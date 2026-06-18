@@ -1,11 +1,16 @@
 #### Options ####
 
+# GBA rom header
+TITLE       := MARIOPARTYUS
+GAME_CODE   := B8ME
+MAKER_CODE  := 01
+REVISION    := 0
+
 # Don't echo build commands unless VERBOSE is set
 VERBOSE ?= 0
 ifeq ($(VERBOSE),0)
   QUIET := @
 endif
-
 
 #### Tools ####
 
@@ -16,8 +21,10 @@ AS       := $(DEVKITARM)/bin/arm-none-eabi-as
 LD       := $(DEVKITARM)/bin/arm-none-eabi-ld
 OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
-GBAGFX   := tools/gbagfx/gbagfx
-GBACOMP  := tools/gbacomp/gbacomp
+
+####  todo: add other tools when needed ####
+GBAFIX   := tools/gbafix/gbafix
+
 
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
 CPPFLAGS := -I tools/agbcc/include -iquote include -nostdinc -undef
@@ -55,6 +62,7 @@ baserom-objs: compare
 $(ELF): $(OFILES) $(LDSCRIPT)
 	@echo 'Linking $@'
 	$(QUIET) $(LD) -T $(LDSCRIPT) -Map $(MAP) $(OFILES) tools/agbcc/lib/libgcc.a -o $@
+	$(QUIET) $(GBAFIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
 
 %.gba: %.elf
 	@echo 'Generating ROM $@'

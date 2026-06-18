@@ -1,6 +1,9 @@
 #define OBJECT_FILE_LIST \
+	X(asm/rom_header.o) \
 	X(asm/crt0.o) \
 	X(asm/rom0.o) \
+	X(asm/text_related_8005650.o) \
+	X(asm/rom_800648c.o) \
 	X(asm/rom1.o) \
 	X(asm/rom2.o) \
 	X(asm/rom3.o) \

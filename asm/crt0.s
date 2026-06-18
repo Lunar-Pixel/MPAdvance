@@ -2,14 +2,8 @@
 	.INCLUDE "macro.inc"
 
 	.SECTION .text
-	.GLOBAL _start
 	.ARM
 	.syntax unified
-
-_start:					@ Entry point of the ROM on startup
-	b init				@ Skip over the header information
-
-	.INCLUDE "asm/rom_header.s"
 
 	.ALIGN 2, 0
 

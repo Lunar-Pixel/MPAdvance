@@ -12,3 +12,5 @@ It builds the following ROM:
 * Install [**devkitARM**](http://devkitpro.org/wiki/Getting_Started/devkitARM).
 
 * Clone [agbcc](https://github.com/pret/agbcc) outside of this repository, run `./build.sh`, and then `./install.sh [MPAdvance path]`, where `[MPAdvance path]` is the directory where you cloned the MPAdvance repository.
+
+* Once thats done, run `make -f make_tools.mk` to build gbafix (TODO: make it build tools when you run `make`)
