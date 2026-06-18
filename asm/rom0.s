@@ -10896,7 +10896,7 @@ _080055EC:
 _080055EE:
 	mov r0, sp
 	adds r2, r4, #0
-	bl sub_08072B34
+	bl sprintf
 	b _08005606
 	.align 2, 0
 _080055F8: .4byte 0x0807ED68
@@ -10904,7 +10904,7 @@ _080055FC:
 	ldr r1, _08005618 @ =0x0807ED70
 	mov r0, sp
 	adds r2, r4, #0
-	bl sub_08072B34
+	bl sprintf
 _08005606:
 	mov r0, sp
 	adds r1, r6, #0
@@ -10931,7 +10931,7 @@ sub_0800561C: @ 0x0800561C
 	ldr r1, _0800564C @ =0x0807ED78
 	mov r0, sp
 	adds r2, r3, #0
-	bl sub_08072B34
+	bl sprintf
 	mov r0, sp
 	adds r1, r4, #0
 	adds r2, r5, #0
