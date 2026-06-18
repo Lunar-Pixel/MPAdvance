@@ -2701,46 +2701,46 @@ _08001688: @ jump table
 	.4byte _08001834 @ case 26
 _080016F4:
 	ldr r0, [r4]
-	bl sub_0806FAE4
+	bl m4aSoundMode
 	b _08001844
 _080016FC:
-	bl sub_0806F5D0
+	bl m4aSoundMain
 	b _08001844
 _08001702:
-	bl sub_0806FCC4
+	bl m4aSoundVSync
 	b _08001844
 _08001708:
-	bl sub_0806FBCC
+	bl m4aSoundVSyncOff
 	b _08001844
 _0800170E:
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	b _08001844
 _08001714:
 	ldrh r0, [r3, #2]
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	b _08001844
 _0800171C:
 	ldrh r0, [r3, #2]
-	bl sub_0806F608
+	bl m4aSongNumStartOrChange
 	b _08001844
 _08001724:
 	ldrh r0, [r3, #2]
-	bl sub_0806F654
+	bl m4aSongNumStartOrContinue
 	b _08001844
 _0800172C:
 	ldrh r0, [r3, #2]
-	bl sub_0806F6A8
+	bl m4aSongNumStop
 	b _08001844
 _08001734:
 	ldrh r0, [r3, #2]
-	bl sub_0806F6DC
+	bl m4aSongNumContinue
 	b _08001844
 _0800173C:
 	ldr r0, _0800174C @ =0x08077220
 	lsls r1, r2, #2
 	adds r1, r1, r0
 	ldr r0, [r1]
-	bl sub_0806F7D4
+	bl m4aMPlayImmInit
 	b _08001844
 	.align 2, 0
 _0800174C: .4byte 0x08077220
@@ -2749,24 +2749,24 @@ _08001750:
 	lsls r1, r2, #2
 	adds r1, r1, r0
 	ldr r0, [r1]
-	bl sub_0806FEA0
+	bl MPlayStop
 	b _08001844
 	.align 2, 0
 _08001760: .4byte 0x08077220
 _08001764:
-	bl sub_0806F710
+	bl m4aMPlayAllStop
 	b _08001844
 _0800176A:
 	ldr r0, _08001778 @ =0x08077220
 	lsls r1, r2, #2
 	adds r1, r1, r0
 	ldr r0, [r1]
-	bl sub_0806F73C
+	bl m4aMPlayContinue
 	b _08001844
 	.align 2, 0
 _08001778: .4byte 0x08077220
 _0800177C:
-	bl sub_0806F748
+	bl m4aMPlayAllContinue
 	b _08001844
 _08001782:
 	ldr r1, _08001794 @ =0x08077220
@@ -2774,7 +2774,7 @@ _08001782:
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldrh r1, [r4]
-	bl sub_0806F774
+	bl m4aMPlayFadeOut
 	b _08001844
 	.align 2, 0
 _08001794: .4byte 0x08077220
@@ -2784,7 +2784,7 @@ _08001798:
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldrh r1, [r4]
-	bl sub_0806F784
+	bl m4aMPlayFadeOutTemporarily
 	b _08001844
 	.align 2, 0
 _080017A8: .4byte 0x08077220
@@ -2794,7 +2794,7 @@ _080017AC:
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldrh r1, [r4]
-	bl sub_0806F7A8
+	bl m4aMPlayFadeIn
 	b _08001844
 	.align 2, 0
 _080017BC: .4byte 0x08077220
@@ -2804,7 +2804,7 @@ _080017C0:
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldrh r1, [r4]
-	bl sub_08070640
+	bl m4aMPlayTempoControl
 	b _08001844
 	.align 2, 0
 _080017D0: .4byte 0x08077220
@@ -2815,7 +2815,7 @@ _080017D4:
 	ldr r0, [r0]
 	ldrh r1, [r4]
 	ldrh r2, [r4, #2]
-	bl sub_08070664
+	bl m4aMPlayVolumeControl
 	b _08001844
 	.align 2, 0
 _080017E8: .4byte 0x08077220
@@ -2827,7 +2827,7 @@ _080017EC:
 	ldrh r1, [r4]
 	movs r3, #2
 	ldrsh r2, [r4, r3]
-	bl sub_080706CC
+	bl m4aMPlayPitchControl
 	b _08001844
 	.align 2, 0
 _08001800: .4byte 0x08077220
@@ -2839,7 +2839,7 @@ _08001804:
 	ldrh r1, [r4]
 	movs r2, #2
 	ldrsb r2, [r4, r2]
-	bl sub_08070740
+	bl m4aMPlayPanpotControl
 	b _08001844
 	.align 2, 0
 _08001818: .4byte 0x08077220
@@ -2850,7 +2850,7 @@ _0800181C:
 	ldr r0, [r0]
 	ldrh r1, [r4]
 	ldrb r2, [r4, #2]
-	bl sub_080707CC
+	bl m4aMPlayModDepthSet
 	b _08001844
 	.align 2, 0
 _08001830: .4byte 0x08077220
@@ -2861,7 +2861,7 @@ _08001834:
 	ldr r0, [r0]
 	ldrh r1, [r4]
 	ldrb r2, [r4, #2]
-	bl sub_08070840
+	bl m4aMPlayLFOSpeedSet
 _08001844:
 	pop {r4}
 	pop {r0}
@@ -3728,7 +3728,7 @@ sub_08001EBC: @ 0x08001EBC
 	ldr r1, _08001EF0 @ =0x0807723C
 	mov r0, sp
 	movs r2, #0xc
-	bl sub_08072A10
+	bl memcpy
 	adds r0, r4, #0
 	bl sub_080019D8
 	lsls r0, r0, #0x18
@@ -3990,7 +3990,7 @@ sub_08002098: @ 0x08002098
 	ldr r1, _080021A4 @ =0x08077248
 	add r0, sp, #8
 	movs r2, #0x10
-	bl sub_08072A10
+	bl memcpy
 	mov r1, sl
 	lsls r0, r1, #3
 	subs r0, r0, r1
@@ -4505,7 +4505,7 @@ _08002524:
 	bne _0800248A
 	movs r0, #0xcc
 _08002532:
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r0, _080025A8 @ =0x03001400
 	strb r4, [r0]
 	ldr r5, _080025AC @ =0x02037EB0
@@ -7453,8 +7453,8 @@ sub_08003B94: @ 0x08003B94
 	mov r8, r0
 	movs r6, #0
 	movs r7, #0
-	bl sub_0806F710
-	bl sub_0806FBCC
+	bl m4aMPlayAllStop
+	bl m4aSoundVSyncOff
 	add r0, sp, #4
 	movs r5, #0
 	strh r7, [r0]
@@ -7592,7 +7592,7 @@ _08003CAE:
 	ldrb r0, [r1, #0x1e]
 	cmp r0, #0
 	bne _08003CF0
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	bl sub_0800386C
 	b _08003CF0
 	.align 2, 0
@@ -7622,7 +7622,7 @@ _08003D00:
 	lsls r0, r0, #0x12
 	cmp r1, r0
 	ble _08003D1E
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	bl sub_0800386C
 	b _08003D1E
 _08003D1C:
@@ -7641,7 +7641,7 @@ _08003D1E:
 	ands r0, r1
 	cmp r0, #0
 	beq _08003D40
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	bl sub_0800386C
 _08003D40:
 	ldr r0, _08003D90 @ =0x03006470
@@ -7673,7 +7673,7 @@ _08003D4E:
 	strh r6, [r2]
 	movs r0, #1
 	strh r0, [r4]
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	adds r0, r7, #0
 	add sp, #8
 	pop {r3}
@@ -10373,7 +10373,7 @@ sub_080051CC: @ 0x080051CC
 	ldr r1, _08005204 @ =0x0807E860
 	mov r0, sp
 	movs r2, #0x10
-	bl sub_08072A10
+	bl memcpy
 	ldr r0, _08005208 @ =0x02033840
 	mov sl, r0
 	movs r0, #0x80
@@ -10465,7 +10465,7 @@ sub_0800527C: @ 0x0800527C
 	ldr r1, _080052B4 @ =0x0807E870
 	mov r0, sp
 	movs r2, #0x18
-	bl sub_08072A10
+	bl memcpy
 	ldr r0, _080052B8 @ =0x02033840
 	mov sl, r0
 	movs r0, #0x80

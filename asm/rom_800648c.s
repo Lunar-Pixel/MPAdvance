@@ -853,7 +853,7 @@ _08006AF0:
 	ldrh r0, [r0]
 	strh r0, [r2, #0xa]
 	ldrh r0, [r2, #0xa]
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -878,7 +878,7 @@ _08006B24:
 	lsls r0, r0, #1
 	adds r0, r0, r1
 	ldrh r0, [r0]
-	bl sub_0806F6A8
+	bl m4aSongNumStop
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -1182,7 +1182,7 @@ sub_08006D5C: @ 0x08006D5C
 	lsrs r5, r0, #0x10
 	adds r0, r4, #0
 	adds r1, r7, #0
-	bl sub_08070C5C
+	bl EEPROMRead
 	movs r4, #0
 	movs r0, #0xca
 	lsls r0, r0, #1
@@ -1193,7 +1193,7 @@ _08006D8C:
 	lsls r1, r1, #0x10
 	lsrs r5, r1, #0x10
 	adds r1, r6, #0
-	bl sub_08070C5C
+	bl EEPROMRead
 	adds r4, #1
 	adds r6, #8
 	cmp r4, r8
@@ -1234,7 +1234,7 @@ sub_08006DC8: @ 0x08006DC8
 	lsls r1, r1, #0x10
 	lsrs r5, r1, #0x10
 	ldr r1, _08006E30 @ =0x02034E98
-	bl sub_08070F50
+	bl EEPROMWrite0_8k_Check
 	movs r7, #0
 	lsls r4, r4, #0x18
 	asrs r4, r4, #0x18
@@ -1250,7 +1250,7 @@ _08006DF2:
 _08006E04:
 	adds r0, r5, #0
 	adds r1, r6, #0
-	bl sub_08070F50
+	bl EEPROMWrite0_8k_Check
 _08006E0C:
 	adds r7, #1
 	adds r0, r5, #1
@@ -1276,7 +1276,7 @@ _08006E30: .4byte 0x02034E98
 sub_08006E34: @ 0x08006E34
 	push {lr}
 	movs r0, #0x40
-	bl sub_08070B94
+	bl EEPROMConfigure
 	pop {r0}
 	bx r0
 
@@ -1309,8 +1309,8 @@ sub_08006E64: @ 0x08006E64
 	ldr r1, _08006F34 @ =0x03004400
 	movs r0, #1
 	strb r0, [r1, #5]
-	bl sub_0806F710
-	bl sub_0806FBCC
+	bl m4aMPlayAllStop
+	bl m4aSoundVSyncOff
 	movs r0, #1
 	bl sub_08002B98
 	add r0, sp, #8
@@ -1445,7 +1445,7 @@ _08006FA6:
 	add r4, sp, #0x10
 	movs r0, #0
 	adds r1, r4, #0
-	bl sub_08070C5C
+	bl EEPROMRead
 	ldrh r0, [r4, #6]
 	mov r8, r4
 	cmp r0, r5
@@ -1641,7 +1641,7 @@ _08007174:
 	subs r5, #1
 	cmp r5, #0
 	bge _08007174
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	ldr r0, _080071A8 @ =0x02031CF8
 	ldrb r0, [r0]
 	bl sub_08008790
@@ -1671,8 +1671,8 @@ sub_080071B0: @ 0x080071B0
 	mov r8, r0
 	movs r5, #1
 	strb r5, [r0, #5]
-	bl sub_0806F710
-	bl sub_0806FBCC
+	bl m4aMPlayAllStop
+	bl m4aSoundVSyncOff
 	movs r0, #1
 	bl sub_08002B98
 	bl sub_08006E40
@@ -1759,7 +1759,7 @@ sub_080071B0: @ 0x080071B0
 	bl sub_080043F0
 	bl sub_0800580C
 	bl sub_08003FE4
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	ldr r0, _080072F0 @ =0x02031CF8
 	ldrb r0, [r0]
 	bl sub_08008790
@@ -1844,7 +1844,7 @@ sub_0800734C: @ 0x0800734C
 	ldr r1, _080073AC @ =0x0807F218
 	mov r0, sp
 	movs r2, #0xa
-	bl sub_08072A10
+	bl memcpy
 	add r0, sp, #0xc
 	movs r1, #0
 	strh r1, [r0]
@@ -2517,7 +2517,7 @@ sub_080077B4: @ 0x080077B4
 	push {lr}
 	lsls r0, r0, #0x10
 	lsrs r0, r0, #0x10
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -2527,7 +2527,7 @@ sub_080077C4: @ 0x080077C4
 	push {lr}
 	lsls r0, r0, #0x10
 	lsrs r0, r0, #0x10
-	bl sub_0806F654
+	bl m4aSongNumStartOrContinue
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -2540,7 +2540,7 @@ sub_080077D4: @ 0x080077D4
 	lsrs r0, r0, #0x16
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl sub_0806FEA0
+	bl MPlayStop
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -2562,7 +2562,7 @@ _080077FC:
 	adds r1, r1, r0
 	ldr r0, [r1]
 	adds r1, r2, #0
-	bl sub_0806F774
+	bl m4aMPlayFadeOut
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -3238,7 +3238,7 @@ sub_08007CA4: @ 0x08007CA4
 	adds r5, r1, #0
 	movs r1, #0
 	adds r2, r5, #0
-	bl sub_08072A70
+	bl memset
 	adds r0, r4, r5
 	str r0, [r4, #4]
 	movs r0, #0x10
@@ -3487,7 +3487,7 @@ sub_08007E74: @ 0x08007E74
 	asrs r0, r0, #8
 	lsls r1, r1, #0x10
 	asrs r1, r1, #0x10
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #0x10
 	asrs r0, r0, #0x10
 	pop {r1}
@@ -3502,7 +3502,7 @@ sub_08007E8C: @ 0x08007E8C
 	lsls r0, r0, #9
 	lsls r1, r1, #0x10
 	asrs r1, r1, #0x10
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #0x10
 	asrs r0, r0, #0x10
 	pop {r1}
@@ -5377,13 +5377,13 @@ _08008CD0:
 	ldrh r0, [r5, #2]
 	muls r0, r4, r0
 	ldrh r1, [r5, #4]
-	bl sub_08070FCC
+	bl __divsi3
 	b _08008CE8
 _08008CDC:
 	ldrh r0, [r5, #2]
 	muls r0, r4, r0
 	ldrh r1, [r5, #4]
-	bl sub_08070FCC
+	bl __divsi3
 	subs r0, r4, r0
 _08008CE8:
 	lsls r0, r0, #0x10
@@ -5707,7 +5707,7 @@ _08008F28:
 	subs r0, r2, r0
 	muls r0, r1, r0
 	adds r1, r2, #0
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #0x10
 	lsrs r6, r0, #0x10
 	b _08008F62
@@ -5716,7 +5716,7 @@ _08008F3C:
 	ldrh r0, [r4, #0x12]
 	muls r0, r1, r0
 	adds r1, r2, #0
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #0x10
 	lsrs r6, r0, #0x10
 	cmp r7, #0
@@ -6247,7 +6247,7 @@ sub_0800933C: @ 0x0800933C
 	bhi _08009356
 	bl sub_08001154
 _08009356:
-	bl sub_0806FCC4
+	bl m4aSoundVSync
 	movs r0, #0
 	bl sub_08009400
 	cmp r0, #0
@@ -6352,7 +6352,7 @@ sub_0800942C: @ 0x0800942C
 	thumb_func_start sub_08009430
 sub_08009430: @ 0x08009430
 	push {lr}
-	bl sub_0806F5D0
+	bl m4aSoundMain
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -8792,7 +8792,7 @@ _0800A59E:
 	cmp r0, #0
 	beq _0800A5BC
 	movs r0, #0xcc
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r1, [r5]
 	movs r0, #7
 	b _0800A7C0
@@ -8804,7 +8804,7 @@ _0800A5BC:
 	cmp r0, #0
 	beq _0800A5D0
 	movs r0, #0xce
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r1, [r5]
 	movs r0, #0xb
 	b _0800A7C0
@@ -8820,7 +8820,7 @@ _0800A5D0:
 	cmp r0, #0
 	beq _0800A5F0
 	movs r0, #0xca
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	bl sub_0800A87C
 	b _0800A7C2
 _0800A5F0:
@@ -8842,7 +8842,7 @@ _0800A602:
 	b _0800A7C2
 _0800A60E:
 	movs r0, #0xca
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	bl sub_0800A898
 	b _0800A7C2
 _0800A61A:
@@ -9324,7 +9324,7 @@ _0800A9B6:
 	subs r0, r1, #1
 	ldrb r2, [r7]
 	adds r0, r0, r2
-	bl sub_08071064
+	bl __modsi3
 	strb r0, [r7]
 	ldr r0, [r4]
 	adds r0, #0x55
@@ -9434,7 +9434,7 @@ _0800AA96:
 	ldrb r0, [r6]
 	adds r0, #1
 	ldrb r1, [r1, #0x15]
-	bl sub_08071064
+	bl __modsi3
 	strb r0, [r6]
 	ldr r0, [r4]
 	adds r0, #0x55
@@ -10634,8 +10634,8 @@ _0800B3AE:
 	movs r2, #0x80
 	lsls r2, r2, #0x13
 	strh r0, [r2]
-	bl sub_0806F710
-	bl sub_0806FBCC
+	bl m4aMPlayAllStop
+	bl m4aSoundVSyncOff
 	bl sub_08009330
 	bl sub_08009330
 	movs r0, #1
@@ -10711,7 +10711,7 @@ sub_0800B470: @ 0x0800B470
 	ldr r2, _0800B500 @ =0x087C7168
 	subs r2, r2, r0
 	bl sub_08007EA4
-	bl sub_0806F558
+	bl m4aSoundInit
 	bl sub_08009F54
 	bl sub_08008C34
 	bl sub_0800915C
@@ -10879,7 +10879,7 @@ _0800B5CC:
 	movs r0, #0
 	strb r0, [r1]
 	movs r0, #0
-	bl sub_08070B70
+	bl SoftReset
 _0800B630:
 	ldr r0, [r5]
 	adds r0, #1
@@ -10917,7 +10917,7 @@ sub_0800B660: @ 0x0800B660
 	ldr r2, _0800B6D8 @ =0x087C7168
 	subs r2, r2, r0
 	bl sub_08007EA4
-	bl sub_0806FC4C
+	bl m4aSoundVSyncOn
 	bl sub_08009F54
 	bl sub_08008C34
 	bl sub_0800915C
@@ -12271,7 +12271,7 @@ _0800C138:
 	movs r0, #0x11
 	bl sub_08008790
 _0800C182:
-	bl sub_0806F710
+	bl m4aMPlayAllStop
 	ldr r4, _0800C1BC @ =0x030013AC
 	ldr r0, [r4]
 	adds r0, #0xf0
@@ -12412,7 +12412,7 @@ _0800C274:
 	bge _0800C2AE
 _0800C2A8:
 	movs r0, #0x40
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 _0800C2AE:
 	bl sub_0800B770
 	ldr r0, _0800C2C8 @ =0x030013AC
@@ -12820,7 +12820,7 @@ _0800C610:
 	lsrs r0, r0, #0x1c
 	subs r0, #1
 	movs r1, #5
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #2
 	adds r0, r0, r4
 	ldr r0, [r0]
@@ -13070,7 +13070,7 @@ _0800C81C:
 _0800C828: .4byte 0x030013AC
 _0800C82C:
 	ldr r0, _0800C860 @ =0x0000016D
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r0, _0800C864 @ =0x03004420
 	ldrh r0, [r0]
 	lsls r0, r0, #0x15
@@ -13284,7 +13284,7 @@ _0800C9D2:
 _0800C9E0: .4byte 0x030013AC
 _0800C9E4:
 	ldr r0, _0800CA14 @ =0x0000016D
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r2, _0800CA18 @ =0x03004420
 	ldr r3, [r2]
 	lsls r1, r3, #0xf
@@ -13401,7 +13401,7 @@ _0800CACC:
 	cmp r0, #0
 	bne _0800CB14
 	ldr r0, _0800CB08 @ =0x0000016D
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r0, _0800CB0C @ =0x08083880
 	movs r1, #0
 	movs r2, #0
@@ -13526,7 +13526,7 @@ _0800CBE8:
 	cmp r0, #0
 	bne _0800CC30
 	ldr r0, _0800CC24 @ =0x0000016D
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldr r0, _0800CC28 @ =0x08083894
 	movs r1, #0
 	movs r2, #0
@@ -13938,15 +13938,15 @@ _0800CF70:
 	b _0800CF8C
 _0800CF76:
 	movs r0, #0x41
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	b _0800CF8C
 _0800CF7E:
 	movs r0, #0x42
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	b _0800CF8C
 _0800CF86:
 	movs r0, #0x43
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 _0800CF8C:
 	bl sub_0800F7EC
 	ldr r1, _0800CFD0 @ =0x0807FC34
@@ -13966,7 +13966,7 @@ _0800CF8C:
 	lsrs r0, r0, #0x1c
 	subs r0, #1
 	movs r1, #5
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
@@ -13989,7 +13989,7 @@ _0800CFE0:
 	lsrs r5, r0, #0x1c
 	adds r0, r5, #0
 	movs r1, #5
-	bl sub_08071064
+	bl __modsi3
 	cmp r0, #0
 	beq _0800D094
 	ldrb r0, [r4]
@@ -14001,7 +14001,7 @@ _0800CFE0:
 	ldr r4, _0800D014 @ =0x0807FD28
 	adds r0, r5, #0
 	movs r1, #5
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r0, r0, #2
 	adds r0, r0, r4
 	ldr r0, [r0]
@@ -14305,7 +14305,7 @@ _0800D270: .4byte 0x030013AC
 _0800D274:
 	ldr r0, _0800D288 @ =0x030056F0
 	movs r1, #5
-	bl sub_0806F774
+	bl m4aMPlayFadeOut
 	bl sub_0800B700
 	ldr r1, [r4]
 	movs r0, #1
@@ -14495,11 +14495,11 @@ _0800D3E2:
 	ldr r4, [r0]
 	mov r0, r8
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r5, r0, #0
 	mov r0, r8
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	mov r8, r0
 	movs r0, #1
 	movs r1, #0x80
@@ -14609,7 +14609,7 @@ _0800D4DC:
 	b _0800D5AA
 _0800D4E2:
 	movs r0, #0xe0
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #1
 	strb r0, [r6]
 _0800D4EC:
@@ -14623,7 +14623,7 @@ _0800D4EC:
 	lsrs r0, r0, #0x10
 	muls r0, r1, r0
 	ldrh r1, [r6, #0xc]
-	bl sub_08071134
+	bl __udivsi3
 	adds r4, r4, r0
 	mov r8, r4
 	movs r0, #0
@@ -14636,11 +14636,11 @@ _0800D510:
 	ldr r4, [r0]
 	mov r0, r8
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r5, r0, #0
 	mov r0, r8
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	mov r8, r0
 	mov r1, sb
 	cmp r1, #5
@@ -14701,7 +14701,7 @@ _0800D57C:
 _0800D59C: .4byte 0x030013AC
 _0800D5A0:
 	movs r0, #0xe0
-	bl sub_0806F6A8
+	bl m4aSongNumStop
 	bl sub_0800D2D0
 _0800D5AA:
 	pop {r3, r4, r5}
@@ -15372,7 +15372,7 @@ _0800DB22:
 	ldr r5, [r0]
 	mov r0, r8
 	adds r1, r5, #0
-	bl sub_08071134
+	bl __udivsi3
 	mov sl, r0
 	cmp r6, #5
 	bne _0800DB3C
@@ -15421,7 +15421,7 @@ _0800DB46:
 	bl sub_08009AFC
 	mov r0, r8
 	adds r1, r5, #0
-	bl sub_080711AC
+	bl __umodsi3
 	mov r8, r0
 _0800DB9C:
 	adds r6, #1
@@ -15435,7 +15435,7 @@ _0800DB9C:
 	movs r2, #0x80
 	bl sub_08009E84
 	movs r0, #0xdd
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r1, #0
 	movs r0, #1
 	strb r0, [r7]
@@ -15494,7 +15494,7 @@ _0800DC28: .4byte 0x030013AC
 _0800DC2C: .4byte 0x08080050
 _0800DC30:
 	movs r0, #0xde
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #3
 	strb r0, [r7]
 _0800DC3A:
@@ -16318,7 +16318,7 @@ _0800E29A:
 	b _0800E3E8
 _0800E2A0:
 	ldr r0, _0800E2C0 @ =0x00000169
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldrb r4, [r6]
 	ldr r0, _0800E2C4 @ =0x03004420
 	ldrb r0, [r0]
@@ -16362,7 +16362,7 @@ _0800E2F8:
 	cmp r0, #0
 	bne _0800E308
 	ldr r0, _0800E348 @ =0x00000169
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 _0800E308:
 	ldrh r0, [r6, #2]
 	lsrs r0, r0, #2
@@ -16862,11 +16862,11 @@ _0800E6E0:
 	ldr r4, [r0]
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r6, r0, #0
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	adds r7, r0, #0
 	movs r0, #1
 	movs r1, #0xc0
@@ -17011,11 +17011,11 @@ _0800E818:
 	ldr r4, [r0]
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r6, r0, #0
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	adds r7, r0, #0
 	cmp r6, #0
 	bne _0800E84C
@@ -17078,7 +17078,7 @@ _0800E8A2:
 	bne _0800E8C4
 	movs r0, #0xb5
 	lsls r0, r0, #1
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 _0800E8C4:
 	mov r0, sb
 	ldrh r1, [r0, #2]
@@ -17134,11 +17134,11 @@ _0800E90C:
 	ldr r4, [r0]
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r6, r0, #0
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	adds r7, r0, #0
 	cmp r6, #0
 	bne _0800E944
@@ -17211,7 +17211,7 @@ sub_0800E998: @ 0x0800E998
 	muls r6, r0, r6
 	adds r0, r6, #0
 	movs r1, #0xb4
-	bl sub_08070FCC
+	bl __divsi3
 	adds r6, r0, #0
 	ldrh r0, [r4]
 	lsls r0, r0, #0x15
@@ -17244,11 +17244,11 @@ _0800E9F2:
 	ldr r4, [r0]
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_08071134
+	bl __udivsi3
 	adds r6, r0, #0
 	adds r0, r7, #0
 	adds r1, r4, #0
-	bl sub_080711AC
+	bl __umodsi3
 	adds r7, r0, #0
 	mov r0, r8
 	cmp r0, #5
@@ -17570,7 +17570,7 @@ _0800ECA4:
 	cmp r0, #0x18
 	bne _0800ECB0
 	ldr r0, _0800ECEC @ =0x0000016B
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 _0800ECB0:
 	ldr r6, _0800ECF0 @ =0x030024E0
 	ldrh r5, [r6, #0x14]
@@ -17583,7 +17583,7 @@ _0800ECB0:
 	lsls r0, r1, #3
 	adds r0, r0, r1
 	movs r1, #0x78
-	bl sub_08070FCC
+	bl __divsi3
 	lsls r1, r5, #0x10
 	asrs r1, r1, #0x10
 	subs r1, r1, r0
@@ -17593,7 +17593,7 @@ _0800ECB0:
 	bgt _0800ECE8
 	movs r0, #0xb7
 	lsls r0, r0, #1
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #0
 	strh r0, [r4, #2]
 	movs r0, #3
@@ -17662,7 +17662,7 @@ _0800ED4E:
 	bl sub_08009A34
 	movs r0, #0xb6
 	lsls r0, r0, #1
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #1
 	strb r0, [r4]
 	b _0800EDA8
@@ -17832,7 +17832,7 @@ _0800EEAC:
 	strh r4, [r5, #2]
 _0800EEB6:
 	movs r0, #0xcd
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	b _0800F030
 _0800EEBE:
 	ldrh r1, [r4, #4]
@@ -17841,7 +17841,7 @@ _0800EEBE:
 	cmp r0, #0
 	beq _0800EF54
 	movs r0, #0xcb
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	ldrh r1, [r4, #4]
 	movs r0, #0x40
 	ands r0, r1
@@ -17865,7 +17865,7 @@ _0800EEEC:
 	adds r0, #1
 	ldrb r1, [r4, #0x18]
 _0800EEF8:
-	bl sub_08071064
+	bl __modsi3
 	movs r1, #7
 	ands r0, r1
 	lsls r0, r0, #3
@@ -19282,13 +19282,13 @@ _0800FA40:
 	b _0800FA80
 _0800FA4A:
 	ldrh r0, [r4, #4]
-	bl sub_0806F6A8
+	bl m4aSongNumStop
 	movs r0, #1
 	strb r0, [r4]
 	b _0800FA80
 _0800FA56:
 	ldrh r0, [r4, #6]
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #2
 	strb r0, [r4]
 	b _0800FA80
@@ -19298,7 +19298,7 @@ _0800FA62:
 	cmp r0, #0
 	bge _0800FA80
 	ldrh r0, [r4, #4]
-	bl sub_0806F5DC
+	bl m4aSongNumStart
 	movs r0, #3
 	strb r0, [r4]
 	b _0800FA80
@@ -19626,7 +19626,7 @@ _0800FD5C:
 	bl sub_0800FCA0
 	movs r0, #1
 	bl sub_08002B98
-	bl sub_0806F710
+	bl m4aMPlayAllStop
 	ldr r4, _0800FD8C @ =0x030013B0
 	ldr r0, [r4]
 	adds r0, #0xd8
@@ -19698,7 +19698,7 @@ _0800FDC0:
 	movs r5, #1
 	strb r5, [r4]
 	movs r0, #0x4a
-	bl sub_0806F654
+	bl m4aSongNumStartOrContinue
 	bl sub_0800B770
 	ldr r0, [r6]
 	strb r5, [r0, #1]

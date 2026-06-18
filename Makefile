@@ -84,7 +84,3 @@ ldscript.txt: ldscript.in
 
 # Automatic dependency generation
 -include $(DEP_FILES)
-
-# Automatically scan files for incbins and add them as a dependency
-.SECONDEXPANSION:
-$(SFILES:.s=.o): $$(shell sed -n '/INCBIN/s/.*"\([^"]*\)".*/\1/p' $$< | sort -u)
