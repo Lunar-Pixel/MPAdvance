@@ -1,0 +1,23 @@
+# Output files
+src/*.s
+*.o
+*.dep
+*.elf
+*.gba
+*.map
+*.dump
+ldscript.txt
+.extract/
+*.exe
+
+# Emulator save files
+*.sav
+*.sgm
+Ghidra/
+tools/Bin2Img.py
+tools/yychr/
+tools/agbcc/
+*.ss*
+*.cheats
+VBinDiff.exe
+*.bak
