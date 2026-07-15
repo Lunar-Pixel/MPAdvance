@@ -8,7 +8,21 @@
 	X(asm/rom2.o) \
 	X(asm/rom3.o) \
 	X(asm/rom4.o) \
+	X(asm/building/early_pipe_house_related.o) \
+	X(asm/building/bob_omb_avenue_related.o) \
+	X(asm/rom_8042608.o) \
+	X(asm/building/vending_machines.o) \
+	X(asm/rom_80427E0.o) \
+	X(asm/building/goomba_house.o) \
+	X(asm/rom_8042BAC.o) \
+	X(src/building/town_game_room_a.o) \
+	X(src/building/town_game_room_b.o) \
+	X(asm/rom_8044058.o) \
 	X(asm/rom5.o) \
+	X(asm/building/mushroom_beacon.o) \
+	X(asm/rom_80579E0.o) \
+	X(asm/title_screen.o) \
+	X(asm/rom_805AA84.o) \
 	X(asm/rom6.o) \
 	X(asm/rom_806E8AC.o) \
 	X(data/data.o) \

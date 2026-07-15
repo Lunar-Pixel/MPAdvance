@@ -23329,7 +23329,7 @@ sub_0802BED8: @ 0x0802BED8
 	adds r4, r4, r1
 	ldrh r4, [r4]
 	adds r1, r4, #0
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	bne _0802BF4C
@@ -23337,7 +23337,7 @@ sub_0802BED8: @ 0x0802BED8
 	ldr r0, [r2]
 	adds r0, #0x98
 	adds r1, r4, #0
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	lsrs r0, r0, #0x18
 	cmp r0, #0
@@ -23524,7 +23524,7 @@ _0802C048:
 	adds r1, r1, r2
 	ldrh r4, [r1]
 	adds r1, r4, #0
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	beq _0802C0F8
@@ -24504,7 +24504,7 @@ sub_0802C91C: @ 0x0802C91C
 	adds r0, r0, r1
 	ldrh r1, [r0]
 	adds r0, r3, #0
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	bne _0802C950
@@ -26280,8 +26280,8 @@ _0802D7C0: .4byte 0x0807F048
 _0802D7C4: .4byte 0x05000260
 _0802D7C8: .4byte 0x06010000
 
-	thumb_func_start sub_0802D7CC
-sub_0802D7CC: @ 0x0802D7CC
+	thumb_func_start SetCharacterMetFlag_0802D7CC
+SetCharacterMetFlag_0802D7CC: @ 0x0802D7CC
 	push {lr}
 	adds r1, r0, #0
 	lsls r1, r1, #0x18

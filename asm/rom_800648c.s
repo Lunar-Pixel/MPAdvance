@@ -1857,7 +1857,7 @@ _0800736E:
 	mov r1, sp
 	adds r0, r1, r4
 	ldrb r0, [r0]
-	bl sub_08001A24
+	bl UnlockMinigame_08001A24
 	adds r0, r4, #1
 	lsls r0, r0, #0x18
 	lsrs r4, r0, #0x18
@@ -11168,8 +11168,8 @@ sub_0800B860: @ 0x0800B860
 	str r0, [r2]
 	bx lr
 
-	thumb_func_start sub_0800B87C
-sub_0800B87C: @ 0x0800B87C
+	thumb_func_start TestBit_0800B87C
+TestBit_0800B87C: @ 0x0800B87C
 	push {lr}
 	lsls r1, r1, #0x10
 	lsrs r2, r1, #0x15
@@ -11208,7 +11208,7 @@ _0800B8B6:
 	lsls r1, r4, #0x10
 	lsrs r1, r1, #0x10
 	adds r0, r7, #0
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	beq _0800B8CC
@@ -11274,7 +11274,7 @@ _0800B926:
 	bge _0800B942
 	lsrs r1, r5, #0x10
 	mov r0, sb
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	beq _0800B924
@@ -11315,7 +11315,7 @@ _0800B96E:
 	bge _0800B98A
 	lsrs r1, r5, #0x10
 	mov r0, sb
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	bne _0800B96C
@@ -11576,7 +11576,7 @@ _0800BB3A:
 	lsls r1, r4, #0x10
 	lsrs r1, r1, #0x10
 	ldr r0, _0800BCA8 @ =0x03004428
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	bne _0800BB72
@@ -11675,7 +11675,7 @@ _0800BC06:
 	lsls r1, r4, #0x10
 	lsrs r1, r1, #0x10
 	ldr r0, _0800BCB4 @ =0x03004430
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	beq _0800BC32

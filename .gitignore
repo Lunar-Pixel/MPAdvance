@@ -1,5 +1,6 @@
 # Output files
 src/*.s
+src/building/*.s
 *.o
 *.dep
 *.elf

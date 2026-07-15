@@ -239,8 +239,8 @@ gBuildingFunctions_0808DB10:
 	.4byte sub_08042DCC @ shroomlocks house
 	.4byte sub_080432C8 @ train station
 	.4byte sub_0804382C @ bob-omb avenue
-	.4byte sub_08043C58 @ town game room A
-	.4byte sub_08043F5C @ town game room B
+	.4byte TownGameRoomAInit_08043C58 @ town game room A
+	.4byte TownGameRoomBInit_08043F5C @ town game room B
 	.4byte sub_08044388 @ mushroom condos 1F
 	.4byte sub_08044864 @ mushroom condos 2F
 	.4byte sub_0804535C @ mushroom condos 3F
@@ -293,14 +293,35 @@ gBuildingFunctions_0808DB10:
 	.4byte sub_08057114 @ mushroom library
 	.4byte sub_080575AC @ mushtoom pool
 	.4byte sub_080578BC @ mushroom beacon
-	.4byte sub_08057C8C @ mario vaundeville @36
-	.4byte sub_080580F8 @ duel tower 1F @37
+	.4byte sub_08057C8C @ mario vaundeville
+	.4byte sub_080580F8 @ duel tower 1F
 	.4byte sub_080584E0 @ duel tower 2F
 	.4byte sub_08058828 @ duel tower 3F
 
-	.GLOBAL game_data_0808dbf8
-game_data_0808dbf8:
-	.INCBIN "baserom.gba", 0x8dbf8, 0x2aba28-0x8dbf8
+	.GLOBAL gUnknown_0808DBF8 @ Town Game Room B related
+gUnknown_0808DBF8:
+	.4byte 0x00030001
+	.4byte 0x00000002
+
+	.GLOBAL game_data_0808dc00
+game_data_0808dc00:
+	.INCBIN "baserom.gba", 0x8dc00, 0x8DD54-0x8dc00
+
+	.GLOBAL gUnknown_0808DD54
+gUnknown_0808DD54:
+	.INCBIN "baserom.gba", 0x8DD54, 0x8DD7C-0x8DD54
+
+	.GLOBAL gUnknown_0808DD7C @ Town Game Room B background pointers
+gUnknown_0808DD7C:
+	.INCBIN "baserom.gba", 0x8DD7C, 0x8E9AC-0x8DD7C
+	
+	.GLOBAL gUnknown_0808E9AC
+gUnknown_0808E9AC:
+	.INCBIN "baserom.gba", 0x8E9AC, 0x8E9BC-0x8E9AC	
+	 
+	.GLOBAL gUnknown_0808E9BC @ Town Game Room B amp sprite pointers
+gUnknown_0808E9BC:
+	.INCBIN "baserom.gba", 0x8E9BC, 0x2aba28-0x8E9BC
 
 	.GLOBAL game_text_pack_082aba28 @ houses the compressed game text
 game_text_082aba28:

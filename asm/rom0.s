@@ -3100,7 +3100,7 @@ sub_08001A00: @ 0x08001A00
 	cmp r1, #0x7b
 	bhi _08001A1C
 	ldr r0, _08001A18 @ =0x020318B8
-	bl sub_0800B87C
+	bl TestBit_0800B87C
 	lsls r0, r0, #0x18
 	lsrs r0, r0, #0x18
 	b _08001A1E
@@ -3113,8 +3113,8 @@ _08001A1E:
 	bx r1
 	.align 2, 0
 
-	thumb_func_start sub_08001A24
-sub_08001A24: @ 0x08001A24
+	thumb_func_start UnlockMinigame_08001A24
+UnlockMinigame_08001A24: @ 0x08001A24
 	push {r4, lr}
 	lsls r0, r0, #0x18
 	lsrs r4, r0, #0x18
