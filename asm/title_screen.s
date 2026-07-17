@@ -11,7 +11,7 @@ sub_080588F8: @ 0x080588F8
 	sub sp, #8
 	ldr r0, _08058AE4 @ =0x08091534
 	ldr r1, _08058AE8 @ =0x05000200
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _08058AEC @ =0x08091B4C
 	mov r1, sp
 	bl sub_08008380
@@ -22,7 +22,7 @@ sub_080588F8: @ 0x080588F8
 	str r0, [r1, #0x74]
 	ldr r0, _08058AF4 @ =0x08190EF8
 	ldr r1, _08058AF8 @ =0x05000220
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _08058AFC @ =0x081924C8
 	mov r1, sp
 	bl sub_08008380
@@ -32,7 +32,7 @@ sub_080588F8: @ 0x080588F8
 	str r0, [r1, #0x7c]
 	ldr r0, _08058B00 @ =0x08197550
 	ldr r1, _08058B04 @ =0x05000240
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _08058B08 @ =0x08197794
 	mov r1, sp
 	bl sub_08008380
@@ -46,12 +46,12 @@ sub_080588F8: @ 0x080588F8
 	ldr r4, _08058B0C @ =0x06011400
 	ldr r0, _08058B10 @ =0x0809B574
 	ldr r1, _08058B14 @ =0x05000280
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, [r5]
 	str r4, [r0, #0x20]
 	ldr r0, _08058B18 @ =0x0809C0D4
 	adds r1, r4, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	adds r4, r0, r4
 	ldr r0, [r5]
 	str r4, [r0, #0x24]
@@ -62,7 +62,7 @@ sub_080588F8: @ 0x080588F8
 	adds r0, r0, r1
 	ldr r0, [r0]
 	adds r1, r4, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	adds r4, r4, r0
 	ldr r1, _08058B20 @ =0x080954C8
 	ldr r6, _08058B24 @ =0x03004400
@@ -71,7 +71,7 @@ sub_080588F8: @ 0x080588F8
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldr r1, _08058B28 @ =0x050002E0
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, [r5]
 	str r4, [r0, #0x28]
 	ldr r1, _08058B2C @ =0x080954CC
@@ -80,7 +80,7 @@ sub_080588F8: @ 0x080588F8
 	adds r0, r0, r1
 	ldr r0, [r0]
 	adds r1, r4, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	adds r4, r4, r0
 	ldr r1, _08058B30 @ =0x080954D8
 	ldrb r0, [r6, #0x14]
@@ -91,12 +91,12 @@ sub_080588F8: @ 0x080588F8
 	bl sub_08009554
 	ldr r0, _08058B38 @ =0x080906B0
 	ldr r1, _08058B3C @ =0x05000340
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, [r5]
 	str r4, [r0, #0x2c]
 	ldr r0, _08058B40 @ =0x080909B8
 	adds r1, r4, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldr r1, _08058B44 @ =0x080943E8
 	ldrb r0, [r6, #0x14]
 	lsls r0, r0, #2
@@ -104,7 +104,7 @@ sub_080588F8: @ 0x080588F8
 	ldr r0, [r0]
 	movs r1, #0xa0
 	lsls r1, r1, #0x13
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r1, _08058B48 @ =0x080943EC
 	ldrb r0, [r6, #0x14]
 	lsls r0, r0, #2
@@ -112,7 +112,7 @@ sub_080588F8: @ 0x080588F8
 	ldr r0, [r0]
 	movs r1, #0xc0
 	lsls r1, r1, #0x13
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldr r1, _08058B4C @ =0x080943F0
 	ldrb r0, [r6, #0x14]
 	lsls r0, r0, #2
@@ -121,7 +121,7 @@ sub_080588F8: @ 0x080588F8
 	ldr r1, _08058B50 @ =0x06003800
 	movs r2, #0
 	movs r3, #0
-	bl sub_080083CC
+	bl LoadTileMap_080083CC
 	ldr r1, _08058B54 @ =0x030024E0
 	movs r0, #0xe0
 	lsls r0, r0, #3
@@ -145,7 +145,7 @@ sub_080588F8: @ 0x080588F8
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldr r1, _08058B60 @ =0x050000E0
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r1, _08058B64 @ =0x0808EE04
 	ldr r0, [r5]
 	adds r0, #0x8c
@@ -154,7 +154,7 @@ sub_080588F8: @ 0x080588F8
 	adds r0, r0, r1
 	ldr r0, [r0]
 	ldr r1, _08058B68 @ =0x050001A0
-	bl sub_08008308
+	bl LoadPalette_08008308
 _08058A48:
 	ldr r0, _08058B6C @ =sub_08059404
 	movs r1, #0x41
@@ -360,7 +360,7 @@ _08058C54:
 	strh r0, [r1, #4]
 _08058C58:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	ldr r0, [r4]
 	ldrb r0, [r0, #6]
 	cmp r0, #0
@@ -370,7 +370,7 @@ _08058C66:
 	ldr r0, [r4]
 	adds r0, #0x88
 	ldrb r0, [r0]
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	bl sub_08058B88
 	ldr r0, [r4]
 	ldr r0, [r0, #0x70]
@@ -535,7 +535,7 @@ _08058DA8: .4byte 0x02031050
 _08058DAC: .4byte 0x030056F0
 _08058DB0:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _08058DB6:
 	bl sub_08008E9C
 	cmp r0, #0

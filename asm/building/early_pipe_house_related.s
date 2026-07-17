@@ -27,14 +27,14 @@ sub_08042188: @ 0x08042188
 	strh r0, [r1, #0x20]
 	ldr r0, _080421E0 @ =0x0818D2A0
 	ldr r1, _080421E4 @ =0x05000340
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, [r4]
 	ldrh r1, [r0, #0x20]
 	lsls r1, r1, #5
 	ldr r0, _080421E8 @ =0x06010000
 	adds r1, r1, r0
 	adds r0, r5, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	add sp, #4
 	pop {r4, r5}
 	pop {r0}
@@ -239,7 +239,7 @@ _08042364:
 	movs r0, #0xd2
 	bl m4aSongNumStart
 	movs r0, #0x14
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _080423D4
 	.align 2, 0
 _0804238C: .4byte 0x03001624
@@ -248,7 +248,7 @@ _08042390:
 	bl sub_08005AC0
 	bl sub_08005ACC
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	mov r1, sp
 	adds r0, r1, r4
 	movs r2, #0
@@ -396,7 +396,7 @@ _080424CE:
 	mov sb, r7
 _080424D0:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _080424D6:
 	ldr r0, _08042520 @ =0x030024B0
 	ldrh r1, [r0]
@@ -419,7 +419,7 @@ _080424EC:
 	movs r0, #1
 	bl sub_08005A74
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	lsls r0, r7, #0x18
 	asrs r0, r0, #0x18
 _08042510:

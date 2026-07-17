@@ -22,8 +22,23 @@
 	X(asm/building/mushroom_beacon.o) \
 	X(asm/rom_80579E0.o) \
 	X(asm/title_screen.o) \
-	X(asm/rom_805AA84.o) \
-	X(asm/rom6.o) \
+	X(asm/opening.o) \
+	X(asm/rom_805BC64.o) \
+	X(asm/bonus_board.o) \
+	X(asm/play_land/gaddgets_menus.o) \
+	X(asm/party_land/hundred_player.o) \
+	X(asm/land_menus.o) \
+	X(asm/company_logos.o) \
+	X(asm/rom_80606C8.o) \
+	X(asm/main_menu.o) \
+	X(asm/passport.o) \
+	X(asm/play_land/penguin_race.o) \
+	X(asm/credits.o) \
+	X(asm/party_land/duel_link.o) \
+	X(asm/party_land/koopa_kid_battle.o) \
+	X(asm/party_land/secret_battle.o) \
+	X(asm/party_land/party_land_link_related.o) \
+	X(asm/health_and_safety.o) \
 	X(asm/rom_806E8AC.o) \
 	X(data/data.o) \
 

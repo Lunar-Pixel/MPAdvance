@@ -355,7 +355,7 @@ _080058DE:
 	strb r0, [r6]
 _080058E2:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _080058C4
 	.align 2, 0
 _080058EC: .4byte 0x0203A100
@@ -462,7 +462,7 @@ _080059B0: .4byte 0x00FFFFFF
 _080059B4: .4byte 0x030024E0
 _080059B8:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	ldr r1, _080059E0 @ =0x030024E0
 	lsrs r0, r5, #0x10
 	movs r2, #0
@@ -650,7 +650,7 @@ sub_08005AE0: @ 0x08005AE0
 	adds r4, r1, #0
 _08005AFE:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	movs r0, #0
 	ldrsb r0, [r4, r0]
 	cmp r0, #0
@@ -693,7 +693,7 @@ sub_08005B2C: @ 0x08005B2C
 	bne _08005B86
 	bl sub_080065EC
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r5, r4, #0
 	ldr r4, _08005B64 @ =0x02000003
 	b _08005B6E
@@ -703,7 +703,7 @@ _08005B60: .4byte 0x030024B0
 _08005B64: .4byte 0x02000003
 _08005B68:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _08005B6E:
 	ldr r0, [r5]
 	ands r0, r4
@@ -713,7 +713,7 @@ _08005B6E:
 	bl m4aSongNumStart
 	bl sub_08006688
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _08005B86:
 	pop {r4, r5}
 	pop {r0}
@@ -727,13 +727,13 @@ sub_08005B8C: @ 0x08005B8C
 	ldr r5, _08005BB0 @ =0x030024B0
 _08005B94:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	ldrh r0, [r5]
 	ands r0, r4
 	cmp r0, #0
 	beq _08005B94
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	pop {r4, r5}
 	pop {r0}
 	bx r0
@@ -866,7 +866,7 @@ sub_08005C50: @ 0x08005C50
 	asrs r1, r6, #0x10
 	bl sub_0800671C
 	movs r0, #8
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r0, r5, #0
 	adds r0, #0x49
 	adds r2, r5, #0
@@ -984,7 +984,7 @@ _08005D4E:
 	asrs r1, r6, #0x10
 	bl sub_0800671C
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _08005D88:
 	ldr r0, _08005DBC @ =0x030024B0
 	ldrh r1, [r0]
@@ -1377,7 +1377,7 @@ _08006058:
 	ldrb r1, [r2]
 _08006080:
 	adds r0, r1, #0
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _08006086:
 	adds r4, #1
 	ldrb r0, [r4]
@@ -1616,7 +1616,7 @@ _0800625E:
 	ldrb r1, [r2]
 _08006284:
 	adds r0, r1, #0
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 _0800628A:
 	adds r4, #1
 _0800628C:

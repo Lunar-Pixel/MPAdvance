@@ -417,7 +417,7 @@ _08000560:
 	cmp r0, #1
 	bne _08000590
 	ldrh r0, [r1, #8]
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _08000590
 _08000578:
 	bl sub_08005A94
@@ -436,7 +436,7 @@ _08000590:
 	cmp r0, #0
 	beq _080005A4
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _080004EC
 _080005A4:
 	pop {r3}
@@ -4001,10 +4001,10 @@ sub_08002098: @ 0x08002098
 	ldr r0, _080021AC @ =0x0813A8AC
 	movs r1, #0xa0
 	lsls r1, r1, #0x13
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _080021B0 @ =0x0813AF7C
 	ldr r1, _080021B4 @ =0x05000020
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r4, _080021B8 @ =0x0807E848
 	ldr r1, _080021BC @ =0x05000040
 	adds r0, r4, #0
@@ -4018,15 +4018,15 @@ sub_08002098: @ 0x08002098
 	movs r5, #0xc0
 	lsls r5, r5, #0x13
 	adds r1, r5, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldr r0, _080021C8 @ =0x0813AFA0
 	ldr r1, _080021CC @ =0x06000400
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldr r0, _080021D0 @ =0x0813A8D0
 	ldr r1, _080021D4 @ =0x06004800
 	movs r2, #0
 	movs r3, #0
-	bl sub_080083CC
+	bl LoadTileMap_080083CC
 	ldr r2, [sp, #0x18]
 	ldrh r1, [r2, #4]
 	mov r0, sl
@@ -4411,7 +4411,7 @@ _08002468:
 	movs r1, #0
 	movs r2, #0x1f
 	movs r3, #0xf
-	bl sub_08008AF4
+	bl FadeIn_08008AF4
 	ldr r0, _080024B4 @ =0x030024E0
 	adds r0, #0x4f
 	movs r1, #1
@@ -4424,7 +4424,7 @@ _08002468:
 	adds r7, r0, #0
 _0800248A:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	ldr r0, _080024B8 @ =0x02037EB0
 	ldrb r0, [r0, #4]
 	cmp r0, #0
@@ -4461,7 +4461,7 @@ _080024CE:
 	movs r2, #1
 	bl sub_080038F4
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	subs r4, #1
 	cmp r4, #0
 	bge _080024CE
@@ -4527,7 +4527,7 @@ _08002558:
 	movs r1, #0
 	movs r2, #0x1f
 	movs r3, #0xf
-	bl sub_080089E8
+	bl FadeOut_080089E8
 	bl sub_08008D34
 	ldrb r0, [r5, #4]
 	cmp r0, #0
@@ -4552,7 +4552,7 @@ _0800258A:
 	strb r0, [r1, #0xc]
 _08002590:
 	ldrb r0, [r1, #0xb]
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	bl sub_08002B0C
 	add sp, #4
 	pop {r3}
@@ -5359,8 +5359,8 @@ _08002B88:
 _08002B90: .4byte 0x020376A0
 _08002B94: .4byte 0x030022E0
 
-	thumb_func_start sub_08002B98
-sub_08002B98: @ 0x08002B98
+	thumb_func_start ProcSleep_08002B98
+ProcSleep_08002B98: @ 0x08002B98
 	push {lr}
 	adds r1, r0, #0
 	ldr r0, _08002BB0 @ =0x020376A0
@@ -5541,7 +5541,7 @@ _08002CA4:
 	movs r1, #0
 	movs r2, #0x1f
 	movs r3, #0xf
-	bl sub_080089E8
+	bl FadeOut_080089E8
 	bl sub_08008D34
 	bl sub_08005A2C
 	bl sub_0800580C
@@ -5563,7 +5563,7 @@ _08002CA4:
 	strh r4, [r5, #0x18]
 	strh r4, [r5, #0x10]
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	bl sub_08003F9C
 	movs r0, #0x80
 	str r0, [sp]
@@ -5576,15 +5576,15 @@ _08002CA4:
 	ldr r0, _08002DE0 @ =0x08133834
 	movs r1, #0xa0
 	lsls r1, r1, #0x13
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _08002DE4 @ =0x081339C8
 	adds r1, r6, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldr r0, _08002DE8 @ =0x08133910
 	ldr r1, _08002DEC @ =0x0600F000
 	movs r2, #0
 	movs r3, #0
-	bl sub_080083CC
+	bl LoadTileMap_080083CC
 	ldr r0, _08002DF0 @ =0x004F0008
 	bl sub_08006828
 	adds r4, r0, #0
@@ -5639,7 +5639,7 @@ _08002CA4:
 	movs r1, #0
 	movs r2, #0x1f
 	movs r3, #0xf
-	bl sub_08008AF4
+	bl FadeIn_08008AF4
 	adds r5, #0x4f
 	movs r0, #1
 	strb r0, [r5]
@@ -5709,30 +5709,30 @@ _08002E10: @ jump table
 	.4byte _08002E84 @ case 28
 _08002E84:
 	movs r0, #0x2c
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	b _08002EAC
 _08002E8C:
 	movs r0, #0x2a
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	b _08002EAC
 _08002E94:
 	movs r0, #0x1e
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	b _08002EAC
 _08002E9C:
 	movs r0, #0x12
-	bl sub_08008790
+	bl ChangeGameState_08008790
 	b _08002EAC
 _08002EA4:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _08002DB2
 _08002EAC:
 	movs r0, #4
 	movs r1, #0
 	movs r2, #0x1f
 	movs r3, #0xf
-	bl sub_080089E8
+	bl FadeOut_080089E8
 	bl sub_08008D34
 	lsls r0, r6, #0x10
 	asrs r0, r0, #0x10
@@ -6589,7 +6589,7 @@ sub_0800353C: @ 0x0800353C
 	ldr r6, _080035D8 @ =0x02037EB0
 _0800355A:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r0, r6, #0
 	adds r0, #0x98
 	ldrb r0, [r0]
@@ -6772,7 +6772,7 @@ sub_08003690: @ 0x08003690
 	mov sb, r0
 _080036C6:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r0, r7, #0
 	adds r0, #0x98
 	ldrb r0, [r0]
@@ -7007,7 +7007,7 @@ _0800387C:
 	strb r0, [r2, #4]
 _0800388E:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	b _0800388E
 	.align 2, 0
 _08003898: .4byte 0x02037EB0
@@ -7205,7 +7205,7 @@ _080039CC:
 	mov sb, r2
 _080039DC:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r0, r5, #0
 	mov r1, r8
 	adds r2, r4, #0
@@ -7261,7 +7261,7 @@ sub_08003A30: @ 0x08003A30
 	adds r5, #0x99
 _08003A44:
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	adds r0, r4, #0
 	mov r1, sp
 	movs r2, #1
@@ -8076,13 +8076,13 @@ sub_080040AC: @ 0x080040AC
 	movs r2, #0xa0
 	lsls r2, r2, #0x13
 	adds r1, r1, r2
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _080040E4 @ =0x08141C3C
 	ldrb r1, [r4]
 	lsls r1, r1, #0xe
 	ldr r2, _080040E8 @ =0x06000020
 	adds r1, r1, r2
-	bl sub_08008374
+	bl DecompressData_08008374
 	ldrb r0, [r4, #2]
 	bl sub_080040EC
 	pop {r4}
@@ -8926,7 +8926,7 @@ sub_080046EC: @ 0x080046EC
 	movs r6, #0
 	movs r4, #0
 	movs r0, #1
-	bl sub_08002B98
+	bl ProcSleep_08002B98
 	ldr r0, _08004714 @ =0x020376A4
 	strb r6, [r0]
 	ldrb r0, [r5, #0xc]
@@ -10582,7 +10582,7 @@ sub_08005350: @ 0x08005350
 	lsls r1, r1, #0x13
 	adds r4, r4, r1
 	adds r1, r4, #0
-	bl sub_08008308
+	bl LoadPalette_08008308
 	ldr r0, _080053A0 @ =0x08125644
 	lsls r6, r6, #0xe
 	lsls r5, r5, #5
@@ -10591,7 +10591,7 @@ sub_08005350: @ 0x08005350
 	adds r5, r5, r1
 	adds r6, r6, r5
 	adds r1, r6, #0
-	bl sub_08008374
+	bl DecompressData_08008374
 	pop {r4, r5, r6}
 	pop {r0}
 	bx r0
