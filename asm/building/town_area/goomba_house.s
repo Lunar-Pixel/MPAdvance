@@ -5,6 +5,28 @@
 	.ARM
 	.syntax unified
 
+	thumb_func_start sub_08042860
+sub_08042860: @ 0x08042860
+	push {lr}
+	ldr r0, _0804288C @ =0x0000011B
+	bl EventPlaySFX_080410E0
+	movs r0, #0
+	movs r1, #0
+	movs r2, #2
+	movs r3, #0
+	bl EventAnimateChara_080418C8
+	movs r0, #0x14
+	bl EventSleep_08040690
+	movs r0, #0
+	movs r1, #0
+	movs r2, #1
+	movs r3, #0xff
+	bl EventAnimateChara_080418C8
+	pop {r0}
+	bx r0
+	.align 2, 0
+_0804288C: .4byte 0x0000011B
+
 	thumb_func_start sub_08042890
 sub_08042890: @ 0x08042890
 	push {lr}
@@ -111,7 +133,7 @@ sub_08042994: @ 0x08042994
 	bl sub_08041808
 	movs r0, #0x90
 	lsls r0, r0, #1
-	bl sub_080410E0
+	bl EventPlaySFX_080410E0
 	movs r0, #0x3c
 	bl EventSleep_08040690
 	movs r0, #1

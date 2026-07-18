@@ -52,7 +52,7 @@ void TownGameRoomA_ScriptAfterGame_08043B04(void) {
 	
 	if	(TestQuestFlag_08040714(0x7C) == 1) { // check if minigame was won, else go to loss dialouge
 		PlayJingle_08041100(BGM_TASK_COMPLETE);
-		sub_08041138();
+		EventWaitForJingle_08041138();
 		EventBGMPlay_080410A8(BGM_GAMBA_QUEST);
 		EventWinInit_08040fe8();
 		EventWinSpeakerSet_08041018(0x2A); // monty mole dialouge portrait

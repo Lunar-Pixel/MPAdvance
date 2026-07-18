@@ -193,7 +193,7 @@ gGameStateInitFuncs_0807F4C4:
 	.4byte sub_08060518  @ challenge land - menu
 	.4byte sub_080603BC  @ play land - menu
 	.4byte sub_08068BC4  @ play land - penguin race
-	.4byte sub_0806E6F4  @ health safety screen
+	.4byte HealthSafetyScreen_0806E6F4  @ health safety screen
 	.4byte 0x00000000
 
 	.GLOBAL game_data_0807f584
@@ -236,7 +236,7 @@ gBuildingFunctions_0808DB10:
 	@ Town Area
 	.4byte sub_0804277C @ vending machines
 	.4byte sub_08042AA8 @ kind goomba
-	.4byte sub_08042DCC @ shroomlocks house
+	.4byte sub_08042DCC @ shroomlock house
 	.4byte sub_080432C8 @ train station
 	.4byte sub_0804382C @ bob-omb avenue
 	.4byte TownGameRoomAInit_08043C58 @ town game room A
@@ -291,7 +291,7 @@ gBuildingFunctions_0808DB10:
 	.4byte sub_08056734 @ sandy beach
 	.4byte sub_08056B8C @ lakitu house
 	.4byte sub_08057114 @ mushroom library
-	.4byte sub_080575AC @ mushtoom pool
+	.4byte sub_080575AC @ mushroom pool
 	.4byte sub_080578BC @ mushroom beacon
 	.4byte sub_08057C8C @ mario vaundeville
 	.4byte sub_080580F8 @ duel tower 1F

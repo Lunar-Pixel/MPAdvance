@@ -1,6 +1,11 @@
 # Output files
 src/*.s
 src/building/*.s
+src/building/town_area/*.s
+src/building/horror_area/*.s
+src/building/desert_area/*.s
+src/building/snow_area/*.s
+src/building/jungle_area/*.s
 *.o
 *.dep
 *.elf

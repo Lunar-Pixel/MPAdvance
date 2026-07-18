@@ -38,7 +38,7 @@ QuestFinish_08042814: @ 0x08042814
 	bl StopSongID_080410C0
 	movs r0, #0x68
 	bl PlayJingle_08041100
-	bl sub_08041138
+	bl EventWaitForJingle_08041138
 	adds r0, r4, #0
 	bl EventBGMPlay_080410A8
 	bl EventWinInit_08040fe8
@@ -56,26 +56,3 @@ QuestFinish_08042814: @ 0x08042814
 	pop {r4, r5}
 	pop {r0}
 	bx r0
-
-	thumb_func_start sub_08042860
-sub_08042860: @ 0x08042860
-	push {lr}
-	ldr r0, _0804288C @ =0x0000011B
-	bl sub_080410E0
-	movs r0, #0
-	movs r1, #0
-	movs r2, #2
-	movs r3, #0
-	bl EventAnimateChara_080418C8
-	movs r0, #0x14
-	bl EventSleep_08040690
-	movs r0, #0
-	movs r1, #0
-	movs r2, #1
-	movs r3, #0xff
-	bl EventAnimateChara_080418C8
-	pop {r0}
-	bx r0
-	.align 2, 0
-_0804288C: .4byte 0x0000011B
-

@@ -44,7 +44,7 @@ void TownGameRoomB_ScriptAfterGame_08043E54(void) {
     EventAnimateChara_080418C8(0, 0, 0, 0xFF);
     if (TestQuestFlag_08040714(0x7F) == 1) { // check if minigame was won, else go to loss dialouge
         PlayJingle_08041100(0x68);
-        sub_08041138();
+        EventWaitForJingle_08041138();
         EventBGMPlay_080410A8(BGM_GAMBA_QUEST);
         EventWinInit_08040fe8();
         EventWinSpeakerSet_08041018(0x2B); // amp dialouge portrait

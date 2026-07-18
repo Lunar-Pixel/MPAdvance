@@ -146,7 +146,7 @@ extern u32 gUnknown_0808E9AC;
 
 void PlayJingle_08041100(s32);
 void EventSetMinigame_08040B84(u32);
-void sub_08041138(void);
+void EventWaitForJingle_08041138(void);
 void SetEventFlag_080406BC(u32);
 void UnsetEventFlag_080406D0(u32);
 void EventUnsetFlag_080406D0(u32);

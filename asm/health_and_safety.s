@@ -5,8 +5,8 @@
 	.ARM
 	.syntax unified
 
-	thumb_func_start sub_0806E6F4
-sub_0806E6F4: @ 0x0806E6F4
+	thumb_func_start HealthSafetyScreen_0806E6F4
+HealthSafetyScreen_0806E6F4: @ 0x0806E6F4
 	push {r4, r5, r6, r7, lr}
 	mov r7, sb
 	mov r6, r8

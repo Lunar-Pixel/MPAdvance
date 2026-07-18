@@ -112,7 +112,7 @@ sub_080577BC: @ 0x080577BC
 	bne _08057830
 	movs r0, #0x68
 	bl PlayJingle_08041100
-	bl sub_08041138
+	bl EventWaitForJingle_08041138
 	movs r0, #0x17
 	bl EventBGMPlay_080410A8
 	bl EventWinInit_08040fe8

@@ -37,8 +37,8 @@ ROM      := MPAdvance.gba
 ELF      := $(ROM:.gba=.elf)
 MAP      := $(ROM:.gba=.map)
 LDSCRIPT := ldscript.txt
-CFILES   := $(wildcard src/*.c) $(wildcard src/building/*.c)
-SFILES   := $(wildcard asm/*.s) $(wildcard asm/building/*.s) $(wildcard asm/play_land/*.s) $(wildcard asm/party_land/*.s) $(wildcard data/*.s)
+CFILES   := $(wildcard src/*.c) $(wildcard src/building/*.c) $(wildcard src/building/town_area/*.c) $(wildcard src/building/horror_area/*.c) $(wildcard src/building/desert_area/*.c) $(wildcard src/building/snow_area/*.c) $(wildcard src/building/jungle_area/*.c) 
+SFILES   := $(wildcard asm/*.s) $(wildcard asm/building/*.s) $(wildcard asm/building/town_area/*.s) $(wildcard asm/building/horror_area/*.s) $(wildcard asm/building/desert_area/*.s) $(wildcard asm/building/snow_area/*.s) $(wildcard asm/building/jungle_area/*.s) $(wildcard asm/play_land/*.s) $(wildcard asm/party_land/*.s) $(wildcard data/*.s)
 OFILES   := $(SFILES:.s=.o) $(CFILES:.c=.o)
 DEP_FILES := $(CFILES:.c=.dep)
 
