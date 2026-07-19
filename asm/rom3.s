@@ -115,7 +115,7 @@ _08030256:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	b _08030278
 	.align 2, 0
 _0803026C: .4byte 0x030013C0
@@ -7401,7 +7401,7 @@ _08033EB8:
 	adds r1, r1, r0
 	ldr r0, [r7, #0x1c]
 	ldr r1, [r1]
-	bl call_via_r1
+	bl _call_via_r1
 	ldr r0, [r6]
 	mov r3, r8
 	strb r3, [r0, #1]
@@ -7686,7 +7686,7 @@ _080341C8:
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, _080341E8 @ =0x030013C0
 	ldr r1, [r0]
 	movs r0, #6
@@ -23045,7 +23045,7 @@ _0803BDB8:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 _0803BDC4:
 	ldr r0, [r4]
 	ldrb r0, [r0]
@@ -26449,7 +26449,7 @@ _0803D86C:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 _0803D878:
 	ldr r4, _0803D88C @ =0x030013C8
 	ldr r0, [r4]
@@ -26951,7 +26951,7 @@ _0803DCFA:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	b _0803DD24
 	.align 2, 0
 _0803DD10: .4byte 0x02034BF0

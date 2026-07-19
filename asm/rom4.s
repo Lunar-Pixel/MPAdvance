@@ -810,7 +810,7 @@ RunEventScript_0804066C: @ 0x0804066C
 	push {lr}
 	cmp r0, #0
 	beq _08040676
-	bl call_via_r0
+	bl _call_via_r0
 _08040676:
 	pop {r0}
 	bx r0

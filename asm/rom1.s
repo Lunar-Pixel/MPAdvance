@@ -2691,7 +2691,7 @@ _08011694:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #6]
 	cmp r0, #0
@@ -4884,7 +4884,7 @@ _08012870:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #6]
 	cmp r0, #0
@@ -10189,7 +10189,7 @@ _08015448:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #6]
 	cmp r0, #0
@@ -14191,7 +14191,7 @@ _08017530:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #6]
 	cmp r0, #0
@@ -16345,7 +16345,7 @@ _08018670:
 	cmp r1, r0
 	bgt _0801868E
 	ldr r0, [r4, #4]
-	bl call_via_r0
+	bl _call_via_r0
 _0801868E:
 	subs r6, #1
 	adds r4, #8
@@ -17831,7 +17831,7 @@ sub_08019290: @ 0x08019290
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _08019302
-	bl call_via_r0
+	bl _call_via_r0
 	movs r0, #1
 	bl ProcSleep_08002B98
 	ldr r5, _080192E8 @ =0x08083A68
@@ -17850,7 +17850,7 @@ _080192F2:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	cmp r0, #0
 	beq _080192EC
 _08019302:
@@ -18116,7 +18116,7 @@ sub_0801956C: @ 0x0801956C
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0xc]
 	pop {r4}
@@ -19730,7 +19730,7 @@ sub_0801A288: @ 0x0801A288
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #8]
 	pop {r4}
@@ -20721,7 +20721,7 @@ sub_0801AAC4: @ 0x0801AAC4
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0x10]
 	pop {r4}
@@ -22423,7 +22423,7 @@ sub_0801B938: @ 0x0801B938
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0x14]
 	pop {r4}
@@ -24946,7 +24946,7 @@ sub_0801CDD8: @ 0x0801CDD8
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0xc]
 	pop {r4}
@@ -27692,7 +27692,7 @@ sub_0801E488: @ 0x0801E488
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0xc]
 	pop {r4}
@@ -29811,7 +29811,7 @@ sub_0801F5DC: @ 0x0801F5DC
 	lsls r0, r0, #2
 	adds r0, r0, r1
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	ldr r0, [r4]
 	ldrb r0, [r0, #0x10]
 	pop {r4}

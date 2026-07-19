@@ -247,7 +247,7 @@ _0805ACE6:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 _0805ACF2:
 	ldr r0, [r4]
 	ldrb r0, [r0]

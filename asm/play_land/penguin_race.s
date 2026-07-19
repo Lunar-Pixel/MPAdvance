@@ -5943,7 +5943,7 @@ sub_08069E54: @ 0x08069E54
 	adds r0, r0, r2
 	ldr r2, [r0]
 	adds r0, r1, #0
-	bl call_via_r2
+	bl _call_via_r2
 	lsls r0, r0, #0x10
 	asrs r0, r0, #0x10
 	pop {r1}

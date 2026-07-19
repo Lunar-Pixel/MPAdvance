@@ -1813,7 +1813,7 @@ sub_08000FE0: @ 0x08000FE0
 	ldr r0, _08001104 @ =0x03006400
 	movs r1, #0
 	mov r8, r1
-	bl call_via_r0
+	bl _call_via_r0
 	lsls r0, r0, #0x18
 	ldr r3, _08001108 @ =0x03006210
 	mov r2, r8

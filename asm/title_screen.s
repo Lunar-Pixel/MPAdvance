@@ -350,7 +350,7 @@ _08058C34:
 	lsls r0, r0, #2
 	adds r0, r0, r5
 	ldr r0, [r0]
-	bl call_via_r0
+	bl _call_via_r0
 	b _08058C58
 	.align 2, 0
 _08058C4C: .4byte 0x0300162C

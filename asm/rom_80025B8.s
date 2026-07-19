@@ -681,7 +681,7 @@ sub_08002AA4: @ 0x08002AA4
 	ldr r0, [r4, #0x40]
 	cmp r0, #0
 	beq _08002AB8
-	bl call_via_r0
+	bl _call_via_r0
 _08002AB8:
 	ldr r1, [r4, #0x2c]
 	ldr r0, [r4, #0x30]
