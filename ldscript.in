@@ -100,6 +100,8 @@ gMaxLines = 0;
 	X(src/m4a.o) \
 	X(asm/rom_806E8AC.o) \
 	X(data/data.o) \
+	X(src/data/m4a_tables.o) \
+	X(data/data1.o) \
 
 OUTPUT_ARCH(arm)
 SECTIONS
