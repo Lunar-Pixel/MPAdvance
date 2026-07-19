@@ -106,17 +106,72 @@ SECTIONS
 		src/m4a.o(.text);
 		asm/libagbsyscall.o(.text);
 		src/eeprom.o(.text);
-		asm/rom_806E8AC.o(.text);
+
+		*libgcc.a:_call_via_rX.o(.text);
+		*libgcc.a:_divsi3.o(.text);
+		*libgcc.a:_dvmd_tls.o(.text);
+		*libgcc.a:_modsi3.o(.text);
+		*libgcc.a:_udivsi3.o(.text);
+		*libgcc.a:_umodsi3.o(.text);
+		*libgcc.a:dp-bit.o(.text);
+		*libgcc.a:fp-bit.o(.text);
+		*libgcc.a:_lshrdi3.o(.text);
+		*libgcc.a:_muldi3.o(.text);
+		*libgcc.a:_negdi2.o(.text);
+
+		*libc.a:memcpy.o(.text);
+		*libc.a:memset.o(.text);
+		*libc.a:rand.o(.text);
+		*libc.a:sprintf.o(.text);
+		*libc.a:vfprintf.o(.text);
+		*libc.a:wsetup.o(.text);
+		*libc.a:dtoa.o(.text);
+		*libc.a:fflush.o(.text);
+		*libc.a:findfp.o(.text);
+		*libc.a:freer.o(.text);
+		*libc.a:fvwrite.o(.text);
+		*libc.a:fwalk.o(.text);
+		*libc.a:locale.o(.text);
+		*libc.a:makebuf.o(.text);
+		*libc.a:mallocr.o(.text);
+		*libc.a:mbtowc_r.o(.text);
+		*libc.a:memchr.o(.text);
+		*libc.a:memmove.o(.text);
+		*libc.a:mlock.o(.text);
+		*libc.a:mprec.o(.text);
+		*libc.a:s_isinf.o(.text);
+		*libc.a:s_isnan.o(.text);
+		*libc.a:sbrkr.o(.text);
+		*libc.a:stdio.o(.text);
+		*libc.a:strcmp.o(.text);
+		*libc.a:strlen.o(.text);
+		*libc.a:syscalls.o(.text);
+		*libc.a:writer.o(.text);
+		*libc.a:callocr.o(.text);
+		*libc.a:closer.o(.text);
+		*libc.a:errno.o(.text);
+		*libc.a:fstatr.o(.text);
+		*libc.a:libcfunc.o(.text);
+		*libc.a:lseekr.o(.text);
+		*libc.a:readr.o(.text);
+
+		asm/rom_8076AD8.o(.text);
 	} = 0
 
 	.rodata (READONLY) :
 	ALIGN(4)
 	{
-		data/data.o(.rodata);
+		data/data_8076AE8.o(.rodata);
 		src/data/m4a_tables.o(.rodata);
-		data/data1.o(.rodata);
+		data/datasound.o(.rodata);
 		src/eeprom.o(.rodata);
-		data/data2.o(.rodata);
+		*libc.a:vfprintf.o(.rodata);
+		*libc.a:dtoa.o(.rodata);
+		data/datalib.o(.rodata);
+		*libc.a:locale.o(.rodata);
+		*libc.a:mprec.o(.rodata);
+		*libc.a:syscalls.o(.rodata);
+		data/data_82ABA28.o(.rodata);
 	}
 
 	.data (READONLY) :
@@ -128,20 +183,28 @@ SECTIONS
 	.ewram (NOLOAD) :
 	ALIGN(4)
 	{
-		. = 0x0;	gUnknown_02000000 = .;
-
+		. = 0x0003A460; *libc.a:impure.o(.data);
+		. = 0x0003A750; *libc.a:locale.o(.data);
+		. = 0x0003A764; *libc.a:mallocr.o(.data);
 	}
 
 	. = 0x03000000;
 	.iwram (NOLOAD) :
 	ALIGN(4)
 	{
+		. = 0x00001E08; *libgcc.a:dp-bit.o(.bss);
+		*libgcc.a:fp-bit.o(.bss);
+		*libc.a:syscalls.o(.bss);
+
 		. = 0x00001EE0; SoundMainRAM_Buffer = .;
 		. = 0x00004530; gSoundInfo = .;
 		. = 0x000054E0; gMPlayJumpTable = .;
 		. = 0x00005570; gCgbChans = .;
 		. = 0x000057F0; gMPlayMemAccArea = .;
 		. = 0x00005840; gEEPROMConfig = .;
+
+		. = 0x00005844; *libc.a:sbrkr.o(COMMON);
+		. = 0x00005848; end = .;
 	} = 0
 
     /* Discard everything not specifically mentioned above. */

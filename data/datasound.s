@@ -3,6 +3,8 @@
 
 	.SECTION .rodata
 
+	@ TODO: this is pretty much all sound data
+
     .INCBIN "baserom.gba", 0x1AF174, 0x1B4288-0x1AF174
 
 	.GLOBAL gMPlayTable

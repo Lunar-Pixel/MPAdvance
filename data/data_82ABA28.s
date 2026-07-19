@@ -3,7 +3,7 @@
 
 	.SECTION .rodata
 
-    .INCBIN "baserom.gba", 0x2AB80C, 0x2aba28-0x2AB80C
+	.align 2, 0
 
 	.GLOBAL game_text_pack_082aba28 @ houses the compressed game text
 game_text_082aba28:

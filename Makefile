@@ -29,6 +29,7 @@ GBAFIX   := tools/gbafix/gbafix
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -fno-common
 CPPFLAGS := -I tools/agbcc/include -iquote include -nostdinc -undef
 ASFLAGS  := -mcpu=arm7tdmi -mthumb-interwork -I asminclude
+LIBS := tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a
 
 
 #### Files ####
@@ -63,7 +64,7 @@ baserom-objs: compare
 
 $(ELF): $(OFILES) $(LDSCRIPT)
 	@echo 'Linking $@'
-	$(QUIET) $(LD) -T $(LDSCRIPT) -Map $(MAP) tools/agbcc/lib/libgcc.a -o $@
+	$(QUIET) $(LD) -T $(LDSCRIPT) -Map $(MAP) $(LIBS) -o $@
 	$(QUIET) $(GBAFIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
 
 %.gba: %.elf
