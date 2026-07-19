@@ -93,6 +93,7 @@
 	X(asm/party_land/secret_battle.o) \
 	X(asm/party_land/party_land_link_related.o) \
 	X(asm/health_and_safety.o) \
+	X(asm/m4a0.o) \
 	X(asm/rom_806E8AC.o) \
 	X(data/data.o) \
 
@@ -141,10 +142,10 @@ SECTIONS
 	}
 
 	. = 0x03000000;
-	.bss (NOLOAD) :
+	.iwram (NOLOAD) :
 	ALIGN(4)
 	{
-		. = 0x0; 		gUnknown_03000000 = .;
+		. = 0x00001EE0; SoundMainRAM_Buffer = .;
 	} = 0
 
     /* Discard everything not specifically mentioned above. */

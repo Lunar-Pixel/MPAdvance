@@ -321,7 +321,19 @@ gUnknown_0808E9AC:
 	 
 	.GLOBAL gUnknown_0808E9BC @ Town Game Room B amp sprite pointers
 gUnknown_0808E9BC:
-	.INCBIN "baserom.gba", 0x8E9BC, 0x2aba28-0x8E9BC
+	.INCBIN "baserom.gba", 0x8E9BC, 0x1AEE9C-0x8E9BC
+
+	.GLOBAL gMPlayJumpTableTemplate
+gMPlayJumpTableTemplate:
+	.INCBIN "baserom.gba", 0x1AEE9C, 1
+
+	.INCBIN "baserom.gba", 0x1AEE9D, 0x1AF110-0x1AEE9D
+
+	.GLOBAL gClockTable
+gClockTable:
+	.INCBIN "baserom.gba", 0x1AF110, 1
+
+	.INCBIN "baserom.gba", 0x1AF111, 0x2aba28-0x1AF111
 
 	.GLOBAL game_text_pack_082aba28 @ houses the compressed game text
 game_text_082aba28:

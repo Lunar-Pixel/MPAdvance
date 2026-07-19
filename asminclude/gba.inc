@@ -463,6 +463,13 @@ INTR_FLAG_DMA3     = (1 << 11)
 INTR_FLAG_KEYPAD   = (1 << 12)
 INTR_FLAG_GAMEPAK  = (1 << 13)
 
+SOUND_INFO_PTR = 0x3007FF0
+INTR_CHECK     = 0x3007FF8
+INTR_VECTOR    = 0x3007FFC
+
+VCOUNT_VBLANK   = 160
+TOTAL_SCANLINES = 228
+
 @-------------------------------------------------------------------------------
 @ Structures
 @-------------------------------------------------------------------------------
