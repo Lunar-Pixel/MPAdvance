@@ -40,7 +40,7 @@ _08005684:
 	adds r4, r0, #0
 	adds r0, r5, #0
 	adds r1, r4, #0
-	bl LZ77UnCompReadNormalWrite8bit
+	bl LZ77UnCompWram
 	ldr r2, _080056BC @ =0x0203A100
 	lsls r1, r6, #1
 	adds r1, r1, r6

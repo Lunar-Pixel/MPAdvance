@@ -45,4 +45,18 @@ void RLUnCompVram(const void *src, void *dest);
 
 int MultiBoot(struct MultiBootParam *mp);
 
+void Diff16bitUnFilter(void *src, void *dest);
+
+void Diff8bitUnFilterWram(void *src, void *dest);
+
+s32 Div(s32 num, s32 denom);
+
+s32 Mod(s32 num, s32 denom);
+
+void HuffUnComp(void *src, void *dest);
+
+void IntrWait(s32 flagClear, s32 interruptFlags);
+
+void BitUnPack(void *src, void *dest);
+
 #endif // GUARD_GBA_SYSCALL_H

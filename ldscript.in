@@ -98,6 +98,7 @@ gMaxLines = 0;
 	X(asm/health_and_safety.o) \
 	X(asm/m4a0.o) \
 	X(src/m4a.o) \
+	X(asm/libagbsyscall.o) \
 	X(asm/rom_806E8AC.o) \
 	X(data/data.o) \
 	X(src/data/m4a_tables.o) \

@@ -43,7 +43,7 @@ HealthSafetyScreen_0806E6F4: @ 0x0806E6F4
 	strh r4, [r0, #0x12]
 	ldr r0, _0806E774 @ =0x0814F72C
 	ldr r1, _0806E778 @ =0x06000020
-	bl LZ77UnCompReadNormalWrite16bit
+	bl LZ77UnCompVram
 	ldr r0, _0806E77C @ =0x0814F70C
 	adds r1, r5, #0
 	movs r2, #0x10

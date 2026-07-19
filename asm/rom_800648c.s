@@ -4076,17 +4076,17 @@ _080082B8:
 _080082C2:
 	adds r0, r4, #0
 	adds r1, r5, #0
-	bl LZ77UnCompReadNormalWrite8bit
+	bl LZ77UnCompWram
 	b _080082FA
 _080082CC:
 	adds r0, r4, #0
 	adds r1, r5, #0
-	bl HuffUnCompReadNormal
+	bl HuffUnComp
 	b _080082FA
 _080082D6:
 	adds r0, r4, #0
 	adds r1, r5, #0
-	bl HuffUnCompReadByCallback
+	bl BitUnPack
 	b _080082FA
 _080082E0:
 	lsls r0, r1, #0x1c
@@ -4095,7 +4095,7 @@ _080082E0:
 	bne _080082F2
 	adds r0, r4, #0
 	adds r1, r5, #0
-	bl Diff8bitUnFilterWrite8bit
+	bl Diff8bitUnFilterWram
 	b _080082FA
 _080082F2:
 	adds r0, r4, #0

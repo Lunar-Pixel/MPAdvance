@@ -2928,7 +2928,7 @@ load_minigame_dll_8001884: @ 0x08001884
 	bl sub_08009330
 	adds r0, r6, #0
 	adds r1, r4, #0
-	bl LZ77UnCompReadNormalWrite8bit
+	bl LZ77UnCompWram
 	bl sub_08009330
 	bl sub_08009330
 	bl sub_08009330
