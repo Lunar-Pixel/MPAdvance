@@ -15,6 +15,7 @@ Makefile text eol=lf
 
 *.png binary
 *.bin binary
+*.lz binary
 *.gba binary
 *.pcm binary
 
