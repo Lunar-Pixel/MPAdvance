@@ -274,6 +274,7 @@ void sub_08002B0C();
 void sub_08008D34();
 void ChangeGameState_08008790(s32);
 
+extern void sub_080405AC();
 extern void sub_08043980();
 extern void sub_08043B04();
 extern void sub_08043BF4();
