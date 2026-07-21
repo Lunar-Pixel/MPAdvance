@@ -3,6 +3,7 @@ src/*.s
 src/*/*.s
 src/*/*/*.s
 src/*/*/*/*.s
+subgame/*/*/*.lz
 *.o
 *.dep
 *.elf

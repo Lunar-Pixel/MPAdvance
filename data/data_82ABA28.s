@@ -333,10 +333,24 @@ gShellStackCmprCode:
 gBillBounceCmprCode:
 	.INCBIN "subgame/minigame/bill_bounce.lz"
 
-	.INCBIN "subgame/minigame/bunny_belt.lz"
+	.GLOBAL gBunnyBeltCmprCode
+gBunnyBeltCmprCode:
+	.INCBIN "subgame/minigame/bunny_belt/bunny_belt.lz"
+
+	.GLOBAL gPestAsideCmprCode
+gPestAsideCmprCode:
 	.INCBIN "subgame/minigame/pest_aside.lz"
+
+	.GLOBAL gMelonFollyCmprCode
+gMelonFollyCmprCode:
 	.INCBIN "subgame/minigame/melon_folly.lz"
+
+	.GLOBAL gSortStackCmprCode
+gSortStackCmprCode:
 	.INCBIN "subgame/minigame/sort_stack.lz"
+
+	.GLOBAL gOnTheSpotCmprCode
+gOnTheSpotCmprCode:
 	.INCBIN "subgame/minigame/on_the_spot.lz"
 
 	.GLOBAL gKoopaKrunchCmprCode

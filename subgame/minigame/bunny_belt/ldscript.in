@@ -1,0 +1,44 @@
+
+OUTPUT_ARCH(arm)
+SECTIONS
+{
+	. = 0x02000000;
+	.text (READONLY) :
+	ALIGN(4)
+	{
+		asm/rom0.o(.text);
+		asm/rom4.o(.text);
+		asm/rom8.o(.text);
+	} = 0
+
+	.rodata (READONLY) :
+	ALIGN(4)
+	{
+		data/data.o(.rodata);
+	}
+
+	.data (READONLY) :
+	ALIGN(4)
+	{
+	}
+
+	. = 0x02000000;
+	.ewram (NOLOAD) :
+	ALIGN(4)
+	{
+
+	}
+
+	. = 0x03000000;
+	.iwram (NOLOAD) :
+	ALIGN(4)
+	{
+
+	} = 0
+
+    /* Discard everything not specifically mentioned above. */
+    /DISCARD/ :
+    {
+        *(*);
+    }
+}
