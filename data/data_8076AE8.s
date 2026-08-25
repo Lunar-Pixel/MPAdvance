@@ -6,7 +6,7 @@
 
 	.GLOBAL game_data_08076ae8
 game_data_08076ae8:
-	.INCBIN "baserom.gba", 0x76ae8, 0x77258-0x76ae8
+	.INCBIN "us_baserom.gba", 0x76ae8, 0x77258-0x76ae8
 
 	.GLOBAL gCmprGameGaddgetCode_08077258
 gCmprGameGaddgetCode_08077258:
@@ -139,7 +139,7 @@ gCmprGameGaddgetCode_08077258:
 
 	.GLOBAL game_data_08077448
 game_data_08077448:
-	.INCBIN "baserom.gba", 0x77448, 0x7f4c0-0x77448
+	.INCBIN "us_baserom.gba", 0x77448, 0x7f4c0-0x77448
 	
 	.GLOBAL gMenuScrollSpeed_0807F4C0
 gMenuScrollSpeed_0807F4C0:
@@ -201,7 +201,7 @@ gGameStateInitFuncs_0807F4C4:
 
 	.GLOBAL game_data_0807f584
 game_data_0807f584:
-	.INCBIN "baserom.gba", 0x7f584, 0x87d60-0x7f584
+	.INCBIN "us_baserom.gba", 0x7f584, 0x87d60-0x7f584
 	
 	.GLOBAL gShroomSityStateTable_08087D60
 gShroomSityStateTable_08087D60:
@@ -232,7 +232,7 @@ gShroomSityStateTable_08087D60:
 
 	.GLOBAL game_data_08087dc0
 game_data_08087dc0:
-	.INCBIN "baserom.gba", 0x87dc0, 0x8db10-0x87dc0
+	.INCBIN "us_baserom.gba", 0x87dc0, 0x8db10-0x87dc0
 
 	.GLOBAL gBuildingFunctions_0808DB10
 gBuildingFunctions_0808DB10:
@@ -308,76 +308,111 @@ gUnknown_0808DBF8:
 
 	.GLOBAL game_data_0808dc00
 game_data_0808dc00:
-	.INCBIN "baserom.gba", 0x8dc00, 0x8DD54-0x8dc00
+	.INCBIN "us_baserom.gba", 0x8dc00, 0x8DD54-0x8dc00
 
 	.GLOBAL gUnknown_0808DD54
 gUnknown_0808DD54:
-	.INCBIN "baserom.gba", 0x8DD54, 0x8DD7C-0x8DD54
+	.INCBIN "us_baserom.gba", 0x8DD54, 0x8DD7C-0x8DD54
 
 	.GLOBAL gUnknown_0808DD7C @ Town Game Room B background pointers
 gUnknown_0808DD7C:
-	.INCBIN "baserom.gba", 0x8DD7C, 0x8E204-0x8DD7C
+	.INCBIN "us_baserom.gba", 0x8DD7C, 0x8E204-0x8DD7C
 	
 	.GLOBAL gUnknown_0808E204 @ Ice Game Room background pointers
 gUnknown_0808E204:
-	.INCBIN "baserom.gba", 0x8E204, 0x8E22C-0x8E204	
+	.INCBIN "us_baserom.gba", 0x8E204, 0x8E22C-0x8E204	
 	
 	.GLOBAL gUnknown_0808E22C @ Ice Stadium background pointers
 gUnknown_0808E22C:
-	.INCBIN "baserom.gba", 0x8E22C, 0x8E254-0x8E22C	
+	.INCBIN "us_baserom.gba", 0x8E22C, 0x8E254-0x8E22C	
 	
 	.GLOBAL gUnknown_0808E254
 gUnknown_0808E254:
-	.INCBIN "baserom.gba", 0x8E254, 0x8E62C-0x8E254
+	.INCBIN "us_baserom.gba", 0x8E254, 0x8E62C-0x8E254
 	
 	.GLOBAL gUnknown_0808E62C
 gUnknown_0808E62C:
-	.INCBIN "baserom.gba", 0x8E62C, 0x8E6BC-0x8E62C
+	.INCBIN "us_baserom.gba", 0x8E62C, 0x8E6BC-0x8E62C
 	
 	.GLOBAL gUnknown_0808E6BC @ Character particles sprite pointers
 gUnknown_0808E6BC:
-	.INCBIN "baserom.gba", 0x8E6BC, 0x8E70C-0x8E6BC	
+	.INCBIN "us_baserom.gba", 0x8E6BC, 0x8E70C-0x8E6BC	
 
 	.GLOBAL gUnknown_0808E70C
 gUnknown_0808E70C:
-	.INCBIN "baserom.gba", 0x8E70C, 0x8E72C-0x8E70C
+	.INCBIN "us_baserom.gba", 0x8E70C, 0x8E72C-0x8E70C
 	
 	.GLOBAL gUnknown_0808E72C
 gUnknown_0808E72C:
-	.INCBIN "baserom.gba", 0x8E72C, 0x8E7BC-0x8E72C
+	.INCBIN "us_baserom.gba", 0x8E72C, 0x8E7BC-0x8E72C
 	
 	.GLOBAL gUnknown_0808E7BC
 gUnknown_0808E7BC:
-	.INCBIN "baserom.gba", 0x8E7BC, 0x8E7CC-0x8E7BC
+	.INCBIN "us_baserom.gba", 0x8E7BC, 0x8E7CC-0x8E7BC
 	
 	.GLOBAL gUnknown_0808E7CC
 gUnknown_0808E7CC:
-	.INCBIN "baserom.gba", 0x8E7CC, 0x8E86C-0x8E7CC
+	.INCBIN "us_baserom.gba", 0x8E7CC, 0x8E86C-0x8E7CC
 
 	.GLOBAL gUnknown_0808E86C @ Ice Game Room Penguin sprite pointers
 gUnknown_0808E86C:
-	.INCBIN "baserom.gba", 0x8E86C, 0x8E99C-0x8E86C
+	.INCBIN "us_baserom.gba", 0x8E86C, 0x8E99C-0x8E86C
 	
 	.GLOBAL gUnknown_0808E99C @ Ice Stadium Snowman sprite pointers
 gUnknown_0808E99C:
-	.INCBIN "baserom.gba", 0x8E99C, 0x8E9AC-0x8E99C
+	.INCBIN "us_baserom.gba", 0x8E99C, 0x8E9AC-0x8E99C
 	
 	.GLOBAL gUnknown_0808E9AC
 gUnknown_0808E9AC:
-	.INCBIN "baserom.gba", 0x8E9AC, 0x8E9BC-0x8E9AC	
+	.INCBIN "us_baserom.gba", 0x8E9AC, 0x8E9BC-0x8E9AC	
 	 
 	.GLOBAL gUnknown_0808E9BC @ Town Game Room B amp sprite pointers
 gUnknown_0808E9BC:
-	.INCBIN "baserom.gba", 0x8E9BC, 0x8EA6C-0x8E9BC
+	.INCBIN "us_baserom.gba", 0x8E9BC, 0x8EA6C-0x8E9BC
 	
 	.GLOBAL gUnknown_0808EA6C
 gUnknown_0808EA6C:
-	.INCBIN "baserom.gba", 0x8EA6C, 0x14F70C-0x8EA6C
-	 
+	.INCBIN "us_baserom.gba", 0x8EA6C, 0x125644-0x8EA6C
+
+
+@ gaddget shop small font
+	.GLOBAL gUnknown_08125644
+gUnknown_08125644:
+	.INCBIN "us_baserom.gba", 0x125644, 0x125A98-0x125644
+	
+	.GLOBAL gUnknown_08125A98
+gUnknown_08125A98:
+	.INCBIN "us_baserom.gba", 0x125A98, 0x125AB8-0x125A98
+	
+
+@ small font, used in character list
+	.GLOBAL gUnknown_08125AB8
+gUnknown_08125AB8:
+	.INCBIN "assets/font/small_font.bin"
+
+	.GLOBAL gUnknown_08126AB8
+gUnknown_08126AB8:
+	.INCBIN "assets/font/small_font_unused_pal.bin"
+
+
+@ standard font, used basically everywhere
+	.GLOBAL gUnknown_08126B78
+gUnknown_08126B78:
+	.INCBIN "assets/font/standard_font.bin"
+
+	.GLOBAL gUnknown_081284F8
+gUnknown_081284F8:
+	.INCBIN "assets/font/standard_font_unused_pal.bin"
+
+
+	.GLOBAL gUnknown_0812851C
+gUnknown_0812851C:
+	.INCBIN "us_baserom.gba", 0x12851C, 0x14F70C-0x12851C
+
 	.GLOBAL gUnknown_0814F70C
 gUnknown_0814F70C:
-	.INCBIN "baserom.gba", 0x14F70C, 0x14F72C-0x14F70C
-	 
+	.INCBIN "us_baserom.gba", 0x14F70C, 0x14F72C-0x14F70C
+
 	.GLOBAL gUnknown_0814F72C
 gUnknown_0814F72C:
-	.INCBIN "baserom.gba", 0x14F72C, 0x1AEE9C-0x14F72C
+	.INCBIN "us_baserom.gba", 0x14F72C, 0x1AEE9C-0x14F72C

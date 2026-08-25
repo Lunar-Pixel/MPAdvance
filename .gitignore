@@ -4,6 +4,10 @@ src/*/*.s
 src/*/*/*.s
 src/*/*/*/*.s
 subgame/*/*/*.lz
+subgame/coin_game/*.lz
+assets/*.bin
+assets/*/*.bin
+assets/*/*/*.bin
 *.o
 *.dep
 *.elf

@@ -7,7 +7,11 @@
 
 	.GLOBAL game_text_pack_082aba28 @ houses the compressed game text
 game_text_082aba28:
-	.INCBIN "baserom.gba", 0x2aba28, 0x2d26d0-0x2aba28
+	.INCBIN "us_baserom.gba", 0x2aba28, 0x2CC3CC-0x2aba28
+
+	.GLOBAL multiboot_base_082CC3CC @ multiboot rom
+multiboot_base_082CC3CC:
+	.INCBIN "subgame/multiboot_base/multiboot_base.gba"
 
 
 @ gaddgets
@@ -269,7 +273,7 @@ gKoopaKappaCmprCode:
 	
 	.GLOBAL minigame_data_pack_0854f2dc @ houses all the assets for minigames below 
 minigame_data_pack_0854f2dc:
-	.INCBIN "baserom.gba", 0x54f2dc, 0x64d96c-0x54f2dc	
+	.INCBIN "us_baserom.gba", 0x54f2dc, 0x64d96c-0x54f2dc	
 
 
 @ minigames that use data from minigame_data_pack_0854f2dc
@@ -430,4 +434,4 @@ gSlammerCmprCode:
 
 	.GLOBAL game_data_087c5434
 game_data_087c5434:
-	.INCBIN "baserom.gba", 0x7c5434, 0x7c7168-0x7c5434
+	.INCBIN "us_baserom.gba", 0x7c5434, 0x7c7168-0x7c5434

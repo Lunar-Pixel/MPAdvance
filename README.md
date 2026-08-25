@@ -7,10 +7,12 @@ It builds the following ROM:
 
 ### Setting up the repository
 
-* You must have a copy of the Mario Party Advance ROM named `baserom.gba` in the repository directory.
+* You must have a copy of the USA version of the Mario Party Advance ROM named `us_baserom.gba` in the repository directory.
 
 * Install [**devkitARM**](http://devkitpro.org/wiki/Getting_Started/devkitARM).
 
 * Clone [agbcc](https://github.com/pret/agbcc) outside of this repository, run `./build.sh`, and then `./install.sh [MPAdvance path]`, where `[MPAdvance path]` is the directory where you cloned the MPAdvance repository.
+
+* Run `make extract_assets`
 
 * Once thats done, run `make -f make_tools.mk` to build gbafix (TODO: make it build tools when you run `make`)

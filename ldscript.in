@@ -13,7 +13,7 @@ SECTIONS
 		asm/rom0.o(.text);
 		asm/minigame_instructions.o(.text);
 		asm/rom_80025B8.o(.text);
-		asm/text_related_8005650.o(.text);
+		asm/text_related_8004A9C.o(.text);
 		asm/rom_800648c.o(.text);
 		asm/rom1.o(.text);
 		asm/rom2.o(.text);

@@ -1,0 +1,90 @@
+[
+  {
+    "path": "font/small_font.bin",
+    "count": "0x1000",
+    "addr": {
+      "us": "0x125AB8"
+    },
+    "size": 1
+  },
+  {
+    "path": "font/small_font_unused_pal.bin",
+    "count": "0xC0",
+    "addr": {
+      "us": "0x126AB8"
+    },
+    "size": 1
+  },
+  {
+    "path": "font/standard_font.bin",
+    "count": "0x1980",
+    "addr": {
+      "us": "0x126B78"
+    },
+    "size": 1
+  },
+  {
+    "path": "font/standard_font_unused_pal.bin",
+    "count": "0x24",
+    "addr": {
+      "us": "0x1284F8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/multiboot_base/multiboot_base.gba",
+    "count": "0x6304",
+    "addr": {
+      "us": "0x2CC3CC"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/scratch_em.lz",
+    "count": "0xF110",
+    "addr": {
+      "us": "0x492044"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/match_em.lz",
+    "count": "0x10614",
+    "addr": {
+      "us": "0x4A1154"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/watch_em.lz",
+    "count": "0x1088C",
+    "addr": {
+      "us": "0x4B1768"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/drop_em.lz",
+    "count": "0xD484",
+    "addr": {
+      "us": "0x4C1FF4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/stop_em.lz",
+    "count": "0xFEDC",
+    "addr": {
+      "us": "0x4CF478"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/coin_game/pair_em.lz",
+    "count": "0xE56C",
+    "addr": {
+      "us": "0x4DF354"
+    },
+    "size": 1
+  }
+]
