@@ -265,7 +265,7 @@ _0805FEDE:
 	b _08060044
 	.align 2, 0
 _0805FEF4: .4byte 0x03004400
-_0805FEF8: .4byte 0x030024E0
+_0805FEF8: .4byte gUnknown_030024E0
 _0805FEFC:
 	cmp r7, #2
 	beq _0805FF90

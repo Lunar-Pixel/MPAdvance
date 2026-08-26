@@ -567,7 +567,7 @@ sub_080646CC: @ 0x080646CC
 	strh r1, [r2, #0x16]
 	bx lr
 	.align 2, 0
-_080646E0: .4byte 0x030024E0
+_080646E0: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_080646E4
 sub_080646E4: @ 0x080646E4
@@ -632,7 +632,7 @@ _08064734:
 	bl ProcSleep_08002B98
 	b _08064734
 	.align 2, 0
-_08064764: .4byte 0x030024E0
+_08064764: .4byte gUnknown_030024E0
 _08064768:
 	mov r1, sl
 	lsls r0, r1, #0x10
@@ -676,7 +676,7 @@ sub_08064794: @ 0x08064794
 	.align 2, 0
 _080647B4: .4byte 0x0600F000
 _080647B8: .4byte 0x01000140
-_080647BC: .4byte 0x030024E0
+_080647BC: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_080647C0
 sub_080647C0: @ 0x080647C0
@@ -760,7 +760,7 @@ _08064812:
 	.align 2, 0
 _0806485C: .4byte 0x030044C8
 _08064860: .4byte 0x0809024F
-_08064864: .4byte 0x030024E0
+_08064864: .4byte gUnknown_030024E0
 _08064868: .4byte 0x0000FF88
 _0806486C: .4byte 0x01000140
 _08064870: .4byte 0x0600E000
@@ -787,7 +787,7 @@ sub_08064874: @ 0x08064874
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0806489C: .4byte 0x030024E0
+_0806489C: .4byte gUnknown_030024E0
 _080648A0: .4byte 0x0000FDFF
 _080648A4: .4byte 0x0600E000
 _080648A8: .4byte 0x01000140
@@ -820,7 +820,7 @@ _080648C2:
 	adds r4, #4
 	b _080648EA
 	.align 2, 0
-_080648E0: .4byte 0x030024E0
+_080648E0: .4byte gUnknown_030024E0
 _080648E4:
 	cmp r4, #0
 	beq _080648F2
@@ -1006,7 +1006,7 @@ _08064A34:
 	bx r0
 	.align 2, 0
 _08064A44: .4byte 0x080902B4
-_08064A48: .4byte 0x030024E0
+_08064A48: .4byte gUnknown_030024E0
 _08064A4C: .4byte 0x030044C8
 
 	thumb_func_start sub_08064A50
@@ -1640,7 +1640,7 @@ _08064F04:
 _08064F48: .4byte 0x06010000
 _08064F4C: .4byte 0x080901C0
 _08064F50: .4byte 0x030044C8
-_08064F54: .4byte 0x030024E0
+_08064F54: .4byte gUnknown_030024E0
 _08064F58: .4byte 0x00000808
 
 	thumb_func_start sub_08064F5C
@@ -1678,7 +1678,7 @@ _08064F7E:
 	bx r0
 	.align 2, 0
 _08064F98: .4byte 0x030044C8
-_08064F9C: .4byte 0x030024E0
+_08064F9C: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_08064FA0
 sub_08064FA0: @ 0x08064FA0
@@ -2267,7 +2267,7 @@ _0806542A:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08065438: .4byte 0x030024E0
+_08065438: .4byte gUnknown_030024E0
 _0806543C: .4byte 0x030044C8
 
 	thumb_func_start sub_08065440
@@ -2596,7 +2596,7 @@ _0806569A:
 	b _080656F0
 	.align 2, 0
 _080656B4: .4byte 0x030044C8
-_080656B8: .4byte 0x030024E0
+_080656B8: .4byte gUnknown_030024E0
 _080656BC: .4byte 0x030024B0
 _080656C0:
 	movs r0, #0xce
@@ -2925,7 +2925,7 @@ _08065954:
 	b _0806569A
 	.align 2, 0
 _08065960: .4byte 0x030044C8
-_08065964: .4byte 0x030024E0
+_08065964: .4byte gUnknown_030024E0
 _08065968:
 	movs r0, #0xcc
 	bl m4aSongNumStart
@@ -3144,7 +3144,7 @@ _08065B04:
 	bl ProcSleep_08002B98
 	b _08065BD4
 	.align 2, 0
-_08065B20: .4byte 0x030024E0
+_08065B20: .4byte gUnknown_030024E0
 _08065B24: .4byte 0x030024B0
 _08065B28:
 	movs r0, #1
@@ -3904,7 +3904,7 @@ _080660EC:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08066108: .4byte 0x030024E0
+_08066108: .4byte gUnknown_030024E0
 _0806610C: .4byte 0x00009C05
 _08066110: .4byte 0x00005C05
 _08066114: .4byte 0x00009E02
@@ -4592,7 +4592,7 @@ _0806670E:
 	.align 2, 0
 _08066764: .4byte 0x01006000
 _08066768: .4byte 0xFFFFFF00
-_0806676C: .4byte 0x030024E0
+_0806676C: .4byte gUnknown_030024E0
 _08066770: .4byte 0x00360001
 _08066774: .4byte 0x00360002
 _08066778: .4byte 0x00360004
@@ -4723,7 +4723,7 @@ _080668C6:
 	b _08066914
 	.align 2, 0
 _080668E4: .4byte 0x01006000
-_080668E8: .4byte 0x030024E0
+_080668E8: .4byte gUnknown_030024E0
 _080668EC: .4byte 0x00360020
 _080668F0:
 	cmp r0, #2

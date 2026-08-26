@@ -1,5 +1,53 @@
 [
   {
+    "path": "boot_logos/nintendo_logo_pal.bin",
+    "count": "0x48",
+    "addr": {
+      "us": "0x11de50"
+    },
+    "size": 1
+  },
+  {
+    "path": "boot_logos/nintendo_logo_tile_map.lz",
+    "count": "0x150",
+    "addr": {
+      "us": "0x11de98"
+    },
+    "size": 1
+  },
+  {
+    "path": "boot_logos/nintendo_logo_gfx.lz",
+    "count": "0x444",
+    "addr": {
+      "us": "0x11DFE8"
+    },
+    "size": 1
+  },
+  {
+    "path": "boot_logos/hudson_logo_pal.bin",
+    "count": "0x44",
+    "addr": {
+      "us": "0x11e42c"
+    },
+    "size": 1
+  },
+  {
+    "path": "boot_logos/hudson_logo_tile_map.lz",
+    "count": "0x19C",
+    "addr": {
+      "us": "0x11e470"
+    },
+    "size": 1
+  },
+  {
+    "path": "boot_logos/hudson_logo_gfx.lz",
+    "count": "0x1184",
+    "addr": {
+      "us": "0x11e60c"
+    },
+    "size": 1
+  },
+  {
     "path": "font/small_font.bin",
     "count": "0x1000",
     "addr": {

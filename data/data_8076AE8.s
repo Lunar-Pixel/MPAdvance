@@ -151,7 +151,7 @@ gMenuScrollSpeed_0807F4C0:
 	.GLOBAL gGameStateInitFuncs_0807F4C4
 gGameStateInitFuncs_0807F4C4:
 	.4byte sub_080089DC  @ unknown/unused
-	.4byte sub_080605B4  @ title screen logos
+	.4byte BootLogos_080605B4  @ title screen logos
 	.4byte sub_0802EB88  @ shroom city - setup
 	.4byte sub_08030220  @ shroom city - gameplay
 	.4byte sub_0802A03C  @ shroom city - map
@@ -372,9 +372,40 @@ gUnknown_0808E9BC:
 	
 	.GLOBAL gUnknown_0808EA6C
 gUnknown_0808EA6C:
-	.INCBIN "us_baserom.gba", 0x8EA6C, 0x125644-0x8EA6C
+	.INCBIN "us_baserom.gba", 0x8EA6C, 0x11DE50-0x8EA6C
 
 
+@ nintendo logo
+	.GLOBAL gNintendoLogoPal_0811DE50
+gNintendoLogoPal_0811DE50:
+	.INCBIN "assets/boot_logos/nintendo_logo_pal.bin"
+
+	.GLOBAL gNintendoLogoMap_0811DE98
+gNintendoLogoMap_0811DE98:
+	.INCBIN "assets/boot_logos/nintendo_logo_tile_map.lz"
+
+	.GLOBAL gNintendoLogoGFX_0811DFE8
+gNintendoLogoGFX_0811DFE8:
+	.INCBIN "assets/boot_logos/nintendo_logo_gfx.lz"
+	
+@ hudson logo
+	.GLOBAL gHudsonLogoPal_0811E42C
+gHudsonLogoPal_0811E42C:
+	.INCBIN "assets/boot_logos/hudson_logo_pal.bin"
+
+	.GLOBAL gHudsonLogoMap_0811E470
+gHudsonLogoMap_0811E470:
+	.INCBIN "assets/boot_logos/hudson_logo_tile_map.lz"
+
+	.GLOBAL gHudsonLogoGFX_0811E60C
+gHudsonLogoGFX_0811E60C:
+	.INCBIN "assets/boot_logos/hudson_logo_gfx.lz"
+	
+
+	.GLOBAL gUnknown_0811F790
+gUnknown_0811F790:
+	.INCBIN "us_baserom.gba", 0x11F790, 0x125644-0x11F790
+	
 @ gaddget shop small font
 	.GLOBAL gUnknown_08125644
 gUnknown_08125644:

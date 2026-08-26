@@ -199,6 +199,18 @@ extern u32 gUnknown_0808E70C;
 extern u32 gUnknown_0808E72C;
 extern u32 gUnknown_0808EA6C;
 
+extern u32 gHudsonLogoGFX_0811E60C;
+extern u32 gHudsonLogoMap_0811E470;
+extern u32 gHudsonLogoPal_0811E42C;
+extern u32 gNintendoLogoGFX_0811DFE8;
+extern u32 gNintendoLogoMap_0811DE98;
+extern u32 gNintendoLogoPal_0811DE50;
+
+
+void DecompressData_08008374(s32*, s32);
+void LoadPalette_08008308(s32*, s32);
+void LoadTileMap_080083CC(s32*, s32, s32, s32);
+void sub_080072F4(s32);
 
 void PlayJingle_08041100(s32);
 void EventSetMinigame_08040B84(u32);

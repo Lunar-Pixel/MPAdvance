@@ -147,7 +147,7 @@ _0805BD9C: .4byte 0x00000173
 _0805BDA0: .4byte 0x0808F2F4
 _0805BDA4: .4byte 0x03004400
 _0805BDA8: .4byte 0x0600A020
-_0805BDAC: .4byte 0x030024E0
+_0805BDAC: .4byte gUnknown_030024E0
 _0805BDB0: .4byte 0x00001B09
 _0805BDB4: .4byte 0x08107B48
 _0805BDB8: .4byte 0x05000180
@@ -377,7 +377,7 @@ _0805BF8C:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805BF94: .4byte 0x030024E0
+_0805BF94: .4byte gUnknown_030024E0
 _0805BF98: .4byte 0x03001634
 _0805BF9C: .4byte 0x040000B0
 _0805BFA0: .4byte 0x04000014
@@ -503,7 +503,7 @@ _0805C020:
 _0805C094: .4byte 0x03001634
 _0805C098: .4byte 0x0808FBD4
 _0805C09C: .4byte 0x00000175
-_0805C0A0: .4byte 0x030024E0
+_0805C0A0: .4byte gUnknown_030024E0
 _0805C0A4: .4byte 0x0000EFFF
 _0805C0A8: .4byte 0x0000FFE4
 _0805C0AC: .4byte sub_0805BEB8
@@ -616,7 +616,7 @@ _0805C132:
 	strb r4, [r0, #2]
 	b _0805C1CE
 	.align 2, 0
-_0805C184: .4byte 0x030024E0
+_0805C184: .4byte gUnknown_030024E0
 _0805C188: .4byte 0x00000CDD
 _0805C18C:
 	ldr r3, _0805C1C4 @ =0x030024E0
@@ -649,7 +649,7 @@ _0805C1A6:
 	strb r0, [r2, #2]
 	b _0805C1CE
 	.align 2, 0
-_0805C1C4: .4byte 0x030024E0
+_0805C1C4: .4byte gUnknown_030024E0
 _0805C1C8:
 	movs r0, #2
 	bl sub_0805BEA0
@@ -694,7 +694,7 @@ _0805C1F6:
 	strb r0, [r1, #2]
 	b _0805C240
 	.align 2, 0
-_0805C218: .4byte 0x030024E0
+_0805C218: .4byte gUnknown_030024E0
 _0805C21C: .4byte 0x00001C09
 _0805C220:
 	ldrb r0, [r2, #0x10]
@@ -772,7 +772,7 @@ _0805C28A:
 	strb r0, [r2, #2]
 	b _0805C2C8
 	.align 2, 0
-_0805C2A8: .4byte 0x030024E0
+_0805C2A8: .4byte gUnknown_030024E0
 _0805C2AC:
 	ldr r0, _0805C2C0 @ =0x030056F0
 	movs r1, #4
@@ -1113,7 +1113,7 @@ _0805C514:
 	strb r0, [r5]
 	b _0805C572
 	.align 2, 0
-_0805C53C: .4byte 0x030024E0
+_0805C53C: .4byte gUnknown_030024E0
 _0805C540:
 	ldr r4, _0805C578 @ =0x030024E0
 	ldrh r1, [r5, #2]
@@ -1143,7 +1143,7 @@ _0805C572:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805C578: .4byte 0x030024E0
+_0805C578: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_0805C57C
 sub_0805C57C: @ 0x0805C57C
@@ -2263,7 +2263,7 @@ _0805CECC:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805CEF0: .4byte 0x030024E0
+_0805CEF0: .4byte gUnknown_030024E0
 _0805CEF4: .4byte 0x03001634
 
 	thumb_func_start sub_0805CEF8

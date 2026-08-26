@@ -55,7 +55,7 @@ sub_08001F60: @ 0x08001F60
 	bx r0
 	.align 2, 0
 _08001FA4: .4byte 0x011F4000
-_08001FA8: .4byte 0x030024E0
+_08001FA8: .4byte gUnknown_030024E0
 _08001FAC: .4byte 0x00000901
 
 	thumb_func_start sub_08001FB0
@@ -654,7 +654,7 @@ _0800248A:
 	strb r0, [r5]
 	b _080024CC
 	.align 2, 0
-_080024B4: .4byte 0x030024E0
+_080024B4: .4byte gUnknown_030024E0
 _080024B8: .4byte 0x02037EB0
 _080024BC: .4byte 0x030024B0
 _080024C0:

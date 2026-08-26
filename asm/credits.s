@@ -562,7 +562,7 @@ _0806A328:
 	strh r0, [r1, #0x36]
 	b _0806A412
 	.align 2, 0
-_0806A35C: .4byte 0x030024E0
+_0806A35C: .4byte gUnknown_030024E0
 _0806A360: .4byte 0x0000FEF0
 _0806A364: .4byte 0x0000FFB0
 _0806A368: .4byte 0x030044D0
@@ -579,7 +579,7 @@ _0806A36C:
 	subs r0, #8
 	b _0806A3BC
 	.align 2, 0
-_0806A384: .4byte 0x030024E0
+_0806A384: .4byte gUnknown_030024E0
 _0806A388:
 	ldr r1, [r5]
 	adds r1, #0x33
@@ -619,7 +619,7 @@ _0806A3BC:
 	strb r0, [r1]
 	b _0806A412
 	.align 2, 0
-_0806A3D0: .4byte 0x030024E0
+_0806A3D0: .4byte gUnknown_030024E0
 _0806A3D4:
 	ldr r1, _0806A3F8 @ =0x08090444
 	ldr r3, [r5]
@@ -696,7 +696,7 @@ sub_0806A424: @ 0x0806A424
 	bl sub_080077C4
 	b _0806A48E
 	.align 2, 0
-_0806A46C: .4byte 0x030024E0
+_0806A46C: .4byte gUnknown_030024E0
 _0806A470: .4byte 0x00005A08
 _0806A474: .4byte 0x00005E09
 _0806A478: .4byte 0x0000FEF0
@@ -787,7 +787,7 @@ _0806A4A6:
 	.align 2, 0
 _0806A548: .4byte 0x030024B0
 _0806A54C: .4byte 0x030044D0
-_0806A550: .4byte 0x030024E0
+_0806A550: .4byte gUnknown_030024E0
 _0806A554: .4byte 0x0000FFE8
 _0806A558: .4byte 0x01006000
 _0806A55C: .4byte 0x08140BA4

@@ -31,7 +31,7 @@ sub_080606C8: @ 0x080606C8
 	strh r2, [r1, #0x10]
 	bx lr
 	.align 2, 0
-_080606F8: .4byte 0x030024E0
+_080606F8: .4byte gUnknown_030024E0
 _080606FC: .4byte 0x00001A09
 _08060700: .4byte 0x00001E0A
 _08060704: .4byte 0x00001903
@@ -283,7 +283,7 @@ _08060910:
 	strh r0, [r3]
 	b _0806093A
 	.align 2, 0
-_08060928: .4byte 0x030024E0
+_08060928: .4byte gUnknown_030024E0
 _0806092C: .4byte 0x0600D000
 _08060930: .4byte 0xFFFFE000
 _08060934:
@@ -322,7 +322,7 @@ sub_08060950: @ 0x08060950
 	.align 2, 0
 _08060970: .4byte 0x0600D000
 _08060974: .4byte 0x01000200
-_08060978: .4byte 0x030024E0
+_08060978: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_0806097C
 sub_0806097C: @ 0x0806097C
@@ -390,7 +390,7 @@ _080609DA:
 	beq _08060A94
 	b _08060B50
 	.align 2, 0
-_08060A00: .4byte 0x030024E0
+_08060A00: .4byte gUnknown_030024E0
 _08060A04: .4byte 0x0808FF6C
 _08060A08: .4byte 0x0600F000
 _08060A0C: .4byte 0x0600F042
@@ -582,7 +582,7 @@ sub_08060B70: @ 0x08060B70
 	.align 2, 0
 _08060B90: .4byte 0x0600F000
 _08060B94: .4byte 0x01000200
-_08060B98: .4byte 0x030024E0
+_08060B98: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_08060B9C
 sub_08060B9C: @ 0x08060B9C
@@ -4769,7 +4769,7 @@ _08062CE8:
 	mov pc, r0
 	.align 2, 0
 _08062CF4: .4byte 0x03004400
-_08062CF8: .4byte 0x030024E0
+_08062CF8: .4byte gUnknown_030024E0
 _08062CFC: .4byte _08062D00
 _08062D00: @ jump table
 	.4byte _08062D14 @ case 0

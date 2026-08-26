@@ -254,7 +254,7 @@ _08058B44: .4byte 0x080943E8
 _08058B48: .4byte 0x080943EC
 _08058B4C: .4byte 0x080943F0
 _08058B50: .4byte 0x06003800
-_08058B54: .4byte 0x030024E0
+_08058B54: .4byte gUnknown_030024E0
 _08058B58: .4byte 0x0808EDD4
 _08058B5C: .4byte 0x0808EDEC
 _08058B60: .4byte 0x050000E0
@@ -465,7 +465,7 @@ _08058D22:
 	strb r4, [r0, #1]
 	b _08058D48
 	.align 2, 0
-_08058D2C: .4byte 0x030024E0
+_08058D2C: .4byte gUnknown_030024E0
 _08058D30:
 	adds r0, r2, #0
 	adds r0, #0x8e
@@ -778,7 +778,7 @@ _08058F66:
 	strb r0, [r3, #1]
 	b _08058FF6
 	.align 2, 0
-_08058F80: .4byte 0x030024E0
+_08058F80: .4byte gUnknown_030024E0
 _08058F84: .4byte 0x00001E41
 _08058F88:
 	ldrh r1, [r3, #2]
@@ -821,7 +821,7 @@ _08058FBE:
 	strh r0, [r1]
 	b _08058FF6
 	.align 2, 0
-_08058FD4: .4byte 0x030024E0
+_08058FD4: .4byte gUnknown_030024E0
 _08058FD8: .4byte 0x0000FEFF
 _08058FDC:
 	movs r0, #3
@@ -2050,7 +2050,7 @@ _080599CA:
 	b _08059A60
 	.align 2, 0
 _08059A08: .4byte 0x0300162C
-_08059A0C: .4byte 0x030024E0
+_08059A0C: .4byte gUnknown_030024E0
 _08059A10:
 	ldrh r1, [r5, #2]
 	adds r1, #1
@@ -2085,7 +2085,7 @@ _08059A10:
 	strh r6, [r0]
 	b _08059A60
 	.align 2, 0
-_08059A54: .4byte 0x030024E0
+_08059A54: .4byte gUnknown_030024E0
 _08059A58: .4byte 0x0300162C
 _08059A5C:
 	bl sub_080598BC
@@ -3837,7 +3837,7 @@ _0805A8A8:
 	strb r0, [r4]
 	b _0805A8EA
 	.align 2, 0
-_0805A8C4: .4byte 0x030024E0
+_0805A8C4: .4byte gUnknown_030024E0
 _0805A8C8:
 	ldr r2, _0805A8F0 @ =0x030024E0
 	ldrh r0, [r4, #2]
@@ -3860,7 +3860,7 @@ _0805A8EA:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805A8F0: .4byte 0x030024E0
+_0805A8F0: .4byte gUnknown_030024E0
 
 	thumb_func_start sub_0805A8F4
 sub_0805A8F4: @ 0x0805A8F4
@@ -3889,7 +3889,7 @@ _0805A908:
 	strb r0, [r3]
 	b _0805A964
 	.align 2, 0
-_0805A924: .4byte 0x030024E0
+_0805A924: .4byte gUnknown_030024E0
 _0805A928:
 	ldr r4, _0805A96C @ =0x030024E0
 	ldrh r0, [r3, #2]
@@ -3925,7 +3925,7 @@ _0805A964:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805A96C: .4byte 0x030024E0
+_0805A96C: .4byte gUnknown_030024E0
 _0805A970: .4byte 0x030056F0
 
 	thumb_func_start sub_0805A974
