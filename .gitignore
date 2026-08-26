@@ -5,6 +5,8 @@ src/*/*/*.s
 src/*/*/*/*.s
 subgame/*/*/*.lz
 subgame/coin_game/*.lz
+subgame/koopa_kid/*.lz
+subgame/gaddget/*.lz
 assets/*.bin
 assets/*/*.bin
 assets/*/*/*.bin

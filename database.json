@@ -40,6 +40,414 @@
     "size": 1
   },
   {
+    "path": "../subgame/gaddget/snooze_ewes.lz",
+    "count": "0x7184",
+    "addr": {
+      "us": "0x2D26D0"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/portagust.lz",
+    "count": "0xD284",
+    "addr": {
+      "us": "0x2D9854"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/magic_lamp.lz",
+    "count": "0xB26C",
+    "addr": {
+      "us": "0x2E6AD8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/compat_i_com.lz",
+    "count": "0x9158",
+    "addr": {
+      "us": "0x2F1D44"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/power_star.lz",
+    "count": "0x75D0",
+    "addr": {
+      "us": "0x2FAE9C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/desktop_golf.lz",
+    "count": "0x954C",
+    "addr": {
+      "us": "0x30246C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/shroom_slide.lz",
+    "count": "0x9DFC",
+    "addr": {
+      "us": "0x30B9B8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/stick_to_it.lz",
+    "count": "0xAA58",
+    "addr": {
+      "us": "0x3157B4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/bait_n_wait.lz",
+    "count": "0xD01C",
+    "addr": {
+      "us": "0x32020C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/digitizer.lz",
+    "count": "0x79D0",
+    "addr": {
+      "us": "0x32D228"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/lip_sync.lz",
+    "count": "0xB214",
+    "addr": {
+      "us": "0x334BF8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/shroom_bloom.lz",
+    "count": "0xB2D0",
+    "addr": {
+      "us": "0x33FE0C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/poochy_pal.lz",
+    "count": "0xB66C",
+    "addr": {
+      "us": "0x34B0DC"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/bulls_eye.lz",
+    "count": "0x6794",
+    "addr": {
+      "us": "0x356748"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/soil_sonar.lz",
+    "count": "0xB20C",
+    "addr": {
+      "us": "0x35CEDC"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/mini_slugger.lz",
+    "count": "0x6A10",
+    "addr": {
+      "us": "0x3680E8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/tap_tap_sumo.lz",
+    "count": "0x84EC",
+    "addr": {
+      "us": "0x36eaf8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/egg_roll.lz",
+    "count": "0x8150",
+    "addr": {
+      "us": "0x376fe4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/shroom_drop.lz",
+    "count": "0x4D9C",
+    "addr": {
+      "us": "0x37f134"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/morse_maker.lz",
+    "count": "0xA1A4",
+    "addr": {
+      "us": "0x383ed0"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/4p_pinball.lz",
+    "count": "0xABFC",
+    "addr": {
+      "us": "0x38e074"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/snow_globe.lz",
+    "count": "0x7354",
+    "addr": {
+      "us": "0x398c70"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/tile_trial.lz",
+    "count": "0x5F08",
+    "addr": {
+      "us": "0x39ffc4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/map_maker.lz",
+    "count": "0x7164",
+    "addr": {
+      "us": "0x3a5ecc"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/attack_frog.lz",
+    "count": "0x8958",
+    "addr": {
+      "us": "0x3ad030"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/mini_maze.lz",
+    "count": "0x511C",
+    "addr": {
+      "us": "0x3b5988"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/faux_flame.lz",
+    "count": "0x696C",
+    "addr": {
+      "us": "0x3baaa4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/stress_press.lz",
+    "count": "0xB604",
+    "addr": {
+      "us": "0x3c1410"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/bomb_game.lz",
+    "count": "0x8218",
+    "addr": {
+      "us": "0x3cca14"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/hourglass.lz",
+    "count": "0x7030",
+    "addr": {
+      "us": "0x3d4c2c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/rochambeau.lz",
+    "count": "0x6CFC",
+    "addr": {
+      "us": "0x3dbc5c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/egg_panic.lz",
+    "count": "0xAE88",
+    "addr": {
+      "us": "0x3e2958"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/block_punch.lz",
+    "count": "0xC2FC",
+    "addr": {
+      "us": "0x3ed7e0"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/toad_force_v.lz",
+    "count": "0x6724",
+    "addr": {
+      "us": "0x3f9adc"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/dart_attack.lz",
+    "count": "0x737C",
+    "addr": {
+      "us": "0x400200"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/breeze_buddy.lz",
+    "count": "0x5B10",
+    "addr": {
+      "us": "0x40757c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/chicken_race.lz",
+    "count": "0xAE04",
+    "addr": {
+      "us": "0x40d08c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/love_me_not.lz",
+    "count": "0x7538",
+    "addr": {
+      "us": "0x417e90"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/mini_bowling.lz",
+    "count": "0x767C",
+    "addr": {
+      "us": "0x41f3c8"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/mini_b_ball.lz",
+    "count": "0x7EA0",
+    "addr": {
+      "us": "0x426a44"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/screen_clean.lz",
+    "count": "0x9008",
+    "addr": {
+      "us": "0x42e8e4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/predictotron.lz",
+    "count": "0x88E8",
+    "addr": {
+      "us": "0x4378ec"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/cake_maker.lz",
+    "count": "0x8CBC",
+    "addr": {
+      "us": "0x4401d4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/mini_soccer.lz",
+    "count": "0x92BC",
+    "addr": {
+      "us": "0x448e90"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/dessert_menu.lz",
+    "count": "0xDC70",
+    "addr": {
+      "us": "0x45214c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/bead_machine.lz",
+    "count": "0x6654",
+    "addr": {
+      "us": "0x45fdbc"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/jewelry_case.lz",
+    "count": "0xAE0C",
+    "addr": {
+      "us": "0x466410"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/castle_night.lz",
+    "count": "0x7694",
+    "addr": {
+      "us": "0x47121c"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/hope_chest.lz",
+    "count": "0x8A44",
+    "addr": {
+      "us": "0x4788b0"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/eye_exam.lz",
+    "count": "0x8260",
+    "addr": {
+      "us": "0x4812f4"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/gaddget/card_trick.lz",
+    "count": "0x8AF0",
+    "addr": {
+      "us": "0x489554"
+    },
+    "size": 1
+  },
+  {
     "path": "../subgame/coin_game/scratch_em.lz",
     "count": "0xF110",
     "addr": {
@@ -84,6 +492,54 @@
     "count": "0xE56C",
     "addr": {
       "us": "0x4DF354"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/crushed_ice.lz",
+    "count": "0x13164",
+    "addr": {
+      "us": "0x4ED8C0"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/mush_rush.lz",
+    "count": "0x12228",
+    "addr": {
+      "us": "0x500A24"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/peek_n_seek.lz",
+    "count": "0x10620",
+    "addr": {
+      "us": "0x512C4C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/splatterball.lz",
+    "count": "0xC994",
+    "addr": {
+      "us": "0x52326C"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/trap_floor.lz",
+    "count": "0xFBBC",
+    "addr": {
+      "us": "0x52FC00"
+    },
+    "size": 1
+  },
+  {
+    "path": "../subgame/koopa_kid/koopa_kappa.lz",
+    "count": "0xFB20",
+    "addr": {
+      "us": "0x53F7BC"
     },
     "size": 1
   }

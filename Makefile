@@ -53,7 +53,7 @@ compare: $(ROM)
 	$(QUIET) md5sum -c checksum.md5
 
 clean:
-	$(RM) $(ROM) $(ELF) $(MAP) $(OFILES) $(DEP_FILES) ldscript.txt src/*.s src/*/*.s src/*/*/*.s src/*/*/*/*.s subgame/*/*/ldscript.txt subgame/*/*/*.gba subgame/*/*/*.map subgame/*/*/*.elf subgame/*/*/*/*.o assets/*.bin assets/*/*.bin assets/*/*/*.bin subgame/*/*.gba subgame/coin_game/*.lz
+	$(RM) $(ROM) $(ELF) $(MAP) $(OFILES) $(DEP_FILES) ldscript.txt src/*.s src/*/*.s src/*/*/*.s src/*/*/*/*.s subgame/*/*/ldscript.txt subgame/*/*/*.gba subgame/*/*/*.map subgame/*/*/*.elf subgame/*/*/*/*.o assets/*.bin assets/*/*.bin assets/*/*/*.bin subgame/*/*.gba subgame/coin_game/*.lz subgame/koopa_kid/*.lz subgame/gaddget/*.lz
 
 # Compile a set of baserom objects for use with objdiff
 baserom-objs: compare
