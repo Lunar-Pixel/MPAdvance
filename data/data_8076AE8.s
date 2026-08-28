@@ -6,7 +6,18 @@
 
 	.GLOBAL game_data_08076ae8
 game_data_08076ae8:
-	.INCBIN "us_baserom.gba", 0x76ae8, 0x77258-0x76ae8
+	.INCBIN "us_baserom.gba", 0x76ae8, 0x77248-0x76ae8
+
+	.GLOBAL gMinigameInfoBtnTileIndex_08077248
+gMinigameInfoBtnTileIndex_08077248:
+	.2byte 0x0006
+	.2byte 0x000A
+	.2byte 0x000E
+	.2byte 0x0012
+	.2byte 0x0016
+	.2byte 0x001A
+	.2byte 0x001C
+	.2byte 0x001E
 
 	.GLOBAL gCmprGameGaddgetCode_08077258
 gCmprGameGaddgetCode_08077258:
@@ -137,9 +148,2745 @@ gCmprGameGaddgetCode_08077258:
 	.4byte 0x00000000	@ blank/unused
 	.4byte gSlammerCmprCode	@ slammer game code
 
-	.GLOBAL game_data_08077448
-game_data_08077448:
-	.INCBIN "us_baserom.gba", 0x77448, 0x7f4c0-0x77448
+	.GLOBAL gMinigameInfo_08077448
+gMinigameInfo_08077448:
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x01 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0001 @ minigame description text ID
+	.2byte 0x0002 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x02 @ minigame ID
+	.byte 0x03 @ icon ID
+	.2byte 0x0005 @ minigame name text ID
+	.2byte 0x0006 @ minigame description text ID
+	.2byte 0x0007 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0008 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0009 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x03 @ minigame ID
+	.byte 0x04 @ icon ID
+	.2byte 0x000A @ minigame name text ID
+	.2byte 0x000B @ minigame description text ID
+	.2byte 0x000C @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x04 @ minigame ID
+	.byte 0x05 @ icon ID
+	.2byte 0x000D @ minigame name text ID
+	.2byte 0x000E @ minigame description text ID
+	.2byte 0x000F @ minigame input 1 text ID
+	.byte 0x91 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0010 @ minigame input 2 text ID
+	.byte 0xB2 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x05 @ minigame ID
+	.byte 0x06 @ icon ID
+	.2byte 0x0011 @ minigame name text ID
+	.2byte 0x0012 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x06 @ minigame ID
+	.byte 0x07 @ icon ID
+	.2byte 0x0013 @ minigame name text ID
+	.2byte 0x0014 @ minigame description text ID
+	.2byte 0x0015 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x07 @ minigame ID
+	.byte 0x08 @ icon ID
+	.2byte 0x0016 @ minigame name text ID
+	.2byte 0x0017 @ minigame description text ID
+	.2byte 0x0018 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0019 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x001A @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x08 @ minigame ID
+	.byte 0x09 @ icon ID
+	.2byte 0x001B @ minigame name text ID
+	.2byte 0x001C @ minigame description text ID
+	.2byte 0x001D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x001E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x09 @ minigame ID
+	.byte 0x0A @ icon ID
+	.2byte 0x001F @ minigame name text ID
+	.2byte 0x0020 @ minigame description text ID
+	.2byte 0x0021 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0A @ minigame ID
+	.byte 0x0B @ icon ID
+	.2byte 0x0022 @ minigame name text ID
+	.2byte 0x0023 @ minigame description text ID
+	.2byte 0x0024 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0025 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0B @ minigame ID
+	.byte 0x0C @ icon ID
+	.2byte 0x0026 @ minigame name text ID
+	.2byte 0x0027 @ minigame description text ID
+	.2byte 0x0028 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0029 @ minigame input 2 text ID
+	.byte 0xBC @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0C @ minigame ID
+	.byte 0x0D @ icon ID
+	.2byte 0x002A @ minigame name text ID
+	.2byte 0x002B @ minigame description text ID
+	.2byte 0x002C @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x002D @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0D @ minigame ID
+	.byte 0x0E @ icon ID
+	.2byte 0x002E @ minigame name text ID
+	.2byte 0x002F @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0E @ minigame ID
+	.byte 0x0F @ icon ID
+	.2byte 0x0030 @ minigame name text ID
+	.2byte 0x0031 @ minigame description text ID
+	.2byte 0x0032 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0033 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0034 @ minigame input 3 text ID
+	.byte 0xBC    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x0F @ minigame ID
+	.byte 0x10 @ icon ID
+	.2byte 0x0035 @ minigame name text ID
+	.2byte 0x0036 @ minigame description text ID
+	.2byte 0x0037 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0038 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x10 @ minigame ID
+	.byte 0x11 @ icon ID
+	.2byte 0x0039 @ minigame name text ID
+	.2byte 0x003A @ minigame description text ID
+	.2byte 0x003B @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x003C @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x11 @ minigame ID
+	.byte 0x12 @ icon ID
+	.2byte 0x003D @ minigame name text ID
+	.2byte 0x003E @ minigame description text ID
+	.2byte 0x003F @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0040 @ minigame input 2 text ID
+	.byte 0x04 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0041 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x12 @ minigame ID
+	.byte 0x13 @ icon ID
+	.2byte 0x0042 @ minigame name text ID
+	.2byte 0x0043 @ minigame description text ID
+	.2byte 0x0044 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0045 @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x13 @ minigame ID
+	.byte 0x14 @ icon ID
+	.2byte 0x0046 @ minigame name text ID
+	.2byte 0x0047 @ minigame description text ID
+	.2byte 0x0048 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x14 @ minigame ID
+	.byte 0x15 @ icon ID
+	.2byte 0x0049 @ minigame name text ID
+	.2byte 0x004A @ minigame description text ID
+	.2byte 0x004B @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x004C @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x15 @ minigame ID
+	.byte 0x16 @ icon ID
+	.2byte 0x004D @ minigame name text ID
+	.2byte 0x004E @ minigame description text ID
+	.2byte 0x004F @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0050 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0051 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0052 @ minigame input 4 text ID
+	.byte 0x04 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0053 @ minigame input 5 text ID
+	.byte 0x05 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x16 @ minigame ID
+	.byte 0x17 @ icon ID
+	.2byte 0x0054 @ minigame name text ID
+	.2byte 0x0055 @ minigame description text ID
+	.2byte 0x0056 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0057 @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0058 @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0059 @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x17 @ minigame ID
+	.byte 0x18 @ icon ID
+	.2byte 0x005A @ minigame name text ID
+	.2byte 0x005B @ minigame description text ID
+	.2byte 0x005C @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x18 @ minigame ID
+	.byte 0x19 @ icon ID
+	.2byte 0x005D @ minigame name text ID
+	.2byte 0x005E @ minigame description text ID
+	.2byte 0x005F @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0060 @ minigame input 2 text ID
+	.byte 0x05 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x19 @ minigame ID
+	.byte 0x1A @ icon ID
+	.2byte 0x0061 @ minigame name text ID
+	.2byte 0x0062 @ minigame description text ID
+	.2byte 0x0063 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0064 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0065 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0066 @ minigame input 4 text ID
+	.byte 0xBC @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1A @ minigame ID
+	.byte 0x1B @ icon ID
+	.2byte 0x0067 @ minigame name text ID
+	.2byte 0x0068 @ minigame description text ID
+	.2byte 0x0069 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x006A @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x006B @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x006C @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1B @ minigame ID
+	.byte 0x1C @ icon ID
+	.2byte 0x006D @ minigame name text ID
+	.2byte 0x006E @ minigame description text ID
+	.2byte 0x006F @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1C @ minigame ID
+	.byte 0x1D @ icon ID
+	.2byte 0x0070 @ minigame name text ID
+	.2byte 0x0071 @ minigame description text ID
+	.2byte 0x0072 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1D @ minigame ID
+	.byte 0x1E @ icon ID
+	.2byte 0x0073 @ minigame name text ID
+	.2byte 0x0074 @ minigame description text ID
+	.2byte 0x0075 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0076 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1E @ minigame ID
+	.byte 0x1F @ icon ID
+	.2byte 0x0077 @ minigame name text ID
+	.2byte 0x0078 @ minigame description text ID
+	.2byte 0x0079 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x007A @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x1F @ minigame ID
+	.byte 0x20 @ icon ID
+	.2byte 0x007B @ minigame name text ID
+	.2byte 0x007C @ minigame description text ID
+	.2byte 0x007D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x007E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x007F @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0080 @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x20 @ minigame ID
+	.byte 0x21 @ icon ID
+	.2byte 0x0081 @ minigame name text ID
+	.2byte 0x0082 @ minigame description text ID
+	.2byte 0x0083 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x21 @ minigame ID
+	.byte 0x22 @ icon ID
+	.2byte 0x0084 @ minigame name text ID
+	.2byte 0x0085 @ minigame description text ID
+	.2byte 0x0086 @ minigame input 1 text ID
+	.byte 0xAC @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x22 @ minigame ID
+	.byte 0x23 @ icon ID
+	.2byte 0x0087 @ minigame name text ID
+	.2byte 0x0088 @ minigame description text ID
+	.2byte 0x0089 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x23 @ minigame ID
+	.byte 0x24 @ icon ID
+	.2byte 0x008A @ minigame name text ID
+	.2byte 0x008B @ minigame description text ID
+	.2byte 0x008C @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x008D @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x008E @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x008F @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x24 @ minigame ID
+	.byte 0x25 @ icon ID
+	.2byte 0x0090 @ minigame name text ID
+	.2byte 0x0091 @ minigame description text ID
+	.2byte 0x0092 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0093 @ minigame input 2 text ID
+	.byte 0x04 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0094 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x25 @ minigame ID
+	.byte 0x26 @ icon ID
+	.2byte 0x0095 @ minigame name text ID
+	.2byte 0x0096 @ minigame description text ID
+	.2byte 0x0097 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0098 @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0099 @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x009A @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x26 @ minigame ID
+	.byte 0x27 @ icon ID
+	.2byte 0x009B @ minigame name text ID
+	.2byte 0x009C @ minigame description text ID
+	.2byte 0x009D @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x27 @ minigame ID
+	.byte 0x28 @ icon ID
+	.2byte 0x009E @ minigame name text ID
+	.2byte 0x009F @ minigame description text ID
+	.2byte 0x00A0 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00A1 @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00A2 @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00A3 @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x29 @ minigame ID
+	.byte 0x2A @ icon ID
+	.2byte 0x00A7 @ minigame name text ID
+	.2byte 0x00A8 @ minigame description text ID
+	.2byte 0x00A9 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x2B @ minigame ID
+	.byte 0x2C @ icon ID
+	.2byte 0x00AD @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x2D @ minigame ID
+	.byte 0x2E @ icon ID
+	.2byte 0x00AF @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x2E @ minigame ID
+	.byte 0x2F @ icon ID
+	.2byte 0x00B0 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x2F @ minigame ID
+	.byte 0x30 @ icon ID
+	.2byte 0x00B1 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x30 @ minigame ID
+	.byte 0x31 @ icon ID
+	.2byte 0x00B2 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x31 @ minigame ID
+	.byte 0x32 @ icon ID
+	.2byte 0x00B3 @ minigame name text ID
+	.2byte 0x00B4 @ minigame description text ID
+	.2byte 0x00B5 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00B6 @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x32 @ minigame ID
+	.byte 0x33 @ icon ID
+	.2byte 0x00B7 @ minigame name text ID
+	.2byte 0x00B8 @ minigame description text ID
+	.2byte 0x00B9 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x35 @ minigame ID
+	.byte 0x36 @ icon ID
+	.2byte 0x00BE @ minigame name text ID
+	.2byte 0x00BF @ minigame description text ID
+	.2byte 0x00C0 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x36 @ minigame ID
+	.byte 0x37 @ icon ID
+	.2byte 0x00C1 @ minigame name text ID
+	.2byte 0x00C2 @ minigame description text ID
+	.2byte 0x00C3 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00C4 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00C5 @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x37 @ minigame ID
+	.byte 0x38 @ icon ID
+	.2byte 0x00C6 @ minigame name text ID
+	.2byte 0x00C7 @ minigame description text ID
+	.2byte 0x00C8 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00C9 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00CA @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00CB @ minigame input 4 text ID
+	.byte 0xBC @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x00CC @ minigame input 5 text ID
+	.byte 0xBC @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x38 @ minigame ID
+	.byte 0x39 @ icon ID
+	.2byte 0x00CD @ minigame name text ID
+	.2byte 0x00CE @ minigame description text ID
+	.2byte 0x00CF @ minigame input 1 text ID
+	.byte 0x99 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00D0 @ minigame input 2 text ID
+	.byte 0x7A @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00D0 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x39 @ minigame ID
+	.byte 0x3A @ icon ID
+	.2byte 0x00D1 @ minigame name text ID
+	.2byte 0x00D2 @ minigame description text ID
+	.2byte 0x00D3 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00D4 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00D5 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x3A @ minigame ID
+	.byte 0x3B @ icon ID
+	.2byte 0x00D6 @ minigame name text ID
+	.2byte 0x00D7 @ minigame description text ID
+	.2byte 0x00D8 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00D9 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00DA @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00DB @ minigame input 4 text ID
+	.byte 0xBC @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x3B @ minigame ID
+	.byte 0x3C @ icon ID
+	.2byte 0x00DC @ minigame name text ID
+	.2byte 0x00DD @ minigame description text ID
+	.2byte 0x00DE @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00DF @ minigame input 2 text ID
+	.byte 0x04 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00E0 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x3C @ minigame ID
+	.byte 0x3D @ icon ID
+	.2byte 0x00E1 @ minigame name text ID
+	.2byte 0x00E2 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x3E @ minigame ID
+	.byte 0x3F @ icon ID
+	.2byte 0x00E4 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x3F @ minigame ID
+	.byte 0x40 @ icon ID
+	.2byte 0x00E5 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x40 @ minigame ID
+	.byte 0x41 @ icon ID
+	.2byte 0x00E6 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x41 @ minigame ID
+	.byte 0x42 @ icon ID
+	.2byte 0x00E7 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x42 @ minigame ID
+	.byte 0x43 @ icon ID
+	.2byte 0x00E8 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x43 @ minigame ID
+	.byte 0x44 @ icon ID
+	.2byte 0x00EF @ minigame name text ID
+	.2byte 0x00F0 @ minigame description text ID
+	.2byte 0x00F1 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00F2 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00F3 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00F4 @ minigame input 4 text ID
+	.byte 0x04 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x00F5 @ minigame input 5 text ID
+	.byte 0x05 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x44 @ minigame ID
+	.byte 0x01 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0001 @ minigame description text ID
+	.2byte 0x0002 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0003 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x45 @ minigame ID
+	.byte 0x02 @ icon ID
+	.2byte 0x0004 @ minigame name text ID
+	.2byte 0x0005 @ minigame description text ID
+	.2byte 0x0006 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0007 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0008 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x46 @ minigame ID
+	.byte 0x03 @ icon ID
+	.2byte 0x0009 @ minigame name text ID
+	.2byte 0x000A @ minigame description text ID
+	.2byte 0x000B @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x47 @ minigame ID
+	.byte 0x04 @ icon ID
+	.2byte 0x000C @ minigame name text ID
+	.2byte 0x000D @ minigame description text ID
+	.2byte 0x000E @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x000F @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x48 @ minigame ID
+	.byte 0x05 @ icon ID
+	.2byte 0x0010 @ minigame name text ID
+	.2byte 0x0011 @ minigame description text ID
+	.2byte 0x0012 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0013 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0014 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x49 @ minigame ID
+	.byte 0x06 @ icon ID
+	.2byte 0x0015 @ minigame name text ID
+	.2byte 0x0016 @ minigame description text ID
+	.2byte 0x0017 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0018 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x4A @ minigame ID
+	.byte 0x07 @ icon ID
+	.2byte 0x0019 @ minigame name text ID
+	.2byte 0x001A @ minigame description text ID
+	.2byte 0x001B @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x001C @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x001D @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x4B @ minigame ID
+	.byte 0x08 @ icon ID
+	.2byte 0x001E @ minigame name text ID
+	.2byte 0x001F @ minigame description text ID
+	.2byte 0x0020 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0021 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0022 @ minigame input 3 text ID
+	.byte 0x52    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x4C @ minigame ID
+	.byte 0x09 @ icon ID
+	.2byte 0x0023 @ minigame name text ID
+	.2byte 0x0024 @ minigame description text ID
+	.2byte 0x0025 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x4D @ minigame ID
+	.byte 0x0A @ icon ID
+	.2byte 0x0026 @ minigame name text ID
+	.2byte 0x0027 @ minigame description text ID
+	.2byte 0x0028 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0029 @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x002A @ minigame input 3 text ID
+	.byte 0x6A    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x4E @ minigame ID
+	.byte 0x0B @ icon ID
+	.2byte 0x002B @ minigame name text ID
+	.2byte 0x002C @ minigame description text ID
+	.2byte 0x002D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x4F @ minigame ID
+	.byte 0x0C @ icon ID
+	.2byte 0x002E @ minigame name text ID
+	.2byte 0x002F @ minigame description text ID
+	.2byte 0x0030 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0031 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0032 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x50 @ minigame ID
+	.byte 0x0D @ icon ID
+	.2byte 0x0033 @ minigame name text ID
+	.2byte 0x0034 @ minigame description text ID
+	.2byte 0x0035 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0036 @ minigame input 2 text ID
+	.byte 0x04 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0037 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x51 @ minigame ID
+	.byte 0x0E @ icon ID
+	.2byte 0x0038 @ minigame name text ID
+	.2byte 0x0039 @ minigame description text ID
+	.2byte 0x003A @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x52 @ minigame ID
+	.byte 0x0F @ icon ID
+	.2byte 0x003B @ minigame name text ID
+	.2byte 0x003C @ minigame description text ID
+	.2byte 0x003D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x003E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x53 @ minigame ID
+	.byte 0x10 @ icon ID
+	.2byte 0x003F @ minigame name text ID
+	.2byte 0x0040 @ minigame description text ID
+	.2byte 0x0041 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0042 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0043 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x54 @ minigame ID
+	.byte 0x11 @ icon ID
+	.2byte 0x0044 @ minigame name text ID
+	.2byte 0x0045 @ minigame description text ID
+	.2byte 0x0046 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0047 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0048 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x55 @ minigame ID
+	.byte 0x12 @ icon ID
+	.2byte 0x0049 @ minigame name text ID
+	.2byte 0x004A @ minigame description text ID
+	.2byte 0x004B @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x004C @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x56 @ minigame ID
+	.byte 0x13 @ icon ID
+	.2byte 0x004D @ minigame name text ID
+	.2byte 0x004E @ minigame description text ID
+	.2byte 0x004F @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0050 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0051 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x57 @ minigame ID
+	.byte 0x14 @ icon ID
+	.2byte 0x0052 @ minigame name text ID
+	.2byte 0x0053 @ minigame description text ID
+	.2byte 0x0054 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x59 @ minigame ID
+	.byte 0x16 @ icon ID
+	.2byte 0x0056 @ minigame name text ID
+	.2byte 0x0057 @ minigame description text ID
+	.2byte 0x0058 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0059 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x005A @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x5A @ minigame ID
+	.byte 0x17 @ icon ID
+	.2byte 0x005B @ minigame name text ID
+	.2byte 0x005C @ minigame description text ID
+	.2byte 0x005D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x005E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x005F @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x5B @ minigame ID
+	.byte 0x18 @ icon ID
+	.2byte 0x0060 @ minigame name text ID
+	.2byte 0x0061 @ minigame description text ID
+	.2byte 0x0062 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x5C @ minigame ID
+	.byte 0x19 @ icon ID
+	.2byte 0x0063 @ minigame name text ID
+	.2byte 0x0064 @ minigame description text ID
+	.2byte 0x0065 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0066 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0067 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x5D @ minigame ID
+	.byte 0x1A @ icon ID
+	.2byte 0x0068 @ minigame name text ID
+	.2byte 0x0069 @ minigame description text ID
+	.2byte 0x006A @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x006B @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x006C @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x5E @ minigame ID
+	.byte 0x1B @ icon ID
+	.2byte 0x006D @ minigame name text ID
+	.2byte 0x006E @ minigame description text ID
+	.2byte 0x006F @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0070 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0071 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x5F @ minigame ID
+	.byte 0x1C @ icon ID
+	.2byte 0x0072 @ minigame name text ID
+	.2byte 0x0073 @ minigame description text ID
+	.2byte 0x0074 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0075 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0076 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x60 @ minigame ID
+	.byte 0x1D @ icon ID
+	.2byte 0x0077 @ minigame name text ID
+	.2byte 0x0078 @ minigame description text ID
+	.2byte 0x0079 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x007A @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x20 @ minigame flags for menu (game type, show high score)
+	.byte 0x61 @ minigame ID
+	.byte 0x1E @ icon ID
+	.2byte 0x007B @ minigame name text ID
+	.2byte 0x007C @ minigame description text ID
+	.2byte 0x007D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x007E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x007F @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0080 @ minigame input 4 text ID
+	.byte 0x6A @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x10 @ minigame flags for menu (game type, show high score)
+	.byte 0x62 @ minigame ID
+	.byte 0x1F @ icon ID
+	.2byte 0x0081 @ minigame name text ID
+	.2byte 0x0082 @ minigame description text ID
+	.2byte 0x0083 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x65 @ minigame ID
+	.byte 0x22 @ icon ID
+	.2byte 0x0086 @ minigame name text ID
+	.2byte 0x0087 @ minigame description text ID
+	.2byte 0x0088 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0089 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x008A @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x66 @ minigame ID
+	.byte 0x23 @ icon ID
+	.2byte 0x008B @ minigame name text ID
+	.2byte 0x008C @ minigame description text ID
+	.2byte 0x008D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x008E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x008F @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x67 @ minigame ID
+	.byte 0x24 @ icon ID
+	.2byte 0x0090 @ minigame name text ID
+	.2byte 0x0091 @ minigame description text ID
+	.2byte 0x0092 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x68 @ minigame ID
+	.byte 0x25 @ icon ID
+	.2byte 0x0093 @ minigame name text ID
+	.2byte 0x0094 @ minigame description text ID
+	.2byte 0x0095 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0096 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x69 @ minigame ID
+	.byte 0x26 @ icon ID
+	.2byte 0x0097 @ minigame name text ID
+	.2byte 0x0098 @ minigame description text ID
+	.2byte 0x0099 @ minigame input 1 text ID
+	.byte 0x04 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x009A @ minigame input 2 text ID
+	.byte 0x05 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x6A @ minigame ID
+	.byte 0x27 @ icon ID
+	.2byte 0x009B @ minigame name text ID
+	.2byte 0x009C @ minigame description text ID
+	.2byte 0x009D @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x009E @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x009F @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x6B @ minigame ID
+	.byte 0x28 @ icon ID
+	.2byte 0x00A0 @ minigame name text ID
+	.2byte 0x00A1 @ minigame description text ID
+	.2byte 0x00A2 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00A3 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00A4 @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x6C @ minigame ID
+	.byte 0x29 @ icon ID
+	.2byte 0x00A5 @ minigame name text ID
+	.2byte 0x00A6 @ minigame description text ID
+	.2byte 0x00A7 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00A8 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x6D @ minigame ID
+	.byte 0x2A @ icon ID
+	.2byte 0x00A9 @ minigame name text ID
+	.2byte 0x00AA @ minigame description text ID
+	.2byte 0x00AB @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x6E @ minigame ID
+	.byte 0x2B @ icon ID
+	.2byte 0x00AC @ minigame name text ID
+	.2byte 0x00AD @ minigame description text ID
+	.2byte 0x00AE @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00AF @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x6F @ minigame ID
+	.byte 0x2C @ icon ID
+	.2byte 0x00B0 @ minigame name text ID
+	.2byte 0x00B1 @ minigame description text ID
+	.2byte 0x00B2 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00B3 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00B4 @ minigame input 3 text ID
+	.byte 0x03    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00B5 @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x70 @ minigame ID
+	.byte 0x2D @ icon ID
+	.2byte 0x00B6 @ minigame name text ID
+	.2byte 0x00B7 @ minigame description text ID
+	.2byte 0x00B8 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00B9 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00BA @ minigame input 3 text ID
+	.byte 0x05    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x02 @ minigame flags for menu (game type, show high score)
+	.byte 0x71 @ minigame ID
+	.byte 0x2E @ icon ID
+	.2byte 0x00BB @ minigame name text ID
+	.2byte 0x00BC @ minigame description text ID
+	.2byte 0x00BD @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00BE @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00BF @ minigame input 3 text ID
+	.byte 0x04    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00C0 @ minigame input 4 text ID
+	.byte 0x05 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x73 @ minigame ID
+	.byte 0x30 @ icon ID
+	.2byte 0x00C2 @ minigame name text ID
+	.2byte 0x00C3 @ minigame description text ID
+	.2byte 0x00C4 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00C5 @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00C6 @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00C7 @ minigame input 4 text ID
+	.byte 0xBC @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x74 @ minigame ID
+	.byte 0x31 @ icon ID
+	.2byte 0x00C8 @ minigame name text ID
+	.2byte 0x00C9 @ minigame description text ID
+	.2byte 0x00CA @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00CB @ minigame input 2 text ID
+	.byte 0x02 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00CC @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00CD @ minigame input 4 text ID
+	.byte 0xBC @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x76 @ minigame ID
+	.byte 0x33 @ icon ID
+	.2byte 0x00CF @ minigame name text ID
+	.2byte 0x00D0 @ minigame description text ID
+	.2byte 0x00D1 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00D2 @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00D3 @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x77 @ minigame ID
+	.byte 0x34 @ icon ID
+	.2byte 0x00D4 @ minigame name text ID
+	.2byte 0x00D5 @ minigame description text ID
+	.2byte 0x00D6 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x78 @ minigame ID
+	.byte 0x35 @ icon ID
+	.2byte 0x00D7 @ minigame name text ID
+	.2byte 0x00D8 @ minigame description text ID
+	.2byte 0x00D9 @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00DA @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00DB @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00DC @ minigame input 4 text ID
+	.byte 0x02 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x03 @ minigame flags for menu (game type, show high score)
+	.byte 0x79 @ minigame ID
+	.byte 0x36 @ icon ID
+	.2byte 0x00DD @ minigame name text ID
+	.2byte 0x00DE @ minigame description text ID
+	.2byte 0x00DF @ minigame input 1 text ID
+	.byte 0x01 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00E0 @ minigame input 2 text ID
+	.byte 0x01 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x00E1 @ minigame input 3 text ID
+	.byte 0x02    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x00E2 @ minigame input 4 text ID
+	.byte 0x02 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x00 @ does minigame use packed data 
+	.byte 0x00 @ minigame flags for menu (game type, show high score)
+	.byte 0x00 @ minigame ID
+	.byte 0x00 @ icon ID
+	.2byte 0x0000 @ minigame name text ID
+	.2byte 0x0000 @ minigame description text ID
+	.2byte 0x0000 @ minigame input 1 text ID
+	.byte 0x00 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 2 text ID
+	.byte 0x00 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	.byte 0x01 @ does minigame use packed data 
+	.byte 0x01 @ minigame flags for menu (game type, show high score)
+	.byte 0x7B @ minigame ID
+	.byte 0x21 @ icon ID
+	.2byte 0x00E4 @ minigame name text ID
+	.2byte 0x00E5 @ minigame description text ID
+	.2byte 0x00E6 @ minigame input 1 text ID
+	.byte 0x02 @ minigame input 1 button ID
+	.byte 0x00    
+	.2byte 0x00E7 @ minigame input 2 text ID
+	.byte 0x03 @ minigame input 2 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 3 text ID
+	.byte 0x00    @minigame input 3 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 4 text ID
+	.byte 0x00 @ minigame input 4 button ID
+	.byte 0x00    
+	.2byte 0x0000 @ minigame input 5 text ID
+	.byte 0x00 @ minigame input 5 button ID
+	.byte 0x00
+
+	
+	.GLOBAL game_data_080781D8
+game_data_080781D8:
+	.INCBIN "us_baserom.gba", 0x781D8, 0x7E846-0x781D8
+	.2byte 0x0000
+		
+	.GLOBAL gMinigameInstructionsTextPal_0807E848
+gMinigameInstructionsTextPal_0807E848:
+	.INCBIN "us_baserom.gba", 0x7E848, 0x7f4c0-0x7E848
 	
 	.GLOBAL gMenuScrollSpeed_0807F4C0
 gMenuScrollSpeed_0807F4C0:
@@ -438,7 +3185,28 @@ gUnknown_081284F8:
 
 	.GLOBAL gUnknown_0812851C
 gUnknown_0812851C:
-	.INCBIN "us_baserom.gba", 0x12851C, 0x14F70C-0x12851C
+	.INCBIN "us_baserom.gba", 0x12851C, 0x13A8AC-0x12851C
+
+
+	.GLOBAL gMinigameInstructionsBG0Pal_0813A8AC
+gMinigameInstructionsBG0Pal_0813A8AC:
+	.INCBIN "us_baserom.gba", 0x13A8AC, 0x13A8D0-0x13A8AC
+
+	.GLOBAL gMinigameInstructionsMap_0813A8D0
+gMinigameInstructionsMap_0813A8D0:
+	.INCBIN "us_baserom.gba", 0x13A8D0, 0x13A984-0x13A8D0
+
+	.GLOBAL gMinigameInstructionsGFX1_0813A984
+gMinigameInstructionsGFX1_0813A984:
+	.INCBIN "us_baserom.gba", 0x13A984, 0x13AF7C-0x13A984
+
+	.GLOBAL gMinigameInstructionsBG1Pal_0813AF7C
+gMinigameInstructionsBG1Pal_0813AF7C:
+	.INCBIN "us_baserom.gba", 0x13AF7C, 0x13AFA0-0x13AF7C
+
+	.GLOBAL gMinigameInstructionsGFX2_0813AFA0
+gMinigameInstructionsGFX2_0813AFA0:
+	.INCBIN "us_baserom.gba", 0x13AFA0, 0x14F70C-0x13AFA0
 
 	.GLOBAL gUnknown_0814F70C
 gUnknown_0814F70C:

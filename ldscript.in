@@ -11,7 +11,7 @@ SECTIONS
 		asm/rom_header.o(.text);
 		asm/crt0.o(.text);
 		asm/rom0.o(.text);
-		asm/minigame_instructions.o(.text);
+		src/minigame_instructions.o(.text);
 		asm/rom_80025B8.o(.text);
 		asm/text_related_8003DAC.o(.text);
 		asm/rom_800648c.o(.text);
@@ -183,6 +183,8 @@ SECTIONS
 	.ewram (NOLOAD) :
 	ALIGN(4)
 	{
+		. = 0x00030000; gUnknown_02030000 = .;
+		. = 0x00037EB0; gUnknown_02037EB0 = .;
 		. = 0x0003A460; *libc.a:impure.o(.data);
 		. = 0x0003A750; *libc.a:locale.o(.data);
 		. = 0x0003A764; *libc.a:mallocr.o(.data);
@@ -192,6 +194,7 @@ SECTIONS
 	.iwram (NOLOAD) :
 	ALIGN(4)
 	{
+		. = 0x00001400; gUnknown_03001400 = .;
 		. = 0x00001E08; *libgcc.a:dp-bit.o(.bss);
 		*libgcc.a:fp-bit.o(.bss);
 		*libc.a:syscalls.o(.bss);

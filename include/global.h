@@ -148,7 +148,9 @@ struct struct_030024E0 {
     u16 unk10;
     u16 unk12;
     u16 unk14;
-    u8 pad16[0x4A - 0x16];
+    u16 unk16;
+    u16 unk18;
+    u8 pad1A[0x4A - 0x1A];
     u16 unk4A;
     u16 unk4C;
     u8 unk4E;
@@ -161,15 +163,45 @@ struct struct_03004400  {
     u32 unk0;
     u8 unk4;
     u8 unk5;
+    u8 unk6;
+    u8 unk7;
+    u8 unk8;  
+    u8 unk9;  
+    u8 unkA;
+    u8 unkB;
+    u8 unkC;
+    u8 currentMinigameID;
+    
     
 };
 
 extern struct struct_03004400 gUnknown_03004400;
 
+struct minigame_info_thing {
+    u16 input_1_text_id;
+    u8 input_1_btn_id;
+    u8 unkB;
+};
+
+struct minigame_info {
+
+    u8 game_uses_pack_data;
+    u8 menu_flags;
+    u8 minigame_id;
+    u8 icon_id;
+    u16 game_text_id;
+    u16 game_desc_id;
+	struct minigame_info_thing thing[5];
+};
+
+extern struct minigame_info gMinigameInfo_08077448[];
+
 extern u16 gUnknown_0300252C;
-extern u16 gUnknown_030024B0;
+extern s16 gUnknown_030024B0;
 extern u8 gUnknown_0300252F;
 extern u16 gUnknown_0300252A;
+
+extern u8 gUnknown_03001400;
 
 extern u32 gUnknown_0814F72C;
 extern u32 gUnknown_0814F70C;
@@ -201,14 +233,22 @@ extern u32 gUnknown_0808EA6C;
 
 extern u32 gHudsonLogoGFX_0811E60C;
 extern u32 gHudsonLogoMap_0811E470;
-extern u32 gHudsonLogoPal_0811E42C;
+extern u16 gHudsonLogoPal_0811E42C;
 extern u32 gNintendoLogoGFX_0811DFE8;
 extern u32 gNintendoLogoMap_0811DE98;
-extern u32 gNintendoLogoPal_0811DE50;
+extern u16 gNintendoLogoPal_0811DE50;
 
+extern u16 gMinigameInfoBtnTileIndex_08077248[8];
+
+extern u16 gMinigameInstructionsBG0Pal_0813A8AC;
+extern u16 gMinigameInstructionsBG1Pal_0813AF7C;
+extern u32 gMinigameInstructionsGFX1_0813A984;
+extern u32 gMinigameInstructionsGFX2_0813AFA0;
+extern u32 gMinigameInstructionsMap_0813A8D0;
+extern u32 gMinigameInstructionsTextPal_0807E848;
 
 void DecompressData_08008374(s32*, s32);
-void LoadPalette_08008308(s32*, s32);
+void LoadPalette_08008308(u16*, s32);
 void LoadTileMap_080083CC(s32*, s32, s32, s32);
 void sub_080072F4(s32);
 
@@ -299,6 +339,24 @@ extern void sub_080506E4();
 extern void sub_08050AAC();
 extern void sub_08050EBC();
 extern void sub_0805114C();
+
+s32 sub_0800193C(u8, u16);
+void sub_08001FB0(u16, u16, u8, u8, u8, u8);
+void sub_0800201C(u16, u16, u8, u8, u8, u8);
+u8 sub_080045FC(s32, s32);
+void sub_08004D94(s32, s32, s32, s32, s32);
+void sub_08004E6C(s32, s32, s32, s32, s32, s32);
+
+void sub_080034DC();
+void sub_080057D0();
+void sub_080038F4(s32, s8*, s32);
+void sub_08003938(s32, s32, s8*, s32);
+void sub_08003A30(s32);
+u8 sub_08007310();
+u8 sub_080038E8();
+void sub_080077EC(s32, s32);
+
+u32 sub_08007760(u8);
 
 #define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 

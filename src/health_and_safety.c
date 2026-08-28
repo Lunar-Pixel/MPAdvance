@@ -10,10 +10,11 @@ void HealthSafetyScreen_0806E6F4(void) {
     s32 var_r2;
     s32 var_r6;
     s32 var_r7;
+	u16 temp1;
 
     gUnknown_03004400.unk5 = 1;
-    CpuFastFill16(0, (void*)0x06000000, 0x18000);
-    CpuFastFill16(0, (void*)0x05000000, 0x400);
+    CpuFastFill16(0, (void*)VRAM, VRAM_SIZE);
+    CpuFastFill16(0, (void*)PLTT, PLTT_SIZE);
     gUnknown_030024E0.unk0 = 0x300;
     gUnknown_030024E0.unk2 = 0x1001;
     gUnknown_030024E0.unk4 = 0x1100;
@@ -22,7 +23,7 @@ void HealthSafetyScreen_0806E6F4(void) {
     gUnknown_030024E0.unk14 = 0;
     gUnknown_030024E0.unk12 = 0;
     LZ77UnCompVram(&gUnknown_0814F72C, (void*)0x06000020);
-    CpuCopy16(&gUnknown_0814F70C, (void*)0x05000000, 0x20);
+    CpuCopy16(&gUnknown_0814F70C, (void*)PLTT, 0x20);
 
     var_r1 = (s16* )0x06008000;
     var_r3 = 1;
@@ -58,7 +59,8 @@ void HealthSafetyScreen_0806E6F4(void) {
 
     var_r4 = 0x1000;
     var_r7 = 1;
-    if (gUnknown_030024B0 == 0) {
+	temp1 = (u16)gUnknown_030024B0;
+    if (temp1 == 0) {
         for (var_r6 = 0xE0F; var_r6 != 0; var_r6--) {
             gUnknown_030024E0.unk4C = ((var_r4 >> 8) & 0x1F) | 0x1000;
             if (var_r7 == 0) {
@@ -75,7 +77,8 @@ void HealthSafetyScreen_0806E6F4(void) {
                 }
             }
             ProcSleep_08002B98(1);
-            if (gUnknown_030024B0 != 0) {
+            temp1 = (u16)gUnknown_030024B0;
+            if (temp1 != 0) {
                 break;
             }
         }

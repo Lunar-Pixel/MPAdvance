@@ -3,10 +3,8 @@
 #include "gba/syscall.h"
 
 void BootLogos_080605B4(void) {
-    s32 sp0;
 
-    sp0 = 0;
-    CpuFastSet(&sp0, (u8*)0x06000000, 0x01006000);
+	CpuFastFill16(0, (u8*)VRAM, VRAM_SIZE);
     gUnknown_030024E0.unk0 = 0x100;
     gUnknown_030024E0.unk2 = 0x1000;
     gUnknown_030024E0.unkA = 0;

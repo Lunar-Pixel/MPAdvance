@@ -2888,7 +2888,7 @@ load_minigame_dll_8001884: @ 0x08001884
 	lsls r0, r1, #3
 	subs r0, r0, r1
 	lsls r0, r0, #2
-	ldr r2, _0800191C @ =0x08077448
+	ldr r2, _0800191C @ =gMinigameInfo_08077448
 	adds r7, r0, r2
 	ldr r0, _08001920 @ =0x08077258
 	lsls r1, r1, #2
@@ -2942,7 +2942,7 @@ _080018FE:
 	bx r0
 	.align 2, 0
 _08001918: .4byte 0x03004400
-_0800191C: .4byte 0x08077448
+_0800191C: .4byte gMinigameInfo_08077448
 _08001920: .4byte gCmprGameGaddgetCode_08077258
 _08001924: .4byte 0x0500C000
 _08001928: .4byte 0x0854F2DC
@@ -3004,7 +3004,7 @@ sub_08001980: @ 0x08001980
 	lsrs r2, r0, #0x18
 	cmp r2, #0x7b
 	bhi _080019A4
-	ldr r1, _080019A0 @ =0x08077448
+	ldr r1, _080019A0 @ =gMinigameInfo_08077448
 	lsls r0, r2, #3
 	subs r0, r0, r2
 	lsls r0, r0, #2
@@ -3014,7 +3014,7 @@ sub_08001980: @ 0x08001980
 	bl sub_0800193C
 	b _080019A6
 	.align 2, 0
-_080019A0: .4byte 0x08077448
+_080019A0: .4byte gMinigameInfo_08077448
 _080019A4:
 	movs r0, #0
 _080019A6:
@@ -3029,7 +3029,7 @@ sub_080019AC: @ 0x080019AC
 	lsrs r2, r0, #0x18
 	cmp r2, #0x7b
 	bhi _080019D0
-	ldr r1, _080019CC @ =0x08077448
+	ldr r1, _080019CC @ =gMinigameInfo_08077448
 	lsls r0, r2, #3
 	subs r0, r0, r2
 	lsls r0, r0, #2
@@ -3039,7 +3039,7 @@ sub_080019AC: @ 0x080019AC
 	bl sub_08001960
 	b _080019D2
 	.align 2, 0
-_080019CC: .4byte 0x08077448
+_080019CC: .4byte gMinigameInfo_08077448
 _080019D0:
 	movs r0, #0
 _080019D2:
@@ -3054,7 +3054,7 @@ sub_080019D8: @ 0x080019D8
 	lsrs r2, r0, #0x18
 	cmp r2, #0x7b
 	bhi _080019F8
-	ldr r0, _080019F4 @ =0x08077448
+	ldr r0, _080019F4 @ =gMinigameInfo_08077448
 	lsls r1, r2, #3
 	subs r1, r1, r2
 	lsls r1, r1, #2
@@ -3064,7 +3064,7 @@ sub_080019D8: @ 0x080019D8
 	lsrs r0, r0, #0x1c
 	b _080019FA
 	.align 2, 0
-_080019F4: .4byte 0x08077448
+_080019F4: .4byte gMinigameInfo_08077448
 _080019F8:
 	movs r0, #0
 _080019FA:
@@ -3195,7 +3195,7 @@ sub_08001ADC: @ 0x08001ADC
 	lsrs r2, r0, #0x18
 	cmp r2, #0x7b
 	bhi _08001AF8
-	ldr r0, _08001AF4 @ =0x08077448
+	ldr r0, _08001AF4 @ =gMinigameInfo_08077448
 	lsls r1, r2, #3
 	subs r1, r1, r2
 	lsls r1, r1, #2
@@ -3203,7 +3203,7 @@ sub_08001ADC: @ 0x08001ADC
 	ldrb r0, [r1, #3]
 	b _08001AFA
 	.align 2, 0
-_08001AF4: .4byte 0x08077448
+_08001AF4: .4byte gMinigameInfo_08077448
 _08001AF8:
 	movs r0, #0
 _08001AFA:
@@ -3218,7 +3218,7 @@ sub_08001B00: @ 0x08001B00
 	lsrs r2, r0, #0x18
 	cmp r2, #0x7b
 	bhi _08001B20
-	ldr r0, _08001B1C @ =0x08077448
+	ldr r0, _08001B1C @ =gMinigameInfo_08077448
 	lsls r1, r2, #3
 	subs r1, r1, r2
 	lsls r1, r1, #2
@@ -3230,7 +3230,7 @@ sub_08001B00: @ 0x08001B00
 thunk_sub_08001b22: @ 0x08001B18
 	b _08001B22
 	.align 2, 0
-_08001B1C: .4byte 0x08077448
+_08001B1C: .4byte gMinigameInfo_08077448
 _08001B20:
 	movs r0, #0
 _08001B22:
