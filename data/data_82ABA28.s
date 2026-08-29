@@ -339,7 +339,7 @@ gBillBounceCmprCode:
 
 	.GLOBAL gBunnyBeltCmprCode
 gBunnyBeltCmprCode:
-	.INCBIN "subgame/minigame/bunny_belt/bunny_belt.lz"
+	.INCBIN "subgame/minigame/bunny_belt.lz"
 
 	.GLOBAL gPestAsideCmprCode
 gPestAsideCmprCode:
