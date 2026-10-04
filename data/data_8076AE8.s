@@ -3119,7 +3119,264 @@ gUnknown_0808E9BC:
 	
 	.GLOBAL gUnknown_0808EA6C
 gUnknown_0808EA6C:
-	.INCBIN "us_baserom.gba", 0x8EA6C, 0x11DE50-0x8EA6C
+	.INCBIN "us_baserom.gba", 0x8EA6C, 0x8F144-0x8EA6C
+
+
+
+	.GLOBAL gUnknown_0808F144
+gUnknown_0808F144:
+	.INCBIN "us_baserom.gba", 0x8F144, 0x8F154-0x8F144
+
+	.GLOBAL gUnknown_0808F154
+gUnknown_0808F154:
+	.INCBIN "us_baserom.gba", 0x8F154, 0x8F164-0x8F154
+
+	.GLOBAL gUnknown_0808F164
+gUnknown_0808F164:
+	.INCBIN "us_baserom.gba", 0x8F164, 0x8F174-0x8F164
+
+	.GLOBAL gUnknown_0808F174
+gUnknown_0808F174:
+	.INCBIN "us_baserom.gba", 0x8F174, 0x8F184-0x8F174
+
+	.GLOBAL gUnknown_0808F184
+gUnknown_0808F184:
+	.INCBIN "us_baserom.gba", 0x8F184, 0x8F194-0x8F184
+
+	.GLOBAL gUnknown_0808F194
+gUnknown_0808F194:
+	.INCBIN "us_baserom.gba", 0x8F194, 0x8F1A4-0x8F194
+
+	.GLOBAL gUnknown_0808F1A4
+gUnknown_0808F1A4:
+	.INCBIN "us_baserom.gba", 0x8F1A4, 0x8F1B4-0x8F1A4
+
+
+	.GLOBAL gUnknown_0808F1B4
+gUnknown_0808F1B4:
+	.4byte gUnknown_0808F144
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1BC
+gUnknown_0808F1BC:
+	.4byte gUnknown_0808F154
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1C4
+gUnknown_0808F1C4:
+	.4byte gUnknown_0808F164
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1CC
+gUnknown_0808F1CC:
+	.4byte gUnknown_0808F174
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1D4
+gUnknown_0808F1D4:
+	.4byte gUnknown_0808F184
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1DC
+gUnknown_0808F1DC:
+	.4byte gUnknown_0808F194
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0808F1E4
+gUnknown_0808F1E4:
+	.4byte gUnknown_0808F1A4
+	.4byte 0x00000000
+
+
+	.GLOBAL gUnknown_0808F1EC
+gUnknown_0808F1EC:
+	.4byte sub_0805AD50
+	.4byte sub_0805ADAC
+	.4byte sub_0805B18C
+
+
+	.GLOBAL gUnknown_0808F1F8
+gUnknown_0808F1F8:
+	.INCBIN "us_baserom.gba", 0x8F1F8, 0x8F270-0x8F1F8
+
+	.GLOBAL gUnknown_0808F270
+gUnknown_0808F270:
+	.4byte sub_0805B514
+	.4byte sub_0805B518
+	.4byte sub_0805B55C
+	.4byte sub_0805B60C
+	
+	.GLOBAL gUnknown_0808F280
+gUnknown_0808F280:
+	.4byte sub_0805B7DC
+	.4byte sub_0805B7E0
+	.4byte sub_0805B878
+
+	.GLOBAL gUnknown_0808F28C
+gUnknown_0808F28C:
+	.INCBIN "us_baserom.gba", 0x8F28C, 0x8F29C-0x8F28C
+
+	.GLOBAL gUnknown_0808F29C
+gUnknown_0808F29C:
+	.INCBIN "us_baserom.gba", 0x8F29C, 0x8F2AC-0x8F29C
+
+	.GLOBAL gUnknown_0808F2AC
+gUnknown_0808F2AC:
+	.INCBIN "us_baserom.gba", 0x8F2AC, 0x8F2BC-0x8F2AC
+
+	.GLOBAL gUnknown_0808F2BC
+gUnknown_0808F2BC:
+	.INCBIN "us_baserom.gba", 0x8F2BC, 0x8F2CC-0x8F2BC
+
+	.GLOBAL gIntroCharCutoutStartPos_0808F2CC @intro cutout start position
+gIntroCharCutoutStartPos_0808F2CC:
+	.INCBIN "us_baserom.gba", 0x8F2CC, 0x8F2DC-0x8F2CC
+
+	.GLOBAL gIntroCharCutoutEndPos_0808F2DC @intro cutout end position
+gIntroCharCutoutEndPos_0808F2DC:
+	.INCBIN "us_baserom.gba", 0x8F2DC, 0x8F2EC-0x8F2DC
+
+	.GLOBAL gUnknown_0808F2EC
+gUnknown_0808F2EC:
+	.INCBIN "us_baserom.gba", 0x8F2EC, 0x107c48-0x8F2EC
+
+
+@ opening sprites	
+	.GLOBAL gUnknown_08107C48 @ palette
+gUnknown_08107C48:
+	.INCBIN "us_baserom.gba", 0x107c48, 0x107D8C-0x107c48
+	
+	.GLOBAL gUnknown_08107D8C @ tilemap
+gUnknown_08107D8C:
+	.INCBIN "us_baserom.gba", 0x107D8C, 0x108338-0x107D8C
+	
+	.GLOBAL gUnknown_08108338 @ tilemap
+gUnknown_08108338:
+	.INCBIN "us_baserom.gba", 0x108338, 0x1088E4-0x108338
+	
+	.GLOBAL gUnknown_081088E4 @ tilemap
+gUnknown_081088E4:
+	.INCBIN "us_baserom.gba", 0x1088E4, 0x108E90-0x1088E4
+	
+	.GLOBAL gUnknown_08108E90 @ graphics
+gUnknown_08108E90:
+	.INCBIN "us_baserom.gba", 0x108E90, 0x10E26C-0x108E90
+
+	
+@ tumble opening sprite
+	.GLOBAL gUnknown_0810E26C @ palette
+gUnknown_0810E26C:
+	.INCBIN "us_baserom.gba", 0x10E26C, 0x10E290-0x10E26C
+
+	.GLOBAL gUnknown_0810E290 @ oam?
+gUnknown_0810E290:
+	.INCBIN "us_baserom.gba", 0x10E290, 0x10E298-0x10E290
+
+	.GLOBAL gUnknown_0810E298 @ oam? (sprite pieces)
+gUnknown_0810E298:
+	.INCBIN "us_baserom.gba", 0x10E298, 0x10E2B4-0x10E298
+
+	.GLOBAL gUnknown_0810E2B4
+gUnknown_0810E2B4:
+	.4byte gUnknown_0810E298
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0810E2BC
+gUnknown_0810E2BC:
+	.4byte gUnknown_0810E290
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0810E2C4 @ sprite graphics
+gUnknown_0810E2C4:
+	.INCBIN "us_baserom.gba", 0x10E2C4, 0x1106D0-0x10E2C4
+
+
+@ toad opening sprite
+	.GLOBAL gUnknown_081106D0 @ palette
+gUnknown_081106D0:
+	.INCBIN "us_baserom.gba", 0x1106D0, 0x1106F4-0x1106D0
+
+	.GLOBAL gUnknown_081106F4 @ oam?
+gUnknown_081106F4:
+	.INCBIN "us_baserom.gba", 0x1106F4, 0x1106FC-0x1106F4
+
+	.GLOBAL gUnknown_081106FC @ oam? (sprite pieces)
+gUnknown_081106FC:
+	.INCBIN "us_baserom.gba", 0x1106FC, 0x110718-0x1106FC
+
+	.GLOBAL gUnknown_08110718
+gUnknown_08110718:
+	.4byte gUnknown_081106FC
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08110720
+gUnknown_08110720:
+	.4byte gUnknown_081106F4
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08110728 @ sprite graphics
+gUnknown_08110728:
+	.INCBIN "us_baserom.gba", 0x110728, 0x112B34-0x110728
+
+@ toadette opening sprite
+	.GLOBAL gUnknown_08112B34 @ palette
+gUnknown_08112B34:
+	.INCBIN "us_baserom.gba", 0x112B34, 0x112B58-0x112B34
+
+	.GLOBAL gUnknown_08112B58 @ oam?
+gUnknown_08112B58:
+	.INCBIN "us_baserom.gba", 0x112B58, 0x112B60-0x112B58
+
+	.GLOBAL gUnknown_08112B60 @ oam? (sprite pieces)
+gUnknown_08112B60:
+	.INCBIN "us_baserom.gba", 0x112B60, 0x112B7C-0x112B60
+
+	.GLOBAL gUnknown_08112B7C
+gUnknown_08112B7C:
+	.4byte gUnknown_08112B60
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08112B84
+gUnknown_08112B84:
+	.4byte gUnknown_08112B58
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08112B8C @ sprite graphics
+gUnknown_08112B8C:
+	.INCBIN "us_baserom.gba", 0x112B8C, 0x114F98-0x112B8C
+
+@ egadd opening sprite
+	.GLOBAL gUnknown_08114F98 @ palette
+gUnknown_08114F98:
+	.INCBIN "us_baserom.gba", 0x114F98, 0x114FBC-0x114F98
+
+	.GLOBAL gUnknown_08114FBC @ oam?
+gUnknown_08114FBC:
+	.INCBIN "us_baserom.gba", 0x114FBC, 0x114FC4-0x114FBC
+
+	.GLOBAL gUnknown_08114FC4 @ oam? (sprite pieces)
+gUnknown_08114FC4:
+	.INCBIN "us_baserom.gba", 0x114FC4, 0x114FE0-0x114FC4
+
+	.GLOBAL gUnknown_08114FE0
+gUnknown_08114FE0:
+	.4byte gUnknown_08114FC4
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08114FE8
+gUnknown_08114FE8:
+	.4byte gUnknown_08114FBC
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_08114FF0 @ sprite graphics
+gUnknown_08114FF0:
+	.INCBIN "us_baserom.gba", 0x114FF0, 0x11768C-0x114FF0
+
+
+@ bowser pipe house related
+	.GLOBAL gUnknown_0811768C @ palette
+gUnknown_0811768C:
+	.INCBIN "us_baserom.gba", 0x11768C, 0x11DE50-0x11768C
 
 
 @ nintendo logo
@@ -3206,12 +3463,145 @@ gMinigameInstructionsBG1Pal_0813AF7C:
 
 	.GLOBAL gMinigameInstructionsGFX2_0813AFA0
 gMinigameInstructionsGFX2_0813AFA0:
-	.INCBIN "us_baserom.gba", 0x13AFA0, 0x14F70C-0x13AFA0
+	.INCBIN "us_baserom.gba", 0x13AFA0, 0x14F234-0x13AFA0
 
+
+@ star sparkle dust sprite data
+	.GLOBAL gUnknown_0814F234 @ palette
+gUnknown_0814F234:
+	.INCBIN "us_baserom.gba", 0x14F234, 0x14F258-0x14F234
+
+	.GLOBAL gUnknown_0814F258
+gUnknown_0814F258:
+	.INCBIN "us_baserom.gba", 0x14F258, 0x14F26C-0x14F258
+
+	.GLOBAL gUnknown_0814F26C
+gUnknown_0814F26C:
+	.INCBIN "us_baserom.gba", 0x14F26C, 0x14F274-0x14F26C
+
+	.GLOBAL gUnknown_0814F274
+gUnknown_0814F274:
+	.INCBIN "us_baserom.gba", 0x14F274, 0x14F27C-0x14F274
+
+	.GLOBAL gUnknown_0814F27C
+gUnknown_0814F27C:
+	.INCBIN "us_baserom.gba", 0x14F27C, 0x14F284-0x14F27C
+
+	.GLOBAL gUnknown_0814F284
+gUnknown_0814F284:
+	.INCBIN "us_baserom.gba", 0x14F284, 0x14F28C-0x14F284
+
+	.GLOBAL gUnknown_0814F28C
+gUnknown_0814F28C:
+	.4byte gUnknown_0814F26C
+	.4byte gUnknown_0814F274
+	.4byte gUnknown_0814F27C
+	.4byte gUnknown_0814F284
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0814F2A0
+gUnknown_0814F2A0:
+	.4byte gUnknown_0814F258
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0814F2A8 @ graphics
+gUnknown_0814F2A8:
+	.INCBIN "us_baserom.gba", 0x14F2A8, 0x14F318-0x14F2A8
+
+
+@ star sprite data
+	.GLOBAL gUnknown_0814F318 @ palette
+gUnknown_0814F318:
+	.INCBIN "us_baserom.gba", 0x14F318, 0x14F33C-0x14F318
+
+	.GLOBAL gUnknown_0814F33C @ sprite animation related
+gUnknown_0814F33C:
+	.INCBIN "us_baserom.gba", 0x14F33C, 0x14F344-0x14F33C
+
+	.GLOBAL gUnknown_0814F344 @ unknown
+gUnknown_0814F344:
+	.INCBIN "us_baserom.gba", 0x14F344, 0x14F368-0x14F344
+
+	.GLOBAL gUnknown_0814F368 @ unknown
+gUnknown_0814F368:
+	.INCBIN "us_baserom.gba", 0x14F368, 0x14F374-0x14F368
+	
+	.GLOBAL gUnknown_0814F374
+gUnknown_0814F374:
+	.INCBIN "us_baserom.gba", 0x14F374, 0x14F388-0x14F374
+
+	.GLOBAL gUnknown_0814F388
+gUnknown_0814F388:
+	.INCBIN "us_baserom.gba", 0x14F388, 0x14F3A2-0x14F388
+
+	.GLOBAL gUnknown_0814F3A2
+gUnknown_0814F3A2:
+	.INCBIN "us_baserom.gba", 0x14F3A2, 0x14F3BC-0x14F3A2
+
+	.GLOBAL gUnknown_0814F3BC
+gUnknown_0814F3BC:
+	.INCBIN "us_baserom.gba", 0x14F3BC, 0x14F3CA-0x14F3BC
+
+	.GLOBAL gUnknown_0814F3CA
+gUnknown_0814F3CA:
+	.INCBIN "us_baserom.gba", 0x14F3CA, 0x14F3E4-0x14F3CA
+
+	.GLOBAL gUnknown_0814F3E4
+gUnknown_0814F3E4:
+	.INCBIN "us_baserom.gba", 0x14F3E4, 0x14F404-0x14F3E4
+
+	.GLOBAL gUnknown_0814F404
+gUnknown_0814F404:
+	.INCBIN "us_baserom.gba", 0x14F404, 0x14F41E-0x14F404
+
+	.GLOBAL gUnknown_0814F41E
+gUnknown_0814F41E:
+	.INCBIN "us_baserom.gba", 0x14F41E, 0x14F42C-0x14F41E
+
+	.GLOBAL gUnknown_0814F42C
+gUnknown_0814F42C:
+	.INCBIN "us_baserom.gba", 0x14F42C, 0x14F446-0x14F42C
+
+	.GLOBAL gUnknown_0814F446
+gUnknown_0814F446:
+	.INCBIN "us_baserom.gba", 0x14F446, 0x14F468-0x14F446
+
+	.GLOBAL gUnknown_0814F468
+gUnknown_0814F468:
+	.4byte gUnknown_0814F388
+	.4byte gUnknown_0814F3A2
+	.4byte gUnknown_0814F3BC
+	.4byte gUnknown_0814F3CA
+	.4byte gUnknown_0814F3E4
+	.4byte gUnknown_0814F404
+	.4byte gUnknown_0814F41E
+	.4byte gUnknown_0814F42C
+	.4byte gUnknown_0814F446
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0814F490
+gUnknown_0814F490:
+	.4byte gUnknown_0814F33C
+	.4byte gUnknown_0814F344
+	.4byte gUnknown_0814F368
+	.4byte gUnknown_0814F374
+	.4byte 0x00000000
+
+	.GLOBAL gUnknown_0814F4A4 @ graphics
+gUnknown_0814F4A4:
+	.INCBIN "us_baserom.gba", 0x14F4A4, 0x14F70C-0x14F4A4
+
+
+@ health and safety
 	.GLOBAL gUnknown_0814F70C
 gUnknown_0814F70C:
 	.INCBIN "us_baserom.gba", 0x14F70C, 0x14F72C-0x14F70C
 
 	.GLOBAL gUnknown_0814F72C
 gUnknown_0814F72C:
-	.INCBIN "us_baserom.gba", 0x14F72C, 0x1AEE9C-0x14F72C
+	.INCBIN "us_baserom.gba", 0x14F72C, 0x150404-0x14F72C
+
+
+	.GLOBAL gUnknown_08150404
+gUnknown_08150404:
+	.INCBIN "us_baserom.gba", 0x150404, 0x1AEE9C-0x150404

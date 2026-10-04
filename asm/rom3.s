@@ -413,13 +413,13 @@ _08030508:
 	bl m4aSongNumStart
 	b _08030556
 _08030510:
-	ldr r0, _08030520 @ =0x030056F0
+	ldr r0, _08030520 @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	bl sub_0803B890
 	b _08030580
 	.align 2, 0
-_08030520: .4byte 0x030056F0
+_08030520: .4byte gMplayInfo
 _08030524:
 	ldr r1, _08030548 @ =0x02034BF0
 	ldr r3, _0803054C @ =0x00000236
@@ -444,21 +444,21 @@ _08030550:
 	movs r0, #0xf5
 	bl m4aSongNumStart
 _08030556:
-	ldr r0, _08030564 @ =0x030056F0
+	ldr r0, _08030564 @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	bl sub_0803B8F0
 	b _08030580
 	.align 2, 0
-_08030564: .4byte 0x030056F0
+_08030564: .4byte gMplayInfo
 _08030568:
-	ldr r0, _08030578 @ =0x030056F0
+	ldr r0, _08030578 @ =gMplayInfo
 	movs r1, #2
 	bl m4aMPlayFadeOut
 	bl sub_0803B868
 	b _08030580
 	.align 2, 0
-_08030578: .4byte 0x030056F0
+_08030578: .4byte gMplayInfo
 _0803057C:
 	bl sub_0803B868
 _08030580:
@@ -5661,7 +5661,7 @@ _0803306C:
 	strh r4, [r1, #4]
 	movs r0, #2
 	strb r0, [r1, #1]
-	ldr r0, _080330B4 @ =0x030056F0
+	ldr r0, _080330B4 @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	movs r3, #0xa0
@@ -5679,7 +5679,7 @@ _0803306C:
 	.align 2, 0
 _080330AC: .4byte 0x08089244
 _080330B0: .4byte 0x030013C0
-_080330B4: .4byte 0x030056F0
+_080330B4: .4byte gMplayInfo
 _080330B8:
 	bl sub_08008E9C
 	cmp r0, #0
@@ -6311,7 +6311,7 @@ _0803360C:
 	movs r2, #1
 	orrs r0, r2
 	str r0, [r1]
-	ldr r0, _0803374C @ =0x030056F0
+	ldr r0, _0803374C @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	bl sub_0803A5EC
@@ -6435,7 +6435,7 @@ _0803373C: .4byte 0x02034BF0
 _08033740: .4byte gUnknown_030024E0
 _08033744: .4byte 0x0000FDFF
 _08033748: .4byte 0x02031050
-_0803374C: .4byte 0x030056F0
+_0803374C: .4byte gMplayInfo
 _08033750: .4byte 0x080AB888
 _08033754: .4byte 0x06009C00
 _08033758: .4byte 0x08087460
@@ -22002,7 +22002,7 @@ _0803B408:
 	strb r0, [r2]
 	ldr r0, _0803B4E8 @ =0x000003FA
 	bl m4aSongNumStart
-	ldr r0, _0803B4EC @ =0x030056F0
+	ldr r0, _0803B4EC @ =gMplayInfo
 	movs r1, #3
 	bl m4aMPlayFadeOut
 	ldr r1, _0803B4F0 @ =0x030024E0
@@ -22024,7 +22024,7 @@ _0803B4DC: .4byte 0x0807F240
 _0803B4E0: .4byte 0x000009A4
 _0803B4E4: .4byte 0x000009A6
 _0803B4E8: .4byte 0x000003FA
-_0803B4EC: .4byte 0x030056F0
+_0803B4EC: .4byte gMplayInfo
 _0803B4F0: .4byte gUnknown_030024E0
 _0803B4F4: .4byte 0x00000CDC
 _0803B4F8:
@@ -23134,7 +23134,7 @@ sub_0803BE60: @ 0x0803BE60
 	.align 2, 0
 _0803BE74: .4byte 0x030013C4
 _0803BE78:
-	ldr r0, _0803BE8C @ =0x030056F0
+	ldr r0, _0803BE8C @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	bl sub_0803B868
@@ -23143,7 +23143,7 @@ _0803BE78:
 	strb r0, [r1, #2]
 	b _0803BE92
 	.align 2, 0
-_0803BE8C: .4byte 0x030056F0
+_0803BE8C: .4byte gMplayInfo
 _0803BE90:
 	strb r0, [r1]
 _0803BE92:
@@ -27139,7 +27139,7 @@ sub_0803DE74: @ 0x0803DE74
 	.align 2, 0
 _0803DE88: .4byte 0x030013CC
 _0803DE8C:
-	ldr r0, _0803DEA4 @ =0x030056F0
+	ldr r0, _0803DEA4 @ =gMplayInfo
 	movs r1, #3
 	bl m4aMPlayFadeOut
 	movs r0, #0x30
@@ -27149,7 +27149,7 @@ _0803DE8C:
 	bl FadeOut_080089E8
 	b _0803DEAE
 	.align 2, 0
-_0803DEA4: .4byte 0x030056F0
+_0803DEA4: .4byte gMplayInfo
 _0803DEA8:
 	movs r0, #1
 	bl ProcSleep_08002B98

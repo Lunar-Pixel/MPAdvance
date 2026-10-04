@@ -137,24 +137,46 @@ struct BuildingRelatedStruct {
 };
 
 struct struct_030024E0 {
-    u16 unk0;
-    u16 unk2;
-    u16 unk4;
-    u16 unk6;
-    u16 unk8;
-    u16 unkA;
-    u16 unkC;
-    u16 unkE;
-    u16 unk10;
-    u16 unk12;
-    u16 unk14;
-    u16 unk16;
-    u16 unk18;
-    u8 pad1A[0x4A - 0x1A];
-    u16 unk4A;
-    u16 unk4C;
-    u8 unk4E;
-    u8 unk4F;
+    u16 DISPCNT;
+    u16 BG0CNT;
+    u16 BG1CNT;
+    u16 BG2CNT;
+    u16 BG3CNT;
+    u16 BG0HOFS;
+    u16 BG0VOFS;
+    u16 BG1HOFS;
+    u16 BG1VOFS;
+    u16 BG2HOFS;
+    u16 BG2VOFS;
+    u16 BG3HOFS;
+    u16 BG3VOFS;
+    u16 BG2PA;
+    u16 BG2PB;
+    u16 BG2PC;
+    u16 BG2PD;
+    u16 unk22;
+    u32 BG2X;
+    u32 BG2Y;
+    u16 BG3PA;
+    u16 BG3PB;
+    u16 BG3PC;
+    u16 BG3PD;
+    u32 BG3X;
+    u32 BG3Y;
+    u16 WIN0H;
+    u16 WIN1H;
+    u16 WIN0V;
+    u16 WIN1V;
+    u8 WININ_1;
+    u8 WININ_2;
+    u8 WINOUT_1;
+    u8 WINOUT_2;
+    u8 MOSAIC_1;
+    u8 MOSAIC_2;
+    u16 BLDCNT;
+    u16 BLDALPHA;
+    u8 BLDY_1;
+    u8 BLDY_2;
 };
 
 extern struct struct_030024E0 gUnknown_030024E0;
@@ -196,8 +218,82 @@ struct minigame_info {
 
 extern struct minigame_info gMinigameInfo_08077448[];
 
+struct struct_03001630_sub34 {
+    u16 unk0;
+    u16 unk2;
+    u16 unk4;
+    s16 unk6;
+    u16 unk8;
+    u16 unkA;
+};
+
+struct struct_03001630 {
+    u8 unk0;
+    u8 unk1;
+    u8 unk2;
+    u8 unk3;
+    u16 unk4;
+    u16 unk6;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
+    u32 unk20;
+    u32 unk24;
+    s16 unk28;
+    s16 unk2A;
+    s16 unk2C;
+    s16 unk2E;
+    u8 unk30_0:1;
+    u8 unk30_1:1;
+    u8 unk30_2:1;
+    u8 unk31;
+    u8 unk32;
+    u8 unk33;
+    struct struct_03001630_sub34* unk34;
+    u32 unk38;
+    u32 *unk3C;
+    u8 unk40;
+};
+
+extern struct struct_03001630* gUnknown_03001630;
+
+struct struct_030024B0 {
+	s16 unk0;
+	u16 unk2;
+	
+};
+
+extern struct struct_030024B0 gUnknown_030024B0;
+
+struct sceneData {
+
+    u32 textBankID;
+    u8 unk4;
+    u8 portraitID;
+    u16 unk6;
+    u16 padA;
+    u16 padC;
+    u16 padE;
+};
+
+struct sceneData_base {
+    struct sceneData sceneData;
+    u32 unk4;
+};
+
+extern struct sceneData_base gUnknown_0808F1B4;
+extern struct sceneData_base gUnknown_0808F1BC;
+extern struct sceneData_base gUnknown_0808F1C4;
+extern struct sceneData_base gUnknown_0808F1CC;
+extern struct sceneData_base gUnknown_0808F1D4;
+extern struct sceneData_base gUnknown_0808F1DC;
+extern struct sceneData_base gUnknown_0808F1E4;
+
 extern u16 gUnknown_0300252C;
-extern s16 gUnknown_030024B0;
+
 extern u8 gUnknown_0300252F;
 extern u16 gUnknown_0300252A;
 
@@ -240,6 +336,7 @@ extern u16 gNintendoLogoPal_0811DE50;
 
 extern u16 gMinigameInfoBtnTileIndex_08077248[8];
 
+
 extern u16 gMinigameInstructionsBG0Pal_0813A8AC;
 extern u16 gMinigameInstructionsBG1Pal_0813AF7C;
 extern u32 gMinigameInstructionsGFX1_0813A984;
@@ -247,7 +344,30 @@ extern u32 gMinigameInstructionsGFX2_0813AFA0;
 extern u32 gMinigameInstructionsMap_0813A8D0;
 extern u32 gMinigameInstructionsTextPal_0807E848;
 
-void DecompressData_08008374(s32*, s32);
+extern u32 *gUnknown_0814F490[5]; // sprite animation data?
+extern u32 *gUnknown_0814F468[10]; // sprite animation oam and sprite construction pointers
+
+extern const u16 gUnknown_0808F1F8[60]; // star bobbing Y position frame data
+
+extern u16 gUnknown_08107C48;
+extern u32 gUnknown_08107D8C;
+extern u32 gUnknown_08108338; //tilemap
+extern u32 gUnknown_081088E4; //tilemap
+extern u32 gUnknown_08108E90;
+extern u16 gUnknown_0810E26C;
+extern u16 gUnknown_0810E2C4;
+extern u16 gUnknown_081106D0;
+extern u16 gUnknown_08110728;
+extern u16 gUnknown_08112B34;
+extern u16 gUnknown_08112B8C;
+extern u16 gUnknown_08114F98;
+extern u16 gUnknown_08114FF0;
+extern u16 gUnknown_0814F234;
+extern u32 gUnknown_0814F2A8;
+extern u16 gUnknown_0814F318;
+extern u32 gUnknown_0814F4A4;
+
+void *DecompressData_08008374(s32*, s32);
 void LoadPalette_08008308(u16*, s32);
 void LoadTileMap_080083CC(s32*, s32, s32, s32);
 void sub_080072F4(s32);
@@ -357,6 +477,161 @@ u8 sub_080038E8();
 void sub_080077EC(s32, s32);
 
 u32 sub_08007760(u8);
+
+void sub_0805B4A8();
+void sub_0805B6B4();
+void sub_0805B7D0();
+void sub_08003F9C();
+void sub_08004028(s32, s32, s32, s32, s32);
+void sub_080057C0();
+void sub_08005A88(s32);
+void sub_08005AC0(s32);
+void sub_08006BE8(s32, s32);
+s16 sub_08007968(u32*, u32, u32);
+s32 sub_08008380(void*, s32*);
+
+void sub_080058A4();
+void sub_08007A08(s16);
+
+void sub_08005A2C();
+void* sub_08007CE8(s32);
+void sub_08007CF8(void*);
+void sub_08007EFC(s32, void*, s32);
+void sub_080081A0(s32);
+void sub_08008174();
+void sub_0800B7F8();
+
+s32 sub_08008BBC();
+
+void sub_080004D4(struct sceneData*, s32, s32);
+void sub_08005934();
+void sub_08005A2C();
+void sub_0805B260();
+void sub_0805B31C();
+void sub_0805B35C();
+void sub_0805B390();
+void sub_0805B3C4();
+void sub_0805B3F8();
+void sub_0805B42C();
+void sub_0805B460();
+void sub_0805B6F8(s32);
+void sub_0805B790();
+void sub_0805B7B0();
+void sub_0805BAB8();
+void sub_0805BAC4();
+void sub_0805BAD0();
+void sub_0805BADC();
+void sub_0805BC30();
+
+void sub_08009A34(s32, s32); 
+void sub_08009A00(u32);
+
+void sub_08007BA0(s16, void*);
+s32 sub_080099E0(s32, s32);
+void sub_08009A70(void*, s16, s16);
+void sub_08009A78(s32, u32);
+void sub_08009AB4(s32, u8);
+void sub_08009ACC(s32, u32*, u32*, s32); // 2nd and 3rd param are sprite construction oam and animation data, TODO: give structure pointers later instead of u32s
+void sub_08009B40(s32, s32);
+void sub_0805B20C();
+
+extern void (*gUnknown_0808F1EC[3])(); // function pointers to `sub_0805AD50, `sub_0805ADAC`, and `sub_0805B18C`
+
+
+void sub_08007B84(s16, void *);
+extern void (*gUnknown_0808F270[4])(); // function pointers to `sub_0805B514`, `sub_0805B518`, `sub_0805B55C`, and `sub_0805B60C`
+extern void (*gUnknown_0808F280[3])(); // function pointers to `sub_0805B7DC`, `sub_0805B7E0` and `sub_0805B878`
+extern s16 gIntroCharCutoutStartPos_0808F2CC[4][2];
+extern s16 gIntroCharCutoutEndPos_0808F2DC[4][2];
+
+
+struct some_returned_struct {
+    u8 unk0;
+    u8 unk1;
+    u16 unk2;
+    u32 unk4;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
+};
+
+struct some_returned_struct2 {
+    u32 unk0;
+    u32 unk4;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
+};
+
+void * sub_08007BBC(s16);
+void* sub_08007BD4();
+void sub_08007A64();
+
+void* sub_08007BBC(s16);
+void sub_08009BBC(s32, s32, s32);
+
+extern u32 gUnknown_0808F28C[4];
+extern u32 gUnknown_0808F29C[4];
+extern u32* gUnknown_0808F2AC[4];
+extern u32* gUnknown_0808F2BC[4];
+
+
+void sub_0805B920(void);
+
+void sub_0805B9C4(u8);
+
+struct Sub0805BAE8_Child {
+    u8 unk0;
+    u8 unk1;
+    u16 unk2;
+    u16 unk4;
+    s16 unk6;
+    s16 unk8;
+};
+
+struct Sub0805BAE8_Parent {
+    u8 unk0;
+    u8 unk1;
+    s16 unk2;
+    struct Sub0805BAE8_Child* unk4;
+    s16 unk8;
+    s16 unkA;
+};
+
+struct struct_0814F2A0 {
+
+    u32 * temp[2]; // star sparkle data struct pointer (note: placeholder)
+};
+struct struct_0814F28C {
+
+    u32 * temp[5]; // star sparkle OAM pointers, with 2 extra bytes at the start for number of sprites in the object (note: placeholder)
+};
+
+extern s32 sub_0800B828(s32);
+extern struct struct_0814F28C *gUnknown_0814F28C; // star sparkle oam pointers
+extern struct struct_0814F2A0 *gUnknown_0814F2A0; // star sparkle data pointer
+
+extern u16 gUnknown_0808F2EC[];
+
+struct struct_0805BBD4 {
+    u8 unk0;
+    u8 unk1;
+    u16 unk2;
+    u16 unk4;
+    u16 unk6;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
+};
 
 #define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 

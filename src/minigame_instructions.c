@@ -11,19 +11,19 @@ void sub_08001F48(u8 minigameID) {
 
 void sub_08001F60(void) {
     CpuFill16(0, (void*)VRAM, 0x03e8000);
-    gUnknown_030024E0.unk0 = 0x300;
-    gUnknown_030024E0.unk2 = 0x800;
-    gUnknown_030024E0.unk4 = 0x901;
-    gUnknown_030024E0.unk6 = 0;
-    gUnknown_030024E0.unk8 = 0;
-    gUnknown_030024E0.unk12 = 0;
-    gUnknown_030024E0.unkA = 0;
-    gUnknown_030024E0.unk14 = 0;
-    gUnknown_030024E0.unkC = 0;
-    gUnknown_030024E0.unk16 = 0;
-    gUnknown_030024E0.unkE = 0;
-    gUnknown_030024E0.unk18 = 0;
-    gUnknown_030024E0.unk10 = 0;
+    gUnknown_030024E0.DISPCNT = 0x300;
+    gUnknown_030024E0.BG0CNT = 0x800;
+    gUnknown_030024E0.BG1CNT = 0x901;
+    gUnknown_030024E0.BG2CNT = 0;
+    gUnknown_030024E0.BG3CNT = 0;
+    gUnknown_030024E0.BG2HOFS = 0;
+    gUnknown_030024E0.BG0HOFS = 0;
+    gUnknown_030024E0.BG2VOFS = 0;
+    gUnknown_030024E0.BG0VOFS = 0;
+    gUnknown_030024E0.BG3HOFS = 0;
+    gUnknown_030024E0.BG1HOFS = 0;
+    gUnknown_030024E0.BG3VOFS = 0;
+    gUnknown_030024E0.BG1VOFS = 0;
 }
 
 void sub_08001FB0(u16 btn_tile_index, u16 palette, u8 btn_x_pos, u8 btn_y_pos, u8 width, u8 height) {
@@ -183,7 +183,7 @@ void sub_08002358(void) {
     }
 
     FadeIn_08008AF4(0x20, 0, 0x1F, 0xF);
-    gUnknown_030024E0.unk4F = 1;
+    gUnknown_030024E0.BLDY_2 = 1;
     sub_08008D34();
 
     while (1) {
@@ -191,10 +191,10 @@ void sub_08002358(void) {
         if (gUnknown_02037EB0.unk4 != 0) {
             if (sub_080038E8() == 0) {
                 u32 flag;
-                if ((s16)var_r6 & gUnknown_030024B0) {
+                if ((s16)var_r6 & gUnknown_030024B0.unk0) {
                     sp0 = -1;
                     flag = 1;
-                } else if (gUnknown_030024B0 & 1 ) {
+                } else if (gUnknown_030024B0.unk0 & 1 ) {
                     sp0 = 1;
                     flag = 1;                    
                 } else {
@@ -209,9 +209,9 @@ void sub_08002358(void) {
             } else {
                 sub_08003938(0, 0x1111, &sp0, 1);
             }
-        } else if ((s16)var_r6 & gUnknown_030024B0) {
+        } else if ((s16)var_r6 & gUnknown_030024B0.unk0) {
             sp0 = -1;
-        } else if (gUnknown_030024B0 & 1) {
+        } else if (gUnknown_030024B0.unk0 & 1) {
             sp0 = 1;
         }
 

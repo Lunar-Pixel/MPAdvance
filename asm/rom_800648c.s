@@ -14303,7 +14303,7 @@ sub_0800D25C: @ 0x0800D25C
 	.align 2, 0
 _0800D270: .4byte 0x030013AC
 _0800D274:
-	ldr r0, _0800D288 @ =0x030056F0
+	ldr r0, _0800D288 @ =gMplayInfo
 	movs r1, #5
 	bl m4aMPlayFadeOut
 	bl sub_0800B700
@@ -14312,7 +14312,7 @@ _0800D274:
 	strb r0, [r1, #1]
 	b _0800D28E
 	.align 2, 0
-_0800D288: .4byte 0x030056F0
+_0800D288: .4byte gMplayInfo
 _0800D28C:
 	strb r0, [r1, #6]
 _0800D28E:

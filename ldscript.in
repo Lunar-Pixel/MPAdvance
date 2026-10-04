@@ -83,7 +83,7 @@ SECTIONS
 		asm/building/seaside_area/duel_tower_2f.o(.text);
 		asm/building/seaside_area/duel_tower_3f.o(.text);
 		asm/title_screen.o(.text);
-		asm/opening.o(.text);
+		src/opening.o(.text);
 		asm/rom_805BC64.o(.text);
 		asm/bonus_board.o(.text);
 		asm/play_land/gaddgets_menus.o(.text);
@@ -195,6 +195,7 @@ SECTIONS
 	ALIGN(4)
 	{
 		. = 0x00001400; gUnknown_03001400 = .;
+		. = 0x00001630; gUnknown_03001630 = .;
 		. = 0x00001E08; *libgcc.a:dp-bit.o(.bss);
 		*libgcc.a:fp-bit.o(.bss);
 		*libc.a:syscalls.o(.bss);
@@ -209,6 +210,7 @@ SECTIONS
 		. = 0x00004530; gSoundInfo = .;
 		. = 0x000054E0; gMPlayJumpTable = .;
 		. = 0x00005570; gCgbChans = .;
+		. = 0x000056F0; gMplayInfo = .;
 		. = 0x000057F0; gMPlayMemAccArea = .;
 		. = 0x00005840; gEEPROMConfig = .;
 

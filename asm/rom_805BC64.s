@@ -774,7 +774,7 @@ _0805C28A:
 	.align 2, 0
 _0805C2A8: .4byte gUnknown_030024E0
 _0805C2AC:
-	ldr r0, _0805C2C0 @ =0x030056F0
+	ldr r0, _0805C2C0 @ =gMplayInfo
 	movs r1, #4
 	bl m4aMPlayFadeOut
 	bl sub_0803B868
@@ -783,7 +783,7 @@ _0805C2AC:
 	strb r0, [r1, #2]
 	b _0805C2C8
 	.align 2, 0
-_0805C2C0: .4byte 0x030056F0
+_0805C2C0: .4byte gMplayInfo
 _0805C2C4:
 	movs r0, #1
 	strb r0, [r2]
