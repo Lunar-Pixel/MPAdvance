@@ -43,7 +43,7 @@ sub_0806E46C: @ 0x0806E46C
 	ldr r0, _0806E4E8 @ =0x08077448
 	adds r4, r4, r0
 	ldr r6, _0806E4EC @ =0x02030024
-	ldr r0, _0806E4F0 @ =0x03004400
+	ldr r0, _0806E4F0 @ =gUnknown_03004400
 	ldrb r0, [r0, #8]
 	strb r0, [r6]
 	ldrh r1, [r4, #4]
@@ -92,7 +92,7 @@ _0806E4D4:
 	.align 2, 0
 _0806E4E8: .4byte 0x08077448
 _0806E4EC: .4byte 0x02030024
-_0806E4F0: .4byte 0x03004400
+_0806E4F0: .4byte gUnknown_03004400
 
 	thumb_func_start sub_0806E4F4
 sub_0806E4F4: @ 0x0806E4F4
@@ -125,7 +125,7 @@ sub_0806E4F4: @ 0x0806E4F4
 	movs r2, #0
 	movs r3, #8
 	bl LoadTileMap_080083CC
-	ldr r4, _0806E5C8 @ =0x030024E0
+	ldr r4, _0806E5C8 @ =gUnknown_030024E0
 	movs r0, #0
 	strh r0, [r4, #0xe]
 	ldr r0, _0806E5CC @ =0x0000FFD0
@@ -176,7 +176,7 @@ _0806E5B8: .4byte 0x08133644
 _0806E5BC: .4byte 0x06008000
 _0806E5C0: .4byte 0x081335E4
 _0806E5C4: .4byte 0x0600F000
-_0806E5C8: .4byte 0x030024E0
+_0806E5C8: .4byte gUnknown_030024E0
 _0806E5CC: .4byte 0x0000FFD0
 _0806E5D0: .4byte 0x004F0003
 _0806E5D4: .4byte 0x00009999
@@ -196,7 +196,7 @@ _0806E5F0: .4byte 0x003E0036
 _0806E5F4:
 	bl sub_080056C0
 	bl sub_08001B40
-	ldr r0, _0806E6D8 @ =0x03004400
+	ldr r0, _0806E6D8 @ =gUnknown_03004400
 	strb r5, [r0, #0xd]
 	bl load_minigame_dll_8001884
 	movs r0, #1
@@ -225,7 +225,7 @@ _0806E62E:
 	movs r0, #1
 	bl ProcSleep_08002B98
 	bl sub_08003468
-	ldr r4, _0806E6DC @ =0x02037EB0
+	ldr r4, _0806E6DC @ =gUnknown_02037EB0
 	adds r0, r4, #0
 	adds r0, #0x94
 	ldr r0, [r0]
@@ -281,8 +281,8 @@ _0806E6AA:
 	pop {r1}
 	bx r1
 	.align 2, 0
-_0806E6D8: .4byte 0x03004400
-_0806E6DC: .4byte 0x02037EB0
+_0806E6D8: .4byte gUnknown_03004400
+_0806E6DC: .4byte gUnknown_02037EB0
 _0806E6E0: .4byte 0x00005501
 _0806E6E4: .4byte 0x02030000
 _0806E6E8: .4byte 0x004F0006

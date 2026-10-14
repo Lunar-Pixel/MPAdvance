@@ -38,7 +38,7 @@ sub_0805BC64: @ 0x0805BC64
 	movs r5, #0
 	ldr r3, _0805BDA0 @ =0x0808F2F4
 	mov sb, r3
-	ldr r0, _0805BDA4 @ =0x03004400
+	ldr r0, _0805BDA4 @ =gUnknown_03004400
 	mov r8, r0
 	mov sl, r5
 	ldr r6, _0805BDA8 @ =0x0600A020
@@ -87,7 +87,7 @@ _0805BCB0:
 	adds r5, #1
 	cmp r5, #3
 	ble _0805BCB0
-	ldr r4, _0805BDAC @ =0x030024E0
+	ldr r4, _0805BDAC @ =gUnknown_030024E0
 	ldr r0, _0805BDB0 @ =0x00001B09
 	strh r0, [r4, #4]
 	ldr r0, _0805BDB4 @ =0x08107B48
@@ -145,7 +145,7 @@ _0805BD94: .4byte 0x050001C4
 _0805BD98: .4byte 0x03001634
 _0805BD9C: .4byte 0x00000173
 _0805BDA0: .4byte 0x0808F2F4
-_0805BDA4: .4byte 0x03004400
+_0805BDA4: .4byte gUnknown_03004400
 _0805BDA8: .4byte 0x0600A020
 _0805BDAC: .4byte gUnknown_030024E0
 _0805BDB0: .4byte 0x00001B09
@@ -266,7 +266,7 @@ _0805BEB4: .4byte 0x03001634
 	thumb_func_start sub_0805BEB8
 sub_0805BEB8: @ 0x0805BEB8
 	push {r4, r5, r6, r7, lr}
-	ldr r1, _0805BF94 @ =0x030024E0
+	ldr r1, _0805BF94 @ =gUnknown_030024E0
 	ldr r7, _0805BF98 @ =0x03001634
 	ldr r3, [r7]
 	ldrh r0, [r3, #0x32]
@@ -478,7 +478,7 @@ _0805C020:
 	adds r0, r0, r5
 	strb r1, [r0]
 	bl sub_08008174
-	ldr r2, _0805C0A0 @ =0x030024E0
+	ldr r2, _0805C0A0 @ =gUnknown_030024E0
 	ldrh r1, [r2]
 	movs r3, #0x80
 	lsls r3, r3, #2
@@ -579,7 +579,7 @@ _0805C12C:
 	b _0805C1CE
 _0805C132:
 	bl sub_08008174
-	ldr r4, _0805C184 @ =0x030024E0
+	ldr r4, _0805C184 @ =gUnknown_030024E0
 	ldrh r1, [r4]
 	movs r2, #0x80
 	lsls r2, r2, #3
@@ -619,7 +619,7 @@ _0805C132:
 _0805C184: .4byte gUnknown_030024E0
 _0805C188: .4byte 0x00000CDD
 _0805C18C:
-	ldr r3, _0805C1C4 @ =0x030024E0
+	ldr r3, _0805C1C4 @ =gUnknown_030024E0
 	ldrh r0, [r2, #4]
 	adds r0, #1
 	strh r0, [r2, #4]
@@ -678,7 +678,7 @@ _0805C1F0:
 	beq _0805C236
 	b _0805C240
 _0805C1F6:
-	ldr r1, _0805C218 @ =0x030024E0
+	ldr r1, _0805C218 @ =gUnknown_030024E0
 	ldrh r2, [r1]
 	movs r3, #0x80
 	lsls r3, r3, #2
@@ -745,7 +745,7 @@ _0805C26E:
 	strb r0, [r2, #2]
 	b _0805C2C8
 _0805C276:
-	ldr r3, _0805C2A8 @ =0x030024E0
+	ldr r3, _0805C2A8 @ =gUnknown_030024E0
 	ldrh r0, [r2, #4]
 	adds r0, #1
 	strh r0, [r2, #4]
@@ -1092,7 +1092,7 @@ sub_0805C500: @ 0x0805C500
 	beq _0805C540
 	b _0805C572
 _0805C514:
-	ldr r3, _0805C53C @ =0x030024E0
+	ldr r3, _0805C53C @ =gUnknown_030024E0
 	ldrh r0, [r5, #2]
 	adds r0, #1
 	strh r0, [r5, #2]
@@ -1115,7 +1115,7 @@ _0805C514:
 	.align 2, 0
 _0805C53C: .4byte gUnknown_030024E0
 _0805C540:
-	ldr r4, _0805C578 @ =0x030024E0
+	ldr r4, _0805C578 @ =gUnknown_030024E0
 	ldrh r1, [r5, #2]
 	adds r1, #1
 	strh r1, [r5, #2]
@@ -2245,7 +2245,7 @@ _0805CEC4: .4byte 0x01000020
 _0805CEC8:
 	bl sub_0805C9F8
 _0805CECC:
-	ldr r1, _0805CEF0 @ =0x030024E0
+	ldr r1, _0805CEF0 @ =gUnknown_030024E0
 	ldr r0, _0805CEF4 @ =0x03001634
 	ldr r0, [r0]
 	movs r2, #0xbc

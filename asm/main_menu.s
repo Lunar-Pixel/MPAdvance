@@ -57,7 +57,7 @@ sub_080636B8: @ 0x080636B8
 	ldr r2, _0806374C @ =0x01006000
 	add r0, sp, #4
 	bl CpuFastSet
-	ldr r0, _08063750 @ =0x030024E0
+	ldr r0, _08063750 @ =gUnknown_030024E0
 	movs r1, #0xe2
 	lsls r1, r1, #5
 	strh r1, [r0]
@@ -1256,7 +1256,7 @@ sub_08064040: @ 0x08064040
 	stm r1!, {r3, r4, r5}
 	ldr r0, [r0]
 	str r0, [r1]
-	ldr r0, _08064080 @ =0x03004400
+	ldr r0, _08064080 @ =gUnknown_03004400
 	ldrb r0, [r0, #0xa]
 	mov sl, r2
 	cmp r0, #0x2b
@@ -1269,7 +1269,7 @@ sub_08064040: @ 0x08064040
 	.align 2, 0
 _08064078: .4byte 0x08090186
 _0806407C: .4byte 0x0809018C
-_08064080: .4byte 0x03004400
+_08064080: .4byte gUnknown_03004400
 _08064084:
 	cmp r0, #0x2c
 	beq _0806408C
@@ -1314,7 +1314,7 @@ _080640C0:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _08064128 @ =0x030024E0
+	ldr r0, _08064128 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	movs r1, #1
 	strb r1, [r0]
@@ -1336,12 +1336,12 @@ _080640C0:
 	add r4, sl
 	ldr r0, [r4]
 	bl sub_080062D0
-	ldr r4, _0806412C @ =0x030024B0
+	ldr r4, _0806412C @ =gUnknown_030024B0
 	mov r8, r4
 	b _080641CC
 	.align 2, 0
 _08064128: .4byte gUnknown_030024E0
-_0806412C: .4byte 0x030024B0
+_0806412C: .4byte gUnknown_030024B0
 _08064130:
 	movs r0, #1
 	ands r0, r1

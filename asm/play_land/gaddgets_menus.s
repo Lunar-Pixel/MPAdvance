@@ -167,13 +167,13 @@ sub_0805E11C: @ 0x0805E11C
 	movs r0, #8
 	bl sub_0805E004
 	bl sub_080614E8
-	ldr r0, _0805E1EC @ =0x03004400
+	ldr r0, _0805E1EC @ =gUnknown_03004400
 	ldr r0, [r0, #0x10]
 	bl sub_08061560
 	movs r0, #0x50
 	movs r1, #0
 	bl sub_080615F0
-	ldr r4, _0805E1F0 @ =0x030024E0
+	ldr r4, _0805E1F0 @ =gUnknown_030024E0
 	ldr r0, _0805E1F4 @ =0x0000FFD8
 	strh r0, [r4, #0xc]
 	adds r0, #8
@@ -232,8 +232,8 @@ sub_0805E11C: @ 0x0805E11C
 	bl sub_080613CC
 	b _0805E396
 	.align 2, 0
-_0805E1EC: .4byte 0x03004400
-_0805E1F0: .4byte 0x030024E0
+_0805E1EC: .4byte gUnknown_03004400
+_0805E1F0: .4byte gUnknown_030024E0
 _0805E1F4: .4byte 0x0000FFD8
 _0805E1F8: .4byte 0x000018D8
 _0805E1FC: .4byte 0x00002060
@@ -258,7 +258,7 @@ _0805E20C:
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	bne _0805E2AC
-	ldr r6, _0805E250 @ =0x03004400
+	ldr r6, _0805E250 @ =gUnknown_03004400
 	ldr r0, [r6, #0x10]
 	cmp r0, r4
 	bhs _0805E25C
@@ -271,7 +271,7 @@ _0805E20C:
 	b _0805E2B8
 	.align 2, 0
 _0805E24C: .4byte 0x0808FC6C
-_0805E250: .4byte 0x03004400
+_0805E250: .4byte gUnknown_03004400
 _0805E254: .4byte 0x003D000A
 _0805E258: .4byte 0x003D000B
 _0805E25C:
@@ -314,7 +314,7 @@ _0805E2B8:
 	ldr r0, _0805E2D8 @ =0x003D0007
 	bl sub_080062D0
 _0805E2BE:
-	ldr r0, _0805E2DC @ =0x030024B0
+	ldr r0, _0805E2DC @ =gUnknown_030024B0
 	ldrh r1, [r0, #4]
 	movs r0, #0x40
 	ands r0, r1
@@ -327,7 +327,7 @@ _0805E2BE:
 	.align 2, 0
 _0805E2D4: .4byte 0x003D001B
 _0805E2D8: .4byte 0x003D0007
-_0805E2DC: .4byte 0x030024B0
+_0805E2DC: .4byte gUnknown_030024B0
 _0805E2E0:
 	movs r0, #0x80
 	ands r0, r1
@@ -368,7 +368,7 @@ _0805E318:
 	ble _0805E324
 	movs r7, #9
 _0805E324:
-	ldr r5, _0805E348 @ =0x030024E0
+	ldr r5, _0805E348 @ =gUnknown_030024E0
 	ldr r0, _0805E34C @ =0x0000FFD8
 	strh r0, [r5, #0xc]
 	adds r0, #8
@@ -386,7 +386,7 @@ _0805E324:
 	bl sub_08061140
 	b _0805E380
 	.align 2, 0
-_0805E348: .4byte 0x030024E0
+_0805E348: .4byte gUnknown_030024E0
 _0805E34C: .4byte 0x0000FFD8
 _0805E350:
 	cmp r4, #5
@@ -425,7 +425,7 @@ _0805E390:
 	movs r0, #1
 	bl ProcSleep_08002B98
 _0805E396:
-	ldr r0, _0805E410 @ =0x030024B0
+	ldr r0, _0805E410 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #2
 	ands r0, r1
@@ -440,7 +440,7 @@ _0805E3A4:
 	bl sub_08061108
 	adds r0, r7, #0
 	bl sub_0805E0B8
-	ldr r1, _0805E414 @ =0x030024E0
+	ldr r1, _0805E414 @ =gUnknown_030024E0
 	ldrh r2, [r1]
 	ldr r0, _0805E418 @ =0x0000DFFF
 	ands r0, r2
@@ -476,8 +476,8 @@ _0805E3E0:
 	bl ChangeGameState_08008790
 	b _0805E422
 	.align 2, 0
-_0805E410: .4byte 0x030024B0
-_0805E414: .4byte 0x030024E0
+_0805E410: .4byte gUnknown_030024B0
+_0805E414: .4byte gUnknown_030024E0
 _0805E418: .4byte 0x0000DFFF
 _0805E41C:
 	movs r0, #0x2b
@@ -499,7 +499,7 @@ sub_0805E434: @ 0x0805E434
 	movs r0, #6
 	bl sub_080607FC
 	bl sub_08060FC4
-	ldr r4, _0805E544 @ =0x03004400
+	ldr r4, _0805E544 @ =gUnknown_03004400
 	ldrb r0, [r4, #0xa]
 	cmp r0, #0x2c
 	bne _0805E450
@@ -514,7 +514,7 @@ _0805E450:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _0805E548 @ =0x030024E0
+	ldr r0, _0805E548 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	movs r1, #1
 	strb r1, [r0]
@@ -575,7 +575,7 @@ _0805E4C6:
 	lsls r0, r0, #0x18
 	cmp r0, #0
 	beq _0805E582
-	ldr r2, _0805E564 @ =0x030024B0
+	ldr r2, _0805E564 @ =gUnknown_030024B0
 	ldrh r1, [r2, #2]
 	movs r0, #0x8c
 	ands r0, r1
@@ -603,15 +603,15 @@ _0805E4C6:
 	movs r0, #0x24
 	b _0805E616
 	.align 2, 0
-_0805E544: .4byte 0x03004400
-_0805E548: .4byte 0x030024E0
+_0805E544: .4byte gUnknown_03004400
+_0805E548: .4byte gUnknown_030024E0
 _0805E54C: .4byte 0x003D0002
 _0805E550: .4byte 0x003D0003
 _0805E554: .4byte 0x003D0004
 _0805E558: .4byte 0x003D0005
 _0805E55C: .4byte 0x0808FCBC
 _0805E560: .4byte 0x003D000C
-_0805E564: .4byte 0x030024B0
+_0805E564: .4byte gUnknown_030024B0
 _0805E568: .4byte 0x00470031
 _0805E56C: .4byte 0x00470032
 _0805E570: .4byte 0x00470033
@@ -621,7 +621,7 @@ _0805E57C:
 	ldr r0, _0805E59C @ =0x003D000C
 	bl sub_080062D0
 _0805E582:
-	ldr r0, _0805E5A0 @ =0x030024B0
+	ldr r0, _0805E5A0 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #2
 	ands r0, r1
@@ -634,7 +634,7 @@ _0805E582:
 	b _0805E780
 	.align 2, 0
 _0805E59C: .4byte 0x003D000C
-_0805E5A0: .4byte 0x030024B0
+_0805E5A0: .4byte gUnknown_030024B0
 _0805E5A4:
 	movs r0, #1
 	ands r0, r1
@@ -834,7 +834,7 @@ _0805E780:
 	bl sub_08060950
 	bl sub_08061490
 	bl sub_08062180
-	ldr r0, _0805E7CC @ =0x03004400
+	ldr r0, _0805E7CC @ =gUnknown_03004400
 	ldrb r0, [r0, #9]
 	cmp r0, #0x11
 	beq _0805E79C
@@ -859,7 +859,7 @@ _0805E7A4:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805E7CC: .4byte 0x03004400
+_0805E7CC: .4byte gUnknown_03004400
 
 	thumb_func_start sub_0805E7D0
 sub_0805E7D0: @ 0x0805E7D0
@@ -880,7 +880,7 @@ sub_0805E7D0: @ 0x0805E7D0
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _0805E848 @ =0x030024E0
+	ldr r0, _0805E848 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	strb r7, [r0]
 	bl sub_08008D34
@@ -906,7 +906,7 @@ sub_0805E7D0: @ 0x0805E7D0
 	adds r6, r4, #0
 	b _0805E96A
 	.align 2, 0
-_0805E848: .4byte 0x030024E0
+_0805E848: .4byte gUnknown_030024E0
 _0805E84C: .4byte 0x003D0020
 _0805E850: .4byte 0x003D0021
 _0805E854: .4byte 0x0808FCBC
@@ -971,7 +971,7 @@ _0805E884:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _0805E954 @ =0x030024E0
+	ldr r0, _0805E954 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	strb r5, [r0]
 	bl sub_08008D34
@@ -1008,7 +1008,7 @@ _0805E926:
 	.align 2, 0
 _0805E94C: .4byte 0x003D0018
 _0805E950: .4byte 0x003D0019
-_0805E954: .4byte 0x030024E0
+_0805E954: .4byte gUnknown_030024E0
 _0805E958: .4byte 0x003D0017
 _0805E95C:
 	adds r0, r4, #0
@@ -1021,7 +1021,7 @@ _0805E964:
 _0805E96A:
 	adds r0, r5, r6
 	ldrb r4, [r0]
-	ldr r0, _0805E9C0 @ =0x030024B0
+	ldr r0, _0805E9C0 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #2
 	ands r0, r1
@@ -1051,7 +1051,7 @@ _0805E97C:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0805E9C0: .4byte 0x030024B0
+_0805E9C0: .4byte gUnknown_030024B0
 
 	thumb_func_start sub_0805E9C4
 sub_0805E9C4: @ 0x0805E9C4
@@ -1065,7 +1065,7 @@ sub_0805E9C4: @ 0x0805E9C4
 	add r0, sp, #4
 	movs r2, #0x48
 	bl memcpy
-	ldr r4, _0805EA40 @ =0x030024E0
+	ldr r4, _0805EA40 @ =gUnknown_030024E0
 	ldrh r7, [r4]
 	ldrh r0, [r4, #4]
 	mov r8, r0
@@ -1109,7 +1109,7 @@ sub_0805E9C4: @ 0x0805E9C4
 	b _0805EAC0
 	.align 2, 0
 _0805EA3C: .4byte 0x0808FD08
-_0805EA40: .4byte 0x030024E0
+_0805EA40: .4byte gUnknown_030024E0
 _0805EA44: .4byte 0x00001805
 _0805EA48: .4byte 0x00001A0A
 _0805EA4C: .4byte 0x0600C000
@@ -1162,13 +1162,13 @@ _0805EAC0:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _0805EB78 @ =0x030024E0
+	ldr r0, _0805EB78 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	movs r1, #1
 	strb r1, [r0]
 	bl sub_08008D34
 	add r6, sp, #0x50
-	ldr r4, _0805EB7C @ =0x030024B0
+	ldr r4, _0805EB7C @ =gUnknown_030024B0
 	movs r5, #8
 _0805EADE:
 	movs r0, #1
@@ -1184,7 +1184,7 @@ _0805EADE:
 	movs r3, #0xf
 	bl FadeOut_080089E8
 	bl sub_08008D34
-	ldr r4, _0805EB78 @ =0x030024E0
+	ldr r4, _0805EB78 @ =gUnknown_030024E0
 	movs r5, #0
 	strh r7, [r4]
 	mov r0, r8
@@ -1232,8 +1232,8 @@ _0805EB68: .4byte 0x0813B300
 _0805EB6C: .4byte 0x05000100
 _0805EB70: .4byte 0x06008000
 _0805EB74: .4byte 0x0600D000
-_0805EB78: .4byte 0x030024E0
-_0805EB7C: .4byte 0x030024B0
+_0805EB78: .4byte gUnknown_030024E0
+_0805EB7C: .4byte gUnknown_030024B0
 _0805EB80: .4byte 0x0600C000
 _0805EB84: .4byte 0x01001000
 
@@ -1293,7 +1293,7 @@ _0805EBCC:
 _0805EC00: .4byte 0x003D001E
 _0805EC04: .4byte 0x003D001F
 _0805EC08:
-	ldr r0, _0805EC18 @ =0x030024B0
+	ldr r0, _0805EC18 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #0xa
 	ands r0, r1
@@ -1302,7 +1302,7 @@ _0805EC08:
 	movs r5, #0xff
 	b _0805EC46
 	.align 2, 0
-_0805EC18: .4byte 0x030024B0
+_0805EC18: .4byte gUnknown_030024B0
 _0805EC1C:
 	adds r0, r4, #0
 	ands r0, r1

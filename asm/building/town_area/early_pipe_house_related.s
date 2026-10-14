@@ -272,7 +272,7 @@ _080423D0:
 	movs r2, #1
 	mov sb, r2
 _080423D4:
-	ldr r0, _080423E8 @ =0x030024B0
+	ldr r0, _080423E8 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #0x40
 	ands r0, r1
@@ -282,7 +282,7 @@ _080423D4:
 	ands r5, r0
 	b _08042448
 	.align 2, 0
-_080423E8: .4byte 0x030024B0
+_080423E8: .4byte gUnknown_030024B0
 _080423EC: .4byte 0xFFFF00FF
 _080423F0:
 	movs r0, #0x80
@@ -398,7 +398,7 @@ _080424D0:
 	movs r0, #1
 	bl ProcSleep_08002B98
 _080424D6:
-	ldr r0, _08042520 @ =0x030024B0
+	ldr r0, _08042520 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #2
 	ands r0, r1
@@ -432,7 +432,7 @@ _08042510:
 	pop {r1}
 	bx r1
 	.align 2, 0
-_08042520: .4byte 0x030024B0
+_08042520: .4byte gUnknown_030024B0
 
 	thumb_func_start sub_08042524
 sub_08042524: @ 0x08042524

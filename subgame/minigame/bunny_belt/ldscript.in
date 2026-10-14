@@ -13,12 +13,31 @@ SECTIONS
 		asm/decompression_related.o(.text);
 		asm/rom7.o(.text);
 		asm/rom8.o(.text);
+		asm/libagbsyscall.o(.text);
+
+		*libgcc.a:_call_via_rX.o(.text);
+		*libgcc.a:_divdi3.o(.text);
+		*libgcc.a:_divsi3.o(.text);
+		*libgcc.a:_dvmd_tls.o(.text);
+		*libgcc.a:_udivsi3.o(.text);
+		*libgcc.a:_umodsi3.o(.text);
+		*libgcc.a:dp-bit.o(.text);
+		*libgcc.a:fp-bit.o(.text);
+		*libgcc.a:_lshrdi3.o(.text);
+		*libgcc.a:_muldi3.o(.text);
+		*libgcc.a:_negdi2.o(.text);
+
+		*libc.a:strlen.o(.text);
+		
+		
 	} = 0
 
 	.rodata (READONLY) :
 	ALIGN(4)
 	{
 		data/data.o(.rodata);
+		*libgcc.a:_divdi3.o(.rodata);
+		data/data2.o(.rodata);
 	}
 
 	.data (READONLY) :
@@ -30,14 +49,124 @@ SECTIONS
 	.ewram (NOLOAD) :
 	ALIGN(4)
 	{
+		. = 0x00010000; gUnknown_02010000 = .;
+		. = 0x00018000; gUnknown_02018000 = .;
+		. = 0x00028000; gUnknown_02028000 = .;
+		. = 0x00028010; gUnknown_02028010 = .;
+		. = 0x00028060; gUnknown_02028060 = .;
+		. = 0x00028460; gUnknown_02028460 = .;
+		. = 0x000284AC; gUnknown_020284AC = .;
+		. = 0x000284B0; gUnknown_020284B0 = .;
+		. = 0x00028510; gUnknown_02028510 = .;
+		. = 0x000285D0; gUnknown_020285D0 = .;
+		. = 0x00028664; gUnknown_02028664 = .;
+		. = 0x00028670; gUnknown_02028670 = .;
+		. = 0x00029000; gUnknown_02029000 = .;
+		. = 0x00029004; gUnknown_02029004 = .;
+		. = 0x00029008; gUnknown_02029008 = .;
+		. = 0x0002900C; gUnknown_0202900C = .;
+		. = 0x00029010; gUnknown_02029010 = .;
+		. = 0x00029014; gUnknown_02029014 = .;
+		. = 0x00029018; gUnknown_02029018 = .;
+		. = 0x0002901C; gUnknown_0202901C = .;
+		. = 0x00029020; gUnknown_02029020 = .;
+		. = 0x00029030; gUnknown_02029030 = .;
+		. = 0x00029230; gUnknown_02029230 = .;
+		. = 0x00029238; gUnknown_02029238 = .;
+		. = 0x00029240; gUnknown_02029240 = .;
+		. = 0x0002AE48; gUnknown_0202AE48 = .;
+		. = 0x0002AE4C; gUnknown_0202AE4C = .;
+		. = 0x0002AE50; gUnknown_0202AE50 = .;
+		. = 0x0002B150; gUnknown_0202B150 = .;
+		. = 0x0002B170; gUnknown_0202B170 = .;
+		. = 0x0002B174; gUnknown_0202B174 = .;
+		. = 0x0002B180; gUnknown_0202B180 = .;
+		. = 0x0002B1A0; gUnknown_0202B1A0 = .;
+		. = 0x0002B1A4; gUnknown_0202B1A4 = .;
+		. = 0x0002B1A8; gUnknown_0202B1A8 = .;
+		. = 0x0002B1B0; gUnknown_0202B1B0 = .;
+		. = 0x0002B1B8; gUnknown_0202B1B8 = .;
+		. = 0x0002B1C0; gUnknown_0202B1C0 = .;
+		. = 0x0002B1C1; gUnknown_0202B1C1 = .;
+		. = 0x0002B210; gUnknown_0202B210 = .;
+		. = 0x0002B214; gUnknown_0202B214 = .;
+		. = 0x0002B220; gUnknown_0202B220 = .;
+		. = 0x0002B260; gUnknown_0202B260 = .;
+		. = 0x0002B264; gUnknown_0202B264 = .;
+		. = 0x0002B268; gUnknown_0202B268 = .;
+		. = 0x0002B270; gUnknown_0202B270 = .;
+		. = 0x0002B280; gUnknown_0202B280 = .;
+		. = 0x0002B290; gUnknown_0202B290 = .;
+		. = 0x0002B298; gUnknown_0202B298 = .;
+		. = 0x0002B29C; gUnknown_0202B29C = .;
+		. = 0x0002B2A0; gUnknown_0202B2A0 = .;
+		. = 0x0002B2B0; gUnknown_0202B2B0 = .;
+		. = 0x0002B2E0; gUnknown_0202B2E0 = .;
+		. = 0x0002B2F0; gUnknown_0202B2F0 = .;
+		. = 0x0002CEF8; gUnknown_0202CEF8 = .;
+		. = 0x0002CF00; gUnknown_0202CF00 = .;
+		. = 0x0002CF60; gUnknown_0202CF60 = .;
+		. = 0x0002D360; gUnknown_0202D360 = .;
+		. = 0x0002D760; gUnknown_0202D760 = .;
+		. = 0x0002D770; gUnknown_0202D770 = .;
+		. = 0x0002D790; gUnknown_0202D790 = .;
+		. = 0x0002DB90; gUnknown_0202DB90 = .;
+		. = 0x0002DB98; gUnknown_0202DB98 = .;
+		. = 0x0002DBA0; gUnknown_0202DBA0 = .;
+		. = 0x0002DD20; gUnknown_0202DD20 = .;
+		. = 0x0002DD30; gUnknown_0202DD30 = .;
+		. = 0x0002E138; gUnknown_0202E138 = .;
+		. = 0x0002E140; gUnknown_0202E140 = .;
+		. = 0x0002E144; gUnknown_0202E144 = .;
+		. = 0x0002E148; gUnknown_0202E148 = .;
+		. = 0x0002E150; gUnknown_0202E150 = .;
+		. = 0x0002E158; gUnknown_0202E158 = .;
+		. = 0x0002E15C; gUnknown_0202E15C = .;
+		. = 0x0002E160; gUnknown_0202E160 = .;
+		. = 0x0002E164; gUnknown_0202E164 = .;
 		. = 0x0002E170; gDecompressionDictionary_0202E170 = .;
+		. = 0x0002E570; gUnknown_0202E570 = .;
+		. = 0x0002E574; gUnknown_0202E574 = .;
+		. = 0x0002E580; gUnknown_0202E580 = .;
+		. = 0x0002E680; gUnknown_0202E680 = .;
+		. = 0x0002E684; gUnknown_0202E684 = .;
+		. = 0x0002E688; gUnknown_0202E688 = .;
+		. = 0x0002E690; gUnknown_0202E690 = .;
+		. = 0x0002E6B0; gUnknown_0202E6B0 = .;
+		. = 0x0002E6C8; gUnknown_0202E6C8 = .;
+		. = 0x0002E714; gUnknown_0202E714 = .;
+		. = 0x0002E880; gUnknown_0202E880 = .;
+		. = 0x0002EAC0; gUnknown_0202EAC0 = .;
+		. = 0x0002EAD0; gUnknown_0202EAD0 = .;
+		. = 0x00030000; gUnknown_02030000 = .;
+		. = 0x00030018; gUnknown_02030018 = .;
 	}
 
 	. = 0x03000000;
 	.iwram (NOLOAD) :
 	ALIGN(4)
 	{
-
+		. = 0x6000; gUnknown_03006000 = .;
+		*libgcc.a:dp-bit.o(.bss);
+		. = 0x6018; gUnknown_03006018 = .;
+		*libgcc.a:fp-bit.o(.bss);
+		. = 0x6030; gUnknown_03006030 = .;
+		. = 0x6040; gUnknown_03006040 = .;
+		. = 0x607C; gUnknown_0300607C = .;
+		. = 0x6080; gUnknown_03006080 = .;
+		. = 0x60E0; gUnknown_030060E0 = .;
+		. = 0x60E4; gUnknown_030060E4 = .;
+		. = 0x60E8; gUnknown_030060E8 = .;
+		. = 0x60F0; gUnknown_030060F0 = .;
+		. = 0x64F0; gUnknown_030064F0 = .;
+		. = 0x6500; gUnknown_03006500 = .;
+		. = 0x6518; gUnknown_03006518 = .;
+		. = 0x7000; gUnknown_03007000 = .;
+		. = 0x7F00; gUnknown_03007F00 = .;
+		. = 0x7FA0; gUnknown_03007FA0 = .;
+		. = 0x7FF8; gUnknown_03007FF8 = .;
+		. = 0x7FFA; gUnknown_03007FFA = .;
+		. = 0x7FFC; gUnknown_03007FFC = .;
 	} = 0
 
     /* Discard everything not specifically mentioned above. */

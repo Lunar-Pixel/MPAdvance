@@ -13,11 +13,11 @@ _start: @ 0x02000000
 _02000004:
 	mov r0, #0x12
 	msr cpsr_fc, r0
-	ldr sp, _02000038 @ =0x03007FA0
+	ldr sp, _02000038 @ =gUnknown_03007FA0
 	mov r0, #0x1f
 	msr cpsr_fc, r0
-	ldr sp, _02000034 @ =0x03007F00
-	ldr r1, _0200003C @ =0x03007FFC
+	ldr sp, _02000034 @ =gUnknown_03007F00
+	ldr r1, _0200003C @ =gUnknown_03007FFC
 	ldr r0, _02000040 @ =sub_02000048
 	str r0, [r1]
 	ldr r1, _02000044 @ =sub_0200392C
@@ -27,9 +27,9 @@ _02000004:
 sub_02000030: @ 0x02000030
 	b _02000004
 	.align 2, 0
-_02000034: .4byte 0x03007F00
-_02000038: .4byte 0x03007FA0
-_0200003C: .4byte 0x03007FFC
+_02000034: .4byte gUnknown_03007F00
+_02000038: .4byte gUnknown_03007FA0
+_0200003C: .4byte gUnknown_03007FFC
 _02000040: .4byte sub_02000048
 _02000044: .4byte sub_0200392C
 
@@ -98,7 +98,7 @@ _02000118:
 	bic r3, r3, #0xdf
 	orr r3, r3, #0x1f
 	msr cpsr_fc, r3
-	ldr r1, _0200017C @ =0x03006040
+	ldr r1, _0200017C @ =gUnknown_03006040
 	add r1, r1, ip
 	ldr r0, [r1]
 	stmdb sp!, {lr}
@@ -118,13 +118,13 @@ sub_02000154: @ 0x02000154
 	msr spsr_fc, r0
 	bx lr
 	.align 2, 0
-_0200017C: .4byte 0x03006040
+_0200017C: .4byte gUnknown_03006040
 
 	arm_func_start sub_02000180
 sub_02000180: @ 0x02000180
 	push {r8, sb, sl, fp}
 	mov ip, #0x4000000
-	ldr fp, _020001BC @ =0x0202E880
+	ldr fp, _020001BC @ =gUnknown_0202E880
 	add sl, fp, #0x28
 	mov sb, #1
 	mov r8, #0
@@ -138,4 +138,4 @@ sub_02000180: @ 0x02000180
 	pop {r8, sb, sl, fp}
 	bx lr
 	.align 2, 0
-_020001BC: .4byte 0x0202E880
+_020001BC: .4byte gUnknown_0202E880

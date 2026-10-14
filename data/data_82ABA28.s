@@ -271,12 +271,12 @@ gTrapFloorCmprCode:
 gKoopaKappaCmprCode:
 	.INCBIN "subgame/koopa_kid/koopa_kappa.lz"
 	
-	.GLOBAL minigame_data_pack_0854f2dc @ houses all the assets for minigames below 
-minigame_data_pack_0854f2dc:
+	.GLOBAL gMinigameDataPack_0854F2DC @ houses all the assets for minigames below 
+gMinigameDataPack_0854F2DC:
 	.INCBIN "us_baserom.gba", 0x54f2dc, 0x64d96c-0x54f2dc	
 
 
-@ minigames that use data from minigame_data_pack_0854f2dc
+@ minigames that use data from gMinigameDataPack_0854F2DC
 	.GLOBAL gBooByeCmprCode
 gBooByeCmprCode:
 	.INCBIN "subgame/minigame/boo_bye.lz"
@@ -398,7 +398,7 @@ gBroomZoomCmprCode:
 	.INCBIN "subgame/minigame/broom_zoom.lz"
 
 
-@ battle games that use data from minigame_data_pack_0854f2dc 
+@ battle games that use data from gMinigameDataPack_0854F2DC 
 	.GLOBAL gTankDownCmprCode
 gTankDownCmprCode:
 	.INCBIN "subgame/battle/tank_down.lz"
@@ -431,7 +431,3 @@ gKoopaCurlCmprCode:
 gSlammerCmprCode:
 	.INCBIN "subgame/battle/slammer.lz"
 
-
-	.GLOBAL game_data_087c5434
-game_data_087c5434:
-	.INCBIN "us_baserom.gba", 0x7c5434, 0x7c7168-0x7c5434

@@ -56,16 +56,16 @@ _080633DA:
 	beq _08063424
 	b _08063434
 _080633E4:
-	ldr r0, _080633F4 @ =0x03004400
+	ldr r0, _080633F4 @ =gUnknown_03004400
 	ldrb r1, [r0, #0xe]
 	adds r0, r6, #0
 	movs r2, #1
 	bl sub_08001BA8
 	b _08063434
 	.align 2, 0
-_080633F4: .4byte 0x03004400
+_080633F4: .4byte gUnknown_03004400
 _080633F8:
-	ldr r0, _0806340C @ =0x03004400
+	ldr r0, _0806340C @ =gUnknown_03004400
 	ldrb r1, [r0, #0xe]
 	ldrb r2, [r0, #0xf]
 	str r4, [sp]
@@ -74,9 +74,9 @@ _080633F8:
 	bl sub_08001CEC
 	b _08063434
 	.align 2, 0
-_0806340C: .4byte 0x03004400
+_0806340C: .4byte gUnknown_03004400
 _08063410:
-	ldr r0, _08063420 @ =0x03004400
+	ldr r0, _08063420 @ =gUnknown_03004400
 	ldrb r1, [r0, #0xe]
 	adds r0, r6, #0
 	adds r2, r7, #0
@@ -84,9 +84,9 @@ _08063410:
 	bl sub_08001C14
 	b _08063434
 	.align 2, 0
-_08063420: .4byte 0x03004400
+_08063420: .4byte gUnknown_03004400
 _08063424:
-	ldr r0, _08063440 @ =0x03004400
+	ldr r0, _08063440 @ =gUnknown_03004400
 	ldrb r1, [r0, #0xe]
 	movs r2, #0xc8
 	lsls r2, r2, #2
@@ -101,7 +101,7 @@ _08063436:
 	pop {r1}
 	bx r1
 	.align 2, 0
-_08063440: .4byte 0x03004400
+_08063440: .4byte gUnknown_03004400
 
 	thumb_func_start sub_08063444
 sub_08063444: @ 0x08063444
@@ -122,7 +122,7 @@ sub_08063444: @ 0x08063444
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _080634C0 @ =0x030024E0
+	ldr r0, _080634C0 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	strb r7, [r0]
 	bl sub_08008D34
@@ -149,7 +149,7 @@ sub_08063444: @ 0x08063444
 	adds r6, r4, #0
 	b _080635EE
 	.align 2, 0
-_080634C0: .4byte 0x030024E0
+_080634C0: .4byte gUnknown_030024E0
 _080634C4: .4byte 0x003E0034
 _080634C8: .4byte 0x003E0035
 _080634CC: .4byte 0x080900C4
@@ -220,7 +220,7 @@ _080634FC:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _080635D8 @ =0x030024E0
+	ldr r0, _080635D8 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	strb r5, [r0]
 	bl sub_08008D34
@@ -258,7 +258,7 @@ _080635AA:
 	.align 2, 0
 _080635D0: .4byte 0x003E0027
 _080635D4: .4byte 0x003E0028
-_080635D8: .4byte 0x030024E0
+_080635D8: .4byte gUnknown_030024E0
 _080635DC: .4byte 0x003E0026
 _080635E0:
 	adds r0, r4, #0
@@ -271,7 +271,7 @@ _080635E8:
 _080635EE:
 	adds r0, r5, r6
 	ldrb r4, [r0]
-	ldr r0, _08063650 @ =0x030024B0
+	ldr r0, _08063650 @ =gUnknown_030024B0
 	ldrh r1, [r0]
 	movs r0, #2
 	ands r0, r1
@@ -305,4 +305,4 @@ _08063600:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08063650: .4byte 0x030024B0
+_08063650: .4byte gUnknown_030024B0

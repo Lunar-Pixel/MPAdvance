@@ -32,7 +32,7 @@ _08062E76:
 	adds r5, #0x20
 	cmp r4, #0xb
 	ble _08062E68
-	ldr r0, _08062EA8 @ =0x030024E0
+	ldr r0, _08062EA8 @ =gUnknown_030024E0
 	ldr r1, _08062EAC @ =0x0000FFE0
 	strh r1, [r0, #0xe]
 	subs r1, #0x10
@@ -43,7 +43,7 @@ _08062E76:
 	bx r0
 	.align 2, 0
 _08062EA4: .4byte 0x06009200
-_08062EA8: .4byte 0x030024E0
+_08062EA8: .4byte gUnknown_030024E0
 _08062EAC: .4byte 0x0000FFE0
 
 	thumb_func_start sub_08062EB0
@@ -126,7 +126,7 @@ sub_08062F30: @ 0x08062F30
 	ldr r0, _08062F64 @ =0x0600F01E
 	add r0, sb
 	mov r8, r0
-	ldr r0, _08062F68 @ =0x03004400
+	ldr r0, _08062F68 @ =gUnknown_03004400
 	ldrb r0, [r0, #0xd]
 	bl sub_08001B00
 	lsls r0, r0, #0x18
@@ -139,7 +139,7 @@ sub_08062F30: @ 0x08062F30
 	.align 2, 0
 _08062F60: .4byte 0x00989680
 _08062F64: .4byte 0x0600F01E
-_08062F68: .4byte 0x03004400
+_08062F68: .4byte gUnknown_03004400
 _08062F6C:
 	movs r1, #0
 	mov sb, r1
@@ -459,7 +459,7 @@ sub_080631F0: @ 0x080631F0
 	movs r0, #5
 	bl sub_080607FC
 	bl sub_08060F7C
-	ldr r4, _08063304 @ =0x03004400
+	ldr r4, _08063304 @ =gUnknown_03004400
 	ldrb r0, [r4, #0xd]
 	bl sub_080019D8
 	lsls r0, r0, #0x18
@@ -495,7 +495,7 @@ _08063252:
 	cmp r4, r5
 	bls _08063266
 _0806325A:
-	ldr r0, _08063304 @ =0x03004400
+	ldr r0, _08063304 @ =gUnknown_03004400
 	ldrb r0, [r0, #0xd]
 	adds r1, r5, #0
 	bl sub_08007778
@@ -511,12 +511,12 @@ _08063270:
 	movs r2, #0x1f
 	movs r3, #0xf
 	bl FadeIn_08008AF4
-	ldr r0, _08063308 @ =0x030024E0
+	ldr r0, _08063308 @ =gUnknown_030024E0
 	adds r0, #0x4f
 	movs r1, #1
 	strb r1, [r0]
 	bl sub_08008D34
-	ldr r0, _08063304 @ =0x03004400
+	ldr r0, _08063304 @ =gUnknown_03004400
 	ldrb r0, [r0, #0xd]
 	bl sub_080019D8
 	lsls r0, r0, #0x18
@@ -555,7 +555,7 @@ _080632DA:
 	asrs r4, r0, #0x18
 	cmp r4, #0
 	bne _08063334
-	ldr r0, _08063304 @ =0x03004400
+	ldr r0, _08063304 @ =gUnknown_03004400
 	ldrb r0, [r0, #0xd]
 	bl sub_08001B00
 	lsls r0, r0, #0x18
@@ -567,8 +567,8 @@ _080632DA:
 	str r0, [r1, #4]
 	b _08063320
 	.align 2, 0
-_08063304: .4byte 0x03004400
-_08063308: .4byte 0x030024E0
+_08063304: .4byte gUnknown_03004400
+_08063308: .4byte gUnknown_030024E0
 _0806330C: .4byte 0x0038001D
 _08063310: .4byte 0x00380018
 _08063314: .4byte 0x02030000
@@ -600,7 +600,7 @@ _08063346:
 	movs r0, #0x14
 	bl ChangeGameState_08008790
 _0806334C:
-	ldr r0, _08063380 @ =0x03004400
+	ldr r0, _08063380 @ =gUnknown_03004400
 	ldrb r0, [r0, #9]
 	cmp r0, #0x14
 	beq _0806335C
@@ -621,4 +621,4 @@ _0806335C:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08063380: .4byte 0x03004400
+_08063380: .4byte gUnknown_03004400

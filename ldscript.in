@@ -172,6 +172,8 @@ SECTIONS
 		*libc.a:mprec.o(.rodata);
 		*libc.a:syscalls.o(.rodata);
 		data/data_82ABA28.o(.rodata);
+		asm/rom_87C5434.o(.text);
+		data/data_87C67E0.o(.rodata);
 	}
 
 	.data (READONLY) :
@@ -185,6 +187,7 @@ SECTIONS
 	{
 		. = 0x00030000; gUnknown_02030000 = .;
 		. = 0x00037EB0; gUnknown_02037EB0 = .;
+		. = 0x0003A220; gUnknown_0203A220 = .;
 		. = 0x0003A460; *libc.a:impure.o(.data);
 		. = 0x0003A750; *libc.a:locale.o(.data);
 		. = 0x0003A764; *libc.a:mallocr.o(.data);
@@ -194,7 +197,9 @@ SECTIONS
 	.iwram (NOLOAD) :
 	ALIGN(4)
 	{
+		. = 0x00000000; gIWRAMBase_03000000 = .;
 		. = 0x00001400; gUnknown_03001400 = .;
+		. = 0x0000162C; gUnknown_0300162C = .;
 		. = 0x00001630; gUnknown_03001630 = .;
 		. = 0x00001E08; *libgcc.a:dp-bit.o(.bss);
 		*libgcc.a:fp-bit.o(.bss);
@@ -206,6 +211,7 @@ SECTIONS
 		. = 0x000024E0; gUnknown_030024E0 = .;
 		. = 0x00002560; gIntrTable = .;
 		. = 0x00004400; gUnknown_03004400 = .;
+		. = 0x0000441C; gUnknown_0300441C = .;
 
 		. = 0x00004530; gSoundInfo = .;
 		. = 0x000054E0; gMPlayJumpTable = .;
