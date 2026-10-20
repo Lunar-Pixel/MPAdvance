@@ -142,7 +142,7 @@ sub_02004CE8: @ 0x02004CE8
 	adds r0, r1, #0
 	adds r1, r2, #0
 	adds r5, r3, #0
-	bl sub_02006A00
+	bl GetFileFromPack_02006A00
 	adds r1, r0, #0
 	adds r0, r4, #0
 	movs r2, #0
@@ -164,12 +164,12 @@ sub_02004D08: @ 0x02004D08
 	mov sb, r3
 	adds r0, r5, #0
 	adds r1, r4, #0
-	bl sub_02006A00
+	bl GetFileFromPack_02006A00
 	adds r6, r0, #0
 	adds r4, #1
 	adds r0, r5, #0
 	adds r1, r4, #0
-	bl sub_02006A00
+	bl GetFileFromPack_02006A00
 	adds r2, r0, #0
 	mov r0, r8
 	adds r1, r6, #0
@@ -193,11 +193,11 @@ sub_02004D44: @ 0x02004D44
 	adds r6, r3, #0
 	ldr r7, [sp, #0x18]
 	adds r0, r4, #0
-	bl sub_02006A00
+	bl GetFileFromPack_02006A00
 	adds r5, r0, #0
 	adds r0, r4, #0
 	adds r1, r6, #0
-	bl sub_02006A00
+	bl GetFileFromPack_02006A00
 	adds r2, r0, #0
 	mov r0, r8
 	adds r1, r5, #0
@@ -4085,7 +4085,7 @@ _020068D4: .4byte gUnknown_0202AE48
 	thumb_func_start sub_020068D8
 sub_020068D8: @ 0x020068D8
 	ldr r1, _020068E8 @ =gUnknown_0202900C
-	ldr r0, _020068EC @ =gUnknown_02010000
+	ldr r0, _020068EC @ =0x02010000
 	str r0, [r1]
 	ldr r1, _020068F0 @ =gUnknown_0202AE48
 	movs r0, #0xc0
@@ -4094,7 +4094,7 @@ sub_020068D8: @ 0x020068D8
 	bx lr
 	.align 2, 0
 _020068E8: .4byte gUnknown_0202900C
-_020068EC: .4byte gUnknown_02010000
+_020068EC: .4byte 0x02010000
 _020068F0: .4byte gUnknown_0202AE48
 
 	thumb_func_start sub_020068F4
@@ -4244,290 +4244,3 @@ sub_020069F0: @ 0x020069F0
 	bx lr
 	.align 2, 0
 _020069FC: .4byte gUnknown_0200B434
-
-	thumb_func_start sub_02006A00
-sub_02006A00: @ 0x02006A00
-	push {lr}
-	adds r2, r0, #0
-	adds r3, r1, #0
-	ldr r0, _02006A20 @ =0x01FFFFFF
-	cmp r2, r0
-	bgt _02006A14
-	ldr r1, _02006A24 @ =gUnknown_0200B434
-	lsls r0, r2, #2
-	adds r0, r0, r1
-	ldr r2, [r0]
-_02006A14:
-	lsls r0, r3, #2
-	adds r0, r0, r2
-	ldr r0, [r0]
-	adds r0, r2, r0
-	pop {r1}
-	bx r1
-	.align 2, 0
-_02006A20: .4byte 0x01FFFFFF
-_02006A24: .4byte gUnknown_0200B434
-
-	thumb_func_start sub_02006A28
-sub_02006A28: @ 0x02006A28
-	push {r4, r5, lr}
-	adds r4, r0, #0
-	adds r0, r1, #0
-	adds r1, r2, #0
-	bl sub_02006A00
-	adds r1, r0, #0
-	ldrb r0, [r1, #3]
-	cmp r0, #0
-	beq _02006A46
-	adds r0, r1, #0
-	adds r1, r4, #0
-	bl sub_0200774C
-	b _02006AAE
-_02006A46:
-	ldrb r0, [r1, #0xe]
-	lsls r0, r0, #8
-	ldrb r2, [r1, #0xf]
-	orrs r2, r0
-	ldr r0, _02006A7C @ =0x05FFFFFF
-	cmp r4, r0
-	bhi _02006A80
-	movs r3, #0
-	lsls r0, r2, #0x10
-	asrs r0, r0, #0x10
-	cmp r3, r0
-	bge _02006AAE
-	adds r2, r0, #0
-_02006A60:
-	ldrb r0, [r1]
-	strb r0, [r4]
-	adds r1, #1
-	adds r4, #1
-	lsls r0, r3, #0x10
-	movs r3, #0x80
-	lsls r3, r3, #9
-	adds r0, r0, r3
-	lsrs r3, r0, #0x10
-	asrs r0, r0, #0x10
-	cmp r0, r2
-	blt _02006A60
-	b _02006AAE
-	.align 2, 0
-_02006A7C: .4byte 0x05FFFFFF
-_02006A80:
-	adds r5, r4, #0
-	adds r4, r1, #0
-	lsls r0, r2, #0x10
-	asrs r1, r0, #0x10
-	lsrs r0, r0, #0x1f
-	adds r1, r1, r0
-	movs r3, #0
-	asrs r0, r1, #1
-	cmp r3, r0
-	bge _02006AAE
-	adds r1, r0, #0
-_02006A96:
-	ldrh r0, [r4]
-	strh r0, [r5]
-	adds r4, #2
-	adds r5, #2
-	lsls r0, r3, #0x10
-	movs r2, #0x80
-	lsls r2, r2, #9
-	adds r0, r0, r2
-	lsrs r3, r0, #0x10
-	asrs r0, r0, #0x10
-	cmp r0, r1
-	blt _02006A96
-_02006AAE:
-	pop {r4, r5}
-	pop {r0}
-	bx r0
-
-	thumb_func_start sub_02006AB4
-sub_02006AB4: @ 0x02006AB4
-	push {lr}
-	bl sub_02006A00
-	adds r2, r0, #0
-	movs r1, #0
-	ldrb r0, [r2]
-	cmp r0, #0x45
-	bne _02006ADE
-	ldrb r0, [r2, #1]
-	cmp r0, #0x43
-	bne _02006ADE
-	ldrb r0, [r2, #2]
-	cmp r0, #0x44
-	bne _02006ADE
-	ldrb r0, [r2, #0xe]
-	lsls r0, r0, #8
-	ldrb r1, [r2, #0xf]
-	adds r0, r0, r1
-	adds r1, r0, #0
-	subs r1, #8
-	b _02006B4E
-_02006ADE:
-	ldrb r0, [r2]
-	adds r3, r0, #0
-	cmp r3, #0x49
-	bne _02006B0C
-	ldrb r0, [r2, #1]
-	cmp r0, #0x4d
-	bne _02006B0C
-	ldrb r0, [r2, #2]
-	cmp r0, #0x47
-	bne _02006B0C
-	ldrb r0, [r2, #4]
-	cmp r0, #0
-	bne _02006B02
-	ldrb r0, [r2, #5]
-	ldrb r1, [r2, #6]
-	muls r0, r1, r0
-	lsls r1, r0, #5
-	b _02006B4E
-_02006B02:
-	ldrb r0, [r2, #5]
-	ldrb r1, [r2, #6]
-	muls r0, r1, r0
-	lsls r1, r0, #6
-	b _02006B4E
-_02006B0C:
-	cmp r3, #0x50
-	bne _02006B28
-	ldrb r0, [r2, #1]
-	cmp r0, #0x4c
-	bne _02006B28
-	ldrb r0, [r2, #2]
-	cmp r0, #0x54
-	bne _02006B28
-	ldrb r0, [r2, #5]
-	lsls r0, r0, #8
-	ldrb r1, [r2, #4]
-	adds r0, r0, r1
-	lsls r1, r0, #1
-	b _02006B4E
-_02006B28:
-	cmp r3, #0x53
-	bne _02006B4E
-	ldrb r0, [r2, #1]
-	cmp r0, #0x43
-	bne _02006B4E
-	ldrb r0, [r2, #2]
-	cmp r0, #0x52
-	bne _02006B4E
-	ldrb r0, [r2, #4]
-	cmp r0, #0
-	bne _02006B48
-	ldrb r0, [r2, #5]
-	ldrb r1, [r2, #6]
-	muls r0, r1, r0
-	lsls r1, r0, #1
-	b _02006B4E
-_02006B48:
-	ldrb r1, [r2, #5]
-	ldrb r0, [r2, #6]
-	muls r1, r0, r1
-_02006B4E:
-	adds r0, r1, #0
-	pop {r1}
-	bx r1
-
-	thumb_func_start sub_02006B54
-sub_02006B54: @ 0x02006B54
-	push {r4, r5, r6, r7, lr}
-	mov r7, sl
-	mov r6, sb
-	mov r5, r8
-	push {r5, r6, r7}
-	mov r8, r0
-	mov sl, r1
-	adds r7, r2, #0
-	movs r0, #0
-	mov sb, r0
-	movs r6, #0
-	mov r5, sl
-	b _02006B8C
-_02006B6E:
-	ldr r0, [r5]
-	ldr r1, [r5, #4]
-	adds r1, #1
-	bl sub_02006A00
-	adds r4, r0, #0
-	ldr r0, [r5]
-	ldr r1, [r5, #4]
-	bl sub_02006A00
-	subs r4, r4, r0
-	adds r6, r6, r4
-	movs r1, #1
-	add sb, r1
-	adds r5, #8
-_02006B8C:
-	ldr r1, [r5]
-	movs r0, #1
-	rsbs r0, r0, #0
-	cmp r1, r0
-	bne _02006B6E
-	mov r2, sb
-	lsls r4, r2, #2
-	adds r6, r6, r4
-	str r6, [r7]
-	mov r0, r8
-	cmp r0, #1
-	bgt _02006BAC
-	adds r1, r6, #0
-	bl sub_02006918
-	mov r8, r0
-_02006BAC:
-	mov r1, r8
-	adds r7, r1, r4
-	mov r5, sl
-	movs r2, #0
-	mov sb, r2
-	b _02006BF8
-_02006BB8:
-	mov r1, sb
-	lsls r0, r1, #2
-	add r0, r8
-	mov r2, r8
-	subs r1, r7, r2
-	str r1, [r0]
-	ldr r0, [r5]
-	ldr r1, [r5, #4]
-	bl sub_02006A00
-	adds r4, r0, #0
-	ldr r0, [r5]
-	ldr r1, [r5, #4]
-	adds r1, #1
-	bl sub_02006A00
-	subs r6, r0, r4
-	mov r2, sb
-	adds r2, #1
-	adds r1, r5, #0
-	adds r1, #8
-	cmp r6, #0
-	beq _02006BF4
-_02006BE6:
-	ldrb r0, [r4]
-	strb r0, [r7]
-	adds r4, #1
-	adds r7, #1
-	subs r6, #1
-	cmp r6, #0
-	bne _02006BE6
-_02006BF4:
-	mov sb, r2
-	adds r5, r1, #0
-_02006BF8:
-	ldr r1, [r5]
-	movs r0, #1
-	rsbs r0, r0, #0
-	cmp r1, r0
-	bne _02006BB8
-	mov r0, r8
-	pop {r3, r4, r5}
-	mov r8, r3
-	mov sb, r4
-	mov sl, r5
-	pop {r4, r5, r6, r7}
-	pop {r1}
-	bx r1
-	.align 2, 0

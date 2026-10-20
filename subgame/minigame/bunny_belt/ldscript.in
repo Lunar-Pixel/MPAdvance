@@ -7,6 +7,7 @@ SECTIONS
 	ALIGN(4)
 	{
 		asm/crt0.o(.text);
+		src/rom0.o(.text);
 		asm/rom0.o(.text);
 		asm/rom4.o(.text);
 		asm/ecd_header_related.o(.text);
@@ -49,11 +50,9 @@ SECTIONS
 	.ewram (NOLOAD) :
 	ALIGN(4)
 	{
-		. = 0x00010000; gUnknown_02010000 = .;
-		. = 0x00018000; gUnknown_02018000 = .;
 		. = 0x00028000; gUnknown_02028000 = .;
 		. = 0x00028010; gUnknown_02028010 = .;
-		. = 0x00028060; gUnknown_02028060 = .;
+		. = 0x00028060; gPaletteCopy_02028060 = .;
 		. = 0x00028460; gUnknown_02028460 = .;
 		. = 0x000284AC; gUnknown_020284AC = .;
 		. = 0x000284B0; gUnknown_020284B0 = .;

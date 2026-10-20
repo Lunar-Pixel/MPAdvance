@@ -1304,7 +1304,7 @@ sub_020082D8: @ 0x020082D8
 	str r2, [sp, #0xc]
 	str r2, [sp, #0x10]
 	movs r2, #3
-	bl sub_02006E68
+	bl LoadTileMapFromPack_02006E68
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0
@@ -1403,7 +1403,7 @@ _0200839A:
 	str r2, [sp, #0xc]
 	str r2, [sp, #0x10]
 	adds r2, r5, #0
-	bl sub_02006E68
+	bl LoadTileMapFromPack_02006E68
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0
