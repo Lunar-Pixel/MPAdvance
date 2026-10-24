@@ -56,7 +56,7 @@ SECTIONS
 		asm/building/desert_area/mushroom_field.o(.text);
 		asm/building/desert_area/the_hammer.o(.text);
 		asm/building/desert_area/pokey.o(.text);
-		asm/building/desert_area/game_mage_pyramid.o(.text);
+		src/building/desert_area/game_mage_pyramid.o(.text);
 		asm/building/desert_area/klepto_ruins.o(.text);
 		asm/building/desert_area/bowser_stadium.o(.text);
 		src/building/snow_area/ice_game_room.o(.text);
